@@ -1,0 +1,20 @@
+html {
+    /* 
+    * box-sizing
+    * default: 'box-sizing: content-box'
+    * @see: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing 
+    */
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+article {
+    max-width: 60ch; /* Ancho máximo basado en el ancho del carácter "0" */
+    margin: 0 auto; /* Centrar en 'x' de su elemento padre */
+    padding: 20px; /* Espacio interno dea la caja */
+    font-size: 16px; /* Tamaño de la fuente */
+    line-height: 1.6; /* Altura de línea para mejorar la legibilidad */
+}

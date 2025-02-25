@@ -82,7 +82,6 @@ footer {
 article {
     width: 80%;
     max-width: 800px;
-    padding: 1em;
     margin: 0 auto; /* Centrar en 'x' de su elemento padre */
 }
 

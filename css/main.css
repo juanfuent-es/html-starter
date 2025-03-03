@@ -38,10 +38,32 @@ body {
     }
 }
 
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1em;
+}
 
-h1, h2, h3, h4, h5 {
-    font-size: 2.5rem;
-    line-height: 1.14em;
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.75em;
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+h5 {
+    font-size: 1.25em;
+}
+
+h6 {
+    font-size: 1em;
 }
 
 header {
@@ -60,7 +82,7 @@ nav ul li {
     display: inline;
 }
 
-a {
+a.box-link {
     color: #000;
     font-weight: 600;
     text-decoration: none;
@@ -68,10 +90,10 @@ a {
     text-transform: uppercase;
     min-width: 42px;
     background-color: #fff;
-    transition: all 300ms ease-in;
+    transition: all 300ms ease-out;
 }
 
-a:hover {
+a.box-link:hover {
     transition: all 100ms ease-in;
     filter: invert(1);
 }
@@ -79,12 +101,7 @@ a:hover {
 footer {
     width: 100%;
     text-align: center;
-}
-
-article {
-    width: 80%;
-    max-width: 800px;
-    margin: 0 auto; /* Centrar en 'x' de su elemento padre */
+    padding: 1em;
 }
 
 p {

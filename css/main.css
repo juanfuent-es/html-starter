@@ -98,6 +98,10 @@ a.box-link:hover {
     filter: invert(1);
 }
 
+a.active {
+    pointer-events: none;
+}
+
 footer {
     width: 100%;
     text-align: center;

@@ -49,15 +49,10 @@ a.box-link:hover {
     transition: all 100ms ease-in;
 }
 
-section {
+section, article {
     margin: 3em auto;
     width: 100%;
     max-width: 1024px;
-}
-
-article {
-    padding: 3em;
-    margin: 3em auto;
 }
 
 footer#main-footer {

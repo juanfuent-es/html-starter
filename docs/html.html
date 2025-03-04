@@ -43,8 +43,9 @@
                     <li><a href="#attributes">Atributos HTML</a></li>
                     <li><a href="#semantic-tags">Etiquetas Semánticas</a></li>
                     <li><a href="#example">Ejemplo Markup Semántico</a></li>
-                    <li><a href="#links">Links</a></li>
                     <li><a href="#favicons">Favicons</a></li>
+                    <li><a href="#links">Links</a></li>
+                    <li><a href="#image">Image / Picture</a></li>
                     <li><a href="#web-semantic">Web Semántica</a></li>
                     <li><a href="#git-github">Git & GitHub</a></li>
                 </ol>
@@ -218,6 +219,51 @@
     &lt;/footer&gt;
 </pre>
         </section>
+        <section id="favicons">
+            <section>
+                <h2>¿Qué es un Favicon?</h2>
+                <p>Un favicon es un pequeño icono que aparece en la pestaña del navegador, en los marcadores y en otros lugares. Ayuda a identificar visualmente el sitio web.</p>
+            </section>
+            <section>
+                <h2>Ejemplos de Favicon</h2>
+                <p>A continuación se muestran diferentes formas de incluir un favicon en tu sitio web:</p>
+                <h3>Favicon básico</h3>
+    <pre>
+    &lt;link rel="icon" href="img/favicon.ico" type="image/x-icon"&gt;
+    </pre>
+                <h3>Favicon en formato PNG</h3>
+    <pre>
+    &lt;link rel="icon" href="img/favicon.png" type="image/png"&gt;
+    </pre>
+                <h3>Favicon para dispositivos Apple</h3>
+    <pre>
+    &lt;link rel="apple-touch-icon" href="img/apple-touch-icon.png"&gt;
+    </pre>
+                <h3>Manifest para aplicaciones web progresivas</h3>
+    <pre>
+    &lt;link rel="manifest" href="manifest.json"&gt;
+    </pre>
+            </section>
+            <section>
+                <h2>Buenas Prácticas</h2>
+                <ul>
+                    <li>Usar un favicon de 16x16 píxeles para navegadores.</li>
+                    <li>Incluir versiones de mayor resolución para dispositivos de alta densidad de píxeles.</li>
+                    <li>Asegurarse de que el favicon sea representativo del sitio web.</li>
+                    <li>Utilizar el formato ICO/PNG para compatibilidad con todos los navegadores.</li>
+                    <li>Incluir favicons en formato SVG para dispositivos modernos.</li>
+                    <li>Proporcionar un archivo de manifiesto para aplicaciones web progresivas.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Referencias</h2>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/link" target="_blank">Documentación de MDN sobre el elemento &lt;link&gt;</a></li>
+                    <li><a href="https://web.dev/add-manifest/" target="_blank">Guía de Google sobre cómo agregar un manifiesto</a></li>
+                    <li><a href="https://realfavicongenerator.net/" target="_blank">Generador de favicons</a></li>
+                </ul>
+            </section>
+        </section>
         <section id="links">
             <section>
                 <h2>Rutas Absolutas</h2>
@@ -276,51 +322,34 @@
                 </ul>
             </section>
         </section>
-        <section id="favicons">
-            <section>
-                <h2>¿Qué es un Favicon?</h2>
-                <p>Un favicon es un pequeño icono que aparece en la pestaña del navegador, en los marcadores y en otros lugares. Ayuda a identificar visualmente el sitio web.</p>
-            </section>
-            <section>
-                <h2>Ejemplos de Favicon</h2>
-                <p>A continuación se muestran diferentes formas de incluir un favicon en tu sitio web:</p>
-                <h3>Favicon básico</h3>
-    <pre>
-    &lt;link rel="icon" href="img/favicon.ico" type="image/x-icon"&gt;
-    </pre>
-                <h3>Favicon en formato PNG</h3>
-    <pre>
-    &lt;link rel="icon" href="img/favicon.png" type="image/png"&gt;
-    </pre>
-                <h3>Favicon para dispositivos Apple</h3>
-    <pre>
-    &lt;link rel="apple-touch-icon" href="img/apple-touch-icon.png"&gt;
-    </pre>
-                <h3>Manifest para aplicaciones web progresivas</h3>
-    <pre>
-    &lt;link rel="manifest" href="manifest.json"&gt;
-    </pre>
-            </section>
-            <section>
-                <h2>Buenas Prácticas</h2>
-                <ul>
-                    <li>Usar un favicon de 16x16 píxeles para navegadores.</li>
-                    <li>Incluir versiones de mayor resolución para dispositivos de alta densidad de píxeles.</li>
-                    <li>Asegurarse de que el favicon sea representativo del sitio web.</li>
-                    <li>Utilizar el formato ICO para compatibilidad con todos los navegadores.</li>
-                    <li>Incluir favicons en formato PNG para dispositivos modernos.</li>
-                    <li>Proporcionar un archivo de manifiesto para aplicaciones web progresivas.</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Referencias</h2>
-                <ul>
-                    <li><a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/link" target="_blank">Documentación de MDN sobre el elemento &lt;link&gt;</a></li>
-                    <li><a href="https://web.dev/add-manifest/" target="_blank">Guía de Google sobre cómo agregar un manifiesto</a></li>
-                    <li><a href="https://favicon.io/" target="_blank">Generador de favicons</a></li>
-                    <li><a href="https://realfavicongenerator.net/" target="_blank">Generador de favicons</a></li>
-                </ul>
-            </section>
+        <section id="image">
+            <h2>Picture</h2>
+            <p>El elemento <code>&lt;picture&gt;</code> permite servir diferentes imágenes según el tamaño de pantalla o el tipo de dispositivo, lo que mejora la optimización y la accesibilidad.</p>
+            <picture>
+                <!-- Imagen más pequeña para pantallas menores a 600px -->
+                <source srcset="https://placehold.co/300x200.webp" type="image/webp" media="(max-width: 600px)">
+                <source srcset="https://placehold.co/300x200.jpg" type="image/jpeg" media="(max-width: 600px)">
+                
+                <!-- Imagen mediana para pantallas entre 601px y 1024px -->
+                <source srcset="https://placehold.co/600x400.webp" type="image/webp" media="(max-width: 1024px)">
+                <source srcset="https://placehold.co/600x400.jpg" type="image/jpeg" media="(max-width: 1024px)">
+                
+                <!-- Imagen grande para pantallas mayores a 1025px -->
+                <source srcset="https://placehold.co/1200x800.webp" type="image/webp">
+                <source srcset="https://placehold.co/1200x800.jpg" type="image/jpeg">
+        
+                <!-- Fallback en caso de que <picture> no sea soportado -->
+                <img src="https://placehold.co/1200x800.jpg" alt="Imagen adaptable">
+            </picture>
+            
+            <h2>Buenas prácticas al usar &lt;picture&gt;</h2>
+            <ul>
+                <li>Usar imágenes optimizadas para diferentes tamaños de pantalla.</li>
+                <li>Emplear el atributo <code>media</code> en <code>&lt;source&gt;</code> para definir puntos de quiebre.</li>
+                <li>Siempre incluir un <code>&lt;img&gt;</code> de respaldo dentro de <code>&lt;picture&gt;</code> para navegadores sin soporte.</li>
+                <li>Optimizar imágenes en formatos modernos como WebP para mejor rendimiento.</li>
+                <li>Utilizar imágenes de alta resolución para pantallas con densidad de píxeles mayor (retina).</li>
+            </ul>
         </section>
         <section id="web-semantic">
             <h2>Web Semántica</h2>

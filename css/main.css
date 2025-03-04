@@ -66,6 +66,9 @@ h6 {
     font-size: 1em;
 }
 
+img {
+    max-width: 100%;
+}
 header {
     width: 100%;
 }

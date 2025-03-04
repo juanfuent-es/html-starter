@@ -43,6 +43,8 @@
                     <li><a href="#attributes">Atributos HTML</a></li>
                     <li><a href="#semantic-tags">Etiquetas Semánticas</a></li>
                     <li><a href="#example">Ejemplo Markup Semántico</a></li>
+                    <li><a href="#links">Links</a></li>
+                    <li><a href="#favicons">Favicons</a></li>
                     <li><a href="#web-semantic">Web Semántica</a></li>
                     <li><a href="#git-github">Git & GitHub</a></li>
                 </ol>
@@ -215,6 +217,110 @@
         &lt;p&gt;Pie de página.&lt;/p&gt;
     &lt;/footer&gt;
 </pre>
+        </section>
+        <section id="links">
+            <section>
+                <h2>Rutas Absolutas</h2>
+                <p>Una ruta absoluta especifica la ubicación completa de un recurso, incluyendo el protocolo (http, https) y el dominio.</p>
+                <p>Ejemplo:</p>
+                <a href="https://www.example.com">Enlace a Example.com</a>
+            </section>
+            <section>
+                <h2>Rutas Relativas</h2>
+                <p>Una ruta relativa especifica la ubicación de un recurso en relación con la ubicación actual del documento.</p>
+                <p>Ejemplos:</p>
+                <ul>
+                    <li><code>&lt;a href="pagina.html"&gt;Enlace a página en el mismo directorio&lt;/a&gt;</code></li>
+                    <li><code>&lt;a href="./pagina.html"&gt;Enlace a página en el mismo directorio (con ./)&lt;/a&gt;</code></li>
+                    <li><code>&lt;a href="../pagina.html"&gt;Enlace a página en el directorio padre&lt;/a&gt;</code></li>
+                    <li><code>&lt;a href="/pagina.html"&gt;Enlace a página en la raíz del sitio&lt;/a&gt;</code></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Prefijos de Rutas Relativas</h2>
+                <p>Los prefijos './', '../' y '/' se utilizan para navegar por el sistema de archivos relativo a la ubicación del documento actual.</p>
+                <ul>
+                    <li><strong>'./'</strong>: Se refiere al directorio actual.</li>
+                    <li><strong>'../'</strong>: Se refiere al directorio padre del directorio actual.</li>
+                    <li><strong>'/'</strong>: Se refiere a la raíz del sitio web.</li>
+                </ul>
+                <p>Ejemplos:</p>
+                <ul>
+                    <li><code>&lt;a href="./pagina.html"&gt;Enlace a página en el mismo directorio&lt;/a&gt;</code></li>
+                    <li><code>&lt;a href="../pagina.html"&gt;Enlace a página en el directorio padre&lt;/a&gt;</code></li>
+                    <li><code>&lt;a href="/pagina.html"&gt;Enlace a página en la raíz del sitio&lt;/a&gt;</code></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Ejemplos Prácticos</h2>
+                <p>Supongamos que tenemos la siguiente estructura de directorios:</p>
+    <pre>
+    /d:/CENTRO/www/
+    ├── index.html
+    ├── docs/
+    │   ├── html.html
+    │   ├── css.html
+    │   └── cheat-sheet.html
+    └── img/
+        └── centro-logo.svg
+    </pre>
+                <p>Desde <code>index.html</code>:</p>
+                <ul>
+                    <li><code>&lt;a href="docs/html.html"&gt;HTML&lt;/a&gt;</code> - Enlace a <code>html.html</code> en el directorio <code>docs</code>.</li>
+                    <li><code>&lt;a href="img/centro-logo.svg"&gt;Logo&lt;/a&gt;</code> - Enlace a <code>centro-logo.svg</code> en el directorio <code>img</code>.</li>
+                </ul>
+                <p>Desde <code>docs/html.html</code>:</p>
+                <ul>
+                    <li><code>&lt;a href="../index.html"&gt;Inicio&lt;/a&gt;</code> - Enlace a <code>index.html</code> en el directorio raíz.</li>
+                    <li><code>&lt;a href="../img/centro-logo.svg"&gt;Logo&lt;/a&gt;</code> - Enlace a <code>centro-logo.svg</code> en el directorio <code>img</code>.</li>
+                </ul>
+            </section>
+        </section>
+        <section id="favicons">
+            <section>
+                <h2>¿Qué es un Favicon?</h2>
+                <p>Un favicon es un pequeño icono que aparece en la pestaña del navegador, en los marcadores y en otros lugares. Ayuda a identificar visualmente el sitio web.</p>
+            </section>
+            <section>
+                <h2>Ejemplos de Favicon</h2>
+                <p>A continuación se muestran diferentes formas de incluir un favicon en tu sitio web:</p>
+                <h3>Favicon básico</h3>
+    <pre>
+    &lt;link rel="icon" href="img/favicon.ico" type="image/x-icon"&gt;
+    </pre>
+                <h3>Favicon en formato PNG</h3>
+    <pre>
+    &lt;link rel="icon" href="img/favicon.png" type="image/png"&gt;
+    </pre>
+                <h3>Favicon para dispositivos Apple</h3>
+    <pre>
+    &lt;link rel="apple-touch-icon" href="img/apple-touch-icon.png"&gt;
+    </pre>
+                <h3>Manifest para aplicaciones web progresivas</h3>
+    <pre>
+    &lt;link rel="manifest" href="manifest.json"&gt;
+    </pre>
+            </section>
+            <section>
+                <h2>Buenas Prácticas</h2>
+                <ul>
+                    <li>Usar un favicon de 16x16 píxeles para navegadores.</li>
+                    <li>Incluir versiones de mayor resolución para dispositivos de alta densidad de píxeles.</li>
+                    <li>Asegurarse de que el favicon sea representativo del sitio web.</li>
+                    <li>Utilizar el formato ICO para compatibilidad con todos los navegadores.</li>
+                    <li>Incluir favicons en formato PNG para dispositivos modernos.</li>
+                    <li>Proporcionar un archivo de manifiesto para aplicaciones web progresivas.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Referencias</h2>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/link" target="_blank">Documentación de MDN sobre el elemento &lt;link&gt;</a></li>
+                    <li><a href="https://web.dev/add-manifest/" target="_blank">Guía de Google sobre cómo agregar un manifiesto</a></li>
+                    <li><a href="https://favicon.io/" target="_blank">Generador de favicons</a></li>
+                    <li><a href="https://realfavicongenerator.net/" target="_blank">Generador de favicons</a></li>
+                </ul>
+            </section>
         </section>
         <section id="web-semantic">
             <h2>Web Semántica</h2>

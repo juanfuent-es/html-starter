@@ -1,3 +1,10 @@
+/*
+* Normalize.css
+* A modern, HTML5-ready alternative to CSS resets
+* @see: https://necolas.github.io/normalize.css 
+*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
 html {
     /* 
     * box-sizing
@@ -69,6 +76,7 @@ h6 {
 img {
     max-width: 100%;
 }
+
 header {
     width: 100%;
 }

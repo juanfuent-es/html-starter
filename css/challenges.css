@@ -99,6 +99,10 @@ h1 {
 h2 {
     font-size: 2em;
 }
+
+p {
+    margin: 0 auto;
+}
 /* classes utilities */
 .text-center {
     text-align: center;

@@ -11,6 +11,7 @@
 
 body {
     background-color: #000;
+    font-family: 'Source Code Pro', monospace;
 }
 
 #challenge-main-header {
@@ -19,10 +20,10 @@ body {
 
 #challenge-container {
     max-width: 640px;
-    font-family: 'Source Code Pro';
     color: #00ff00;
 }
 
+/* nav */
 nav#challenge-nav {
     display: inline-block;
     padding: 0;
@@ -90,6 +91,14 @@ hr {
     border-top: 1px solid #0F0;
 }
 
+h1 {
+
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
 /* classes utilities */
 .text-center {
     text-align: center;

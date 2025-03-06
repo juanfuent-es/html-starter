@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --green: #00ff00;
+    --scroll-background: #000;
+    --scroll-foreground: #0f0;
+    --scroll-background-over: #666;
+    --scroll-border-radius: 0px;
+    --scroll-size: 10px;
+}
+
+body {
+    background-color: #000;
+}
+
+#challenge-main-header {
+    padding: 1em;
+}
+
+#challenge-container {
+    max-width: 640px;
+    font-family: 'Source Code Pro';
+    color: #00ff00;
+}
+
+nav#challenge-nav {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    max-width: 640px;
+    width: 100%;
+}
+nav#challenge-nav ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+nav#challenge-nav ul li {
+    display: block;
+    width: 100%;
+    margin: 1em 0;
+}
+
+a.challenge-link {
+    width: 100%;
+    text-align: center;
+    display: block;
+    background-color: #000;
+    max-width: 320px;
+    margin: 0 auto;
+    text-transform: none;
+    font-weight: 400;
+    line-height: 2em;
+    color: #0F0;
+    border: 1px solid currentColor;
+    transition: all 80ms ease-in-out;
+    text-decoration: none;
+}
+
+a.challenge-link:hover {
+    background-color: #0F0;
+    color: #000;
+}
+
+footer#challenge-footer {
+    color: #0F0;
+    text-transform: uppercase;
+    font-family: 'Source Code Pro';
+    padding: 1em;
+}
+
+code {
+    background: #000;
+    border: 1px solid currentColor;
+    border-radius: 2px;
+}
+
+hr {
+    border-top: 1px solid #0F0;
+}
+
+/* classes utilities */
+.text-center {
+    text-align: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}

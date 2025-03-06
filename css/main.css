@@ -4,6 +4,7 @@
 * @see: https://necolas.github.io/normalize.css 
 */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+@import url('scroll.css');
 
 html {
     /* 
@@ -29,6 +30,7 @@ body {
     font-size: 14px;
     line-height: 1.4em;
     background-color: #e8e8e8;
+    overflow-x: hidden;
 }
 
 /* Laptop / Tablet */

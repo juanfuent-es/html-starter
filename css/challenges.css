@@ -43,27 +43,32 @@ nav#challenge-nav ul li {
     margin: 1em 0;
 }
 
+/* links */
+a {
+    background-color: #000;
+    color: #0F0;
+}
+
+a:hover {
+    background-color: #0F0;
+    color: #000;
+}
+
 a.challenge-link {
     width: 100%;
     text-align: center;
     display: block;
-    background-color: #000;
     max-width: 320px;
     margin: 0 auto;
     text-transform: none;
     font-weight: 400;
     line-height: 2em;
-    color: #0F0;
     border: 1px solid currentColor;
     transition: all 80ms ease-in-out;
     text-decoration: none;
 }
 
-a.challenge-link:hover {
-    background-color: #0F0;
-    color: #000;
-}
-
+/* footer */
 footer#challenge-footer {
     color: #0F0;
     text-transform: uppercase;
@@ -71,6 +76,10 @@ footer#challenge-footer {
     padding: 1em;
 }
 
+/* code */
+pre {
+    line-height: 1.2em;
+}
 code {
     background: #000;
     border: 1px solid currentColor;

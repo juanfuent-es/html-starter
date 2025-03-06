@@ -64,11 +64,11 @@
             <nav id="challenge-nav">
                 <ul>
                     <li><a href="#objective" class="challenge-link" aria-label="Objetivo">Objetivo</a></li>
-                    <li><a href="#evaluation" class="challenge-link" aria-label="Aspectos a evaluar">Aspectos a evaluar</a></li>
                     <li><a href="#structure" class="challenge-link" aria-label="Estructura y Semántica">Estructura y Semántica</a></li>
                     <li><a href="#mobile" class="challenge-link" aria-label="Mobile">Mobile</a></li>
                     <li><a href="#optimization" class="challenge-link" aria-label="Optimización y Compatibilidad">Optimización y Compatibilidad</a></li>
                     <li><a href="#accessibility" class="challenge-link" aria-label="Accesibilidad y Diseño">Accesibilidad y Diseño</a></li>
+                    <li><a href="#multimedia" class="challenge-link" aria-label="Archivos Multimedia">Multimedia</a></li>
                     <li><a href="#repository" class="challenge-link" aria-label="Repositorio en Github">Repositorio</a></li>
                     <li><a href="#tips" class="challenge-link" aria-label="Tips">Tips</a></li>
                 </ul>
@@ -80,33 +80,40 @@
             <h2>Objetivo</h2>
             <p>El propósito de este ejercicio es diseñar una página web que reúna y muestre todos tus enlaces sociales en un solo lugar.</p>
             <p>Si no utilizas redes sociales o prefieres mantener tu privacidad, puedes listar enlaces a páginas de tu artista favorito, empresa, servicio o cualquier otro recurso de interés. Considera incluir:</p>
-            <ul>
+            <ol>
                 <li>Al menos tres enlaces a redes sociales (Instagram, X, LinkedIn, etc.).</li>
                 <li>Un enlace de contacto vía correo electrónico.</li>
                 <li>Un enlace de contacto vía WhatsApp.</li>
                 <li>Un enlace de contacto vía teléfono.</li>
                 <li>Una foto de perfil, logo o avatar.</li>
                 <li>Una imagen de background.</li>
-            </ul>
+                <li>Cualquier uso extra será considerado.</li>
+            </ol>
         </article>
         <hr>
         <!-- Aspectos a evaluar -->
         <article id="evaluation">
-            <header class="text-center">
-                <h2 class="uppercase">Aspectos a evaluar</h2>
-            </header>
             
             <section id="structure">
-                <h3>Estructura y Semántica</h3>
-                <ul>
+                <h2>Estructura y Semántica</h2>
+                <ol>
                     <li>Usar HTML semántico con etiquetas adecuadas (<code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code>, etc.).</li>
                     <li>Utiliza las propiedades obligatorias recomendadas en tags como <code>title</code> en links y <code>alt</code> en imágenes, necesarios para screenreaders.</li>
                     <li>Optimizar la jerarquía de títulos para mejorar la accesibilidad.</li>
-                </ul>
+                    <li>Organiza tus archivos en folders</li>
+                    <li>Nombra tus archivos de manera adecuada
+                        <ul>
+                            <li>Utiliza minúsculas</li>
+                            <li>Evita el uso de espacios, en su lugar haz uso de guiones medios <code>-</code> o guiones bajos <code>_</code>.</li>
+                            <li>Sé descriptivo y conciso, mantén los nombres simples y cortos.</li>
+                            <li>Usa las extensiones de archivos adecuadas y mejor soportadas por navegadores. Verifica soporte en <a href="https://caniuse.com/" title="Can I use '_' ?">caniuse.com</a> </li>
+                        </ul>
+                    </li>
+                </ol>
             </section>
     
             <section id="mobile">
-                <h3>Mobile</h3>
+                <h2>Mobile</h2>
                 <ul>
                     <li>Priorizar la visualización en dispositivos móviles.</li>
                     <li>Utilizar <code>media queries</code> y la etiqueta <code>picture</code> para imágenes adaptativas.</li>
@@ -115,7 +122,7 @@
             </section>
     
             <section id="optimization">
-                <h3>Optimización y Compatibilidad</h3>
+                <h2>Optimización y Compatibilidad</h2>
                 <ul>
                     <li>Incluir un favicon compatible con navegadores modernos y fallback para versiones antiguas.</li>
                     <li>Agregar metadata Open Graph para mejorar la previsualización en redes sociales.</li>
@@ -125,14 +132,23 @@
             </section>
     
             <section id="accessibility">
-                <h3>Accesibilidad y Diseño</h3>
+                <h2>Accesibilidad y Diseño</h2>
                 <ul>
-                    <li>Elegir tipografías y tamaños adecuados para mejorar la legibilidad en diversos dispositivos.</li>
+                    <li>Elegir tipografías y tamaños adecuados para mejorar la legibilidad en diversos dispositivos. Ayúdate de páginas como <a href="https://www.fontpair.co/" aria-label="Font Pair" target="_blank">fontpair.co</a> o <a href="https://fonts.google.com/" target="_blank" aria-label="Google Fonts">fonts.google.com</a></li>
                     <li>Asegurar suficiente contraste en los colores utilizados para facilitar la lectura en modo light/oscuro.</li>
                     <li>Proporcionar descripciones alternativas en imágenes mediante el atributo <code>alt</code>.</li>
                     <li>Asegurar que los enlaces sean descriptivos y accesibles (evitar "haz clic aquí").</li>
                 </ul>
             </section>
+        </article>
+        <article id="multimedia">
+            <h2>Multimedia</h2>
+            <p>Para enriquecer la experiencia, prepara tus archivos de imagen/video para web.</p>
+            <ul>
+                <li>Utiliza formatos modernos como <code>WebP</code> y <code>AVIF</code> para imágenes.</li>
+                <li>Redimensiona tus archivos a los tamaños adecuados para cada dispositivo.</li>
+                <li>Comprime tus archivos para reducir el tiempo de carga.</li>
+            </ul>
         </article>
         <article id="repository">
             <h2>Github</h2>
@@ -148,24 +164,28 @@
         <!-- Tips -->
         <article id="tips">
             <h2>Tips</h2>
-            <p>¿No sabes por dónde empezar? Algunas recomendaciones adicionales para mejorar el desarrollo:</p>
+            <p>¿No sabes por dónde empezar?</p>
             <ul>
                 <li>Arma un moodboard para hacer encontrar el estilo de tu página.</li>
-                <li>¿No sabes qué colores usar? <a href="https://color.adobe.com/trends" target="_blank" aria-label="Paletas de color de Adobe">Adobe Color</a> ó 
+                <li>¿Necesitas ayuda para encontrar la paleta adecuada? <a href="https://color.adobe.com/trends" target="_blank" aria-label="Paletas de color de Adobe">Adobe Color</a> ó 
                     <a href="https://coolors.co/" target="_blank" aria-label="Coolors Color Generator">https://coolors.co</a> podrán ayudarte.
                 </li>
-                <li>Evita enlaces rotos o que requieran autenticación para ser vistos.</li>
-                <li>Personaliza los enlaces con estilos visuales distintivos.</li>
-                <li>Agregar una breve descripción "Sobre mí" o un archivo <code>humans.txt</code> para mayor contexto.</li>
+                <li>¿Necesitas inspiración? Ayúdate de referencias de servicios como <a href="https://linktr.ee/" target="_blank" aria-label="Linktree">linktr.ee</a>, <a href="https://heylink.me/" target="_blank" aria-label="heylink">heylink.me</a>, <a href="https://beacons.ai/" target="_blank" aria-label="Beacons.ai">beacons.ai</a></li>
+                <li>Agrega un toque personal con un <code>embed</code> a tu canción o vídeo favorito
+                    <br>
+                    <br>
+                    <iframe src="https://open.spotify.com/embed/track/1KuVdyg8d6NlRhbpHxg5UF?utm_source=generator" width="100%" height="180" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </li>
             </ul>
         </article>
+        
         <article id="tips">
-            <h2>Recursos</h2>
-            <p>Algunas recomendaciones adicionales para mejorar la experiencia:</p>
+            <h2>Recomendaciones</h2>
+            <p>Algunas recomendaciones adicionales para mejorar la experiencia de desarrollo y futuros visitantes de tu sitio:</p>
             <ul>
                 <li>Evita enlaces rotos o que requieran autenticación para ser vistos.</li>
                 <li>Personaliza los enlaces con estilos visuales distintivos.</li>
-                <li>Considera agregar una breve descripción "Sobre mí" para mayor contexto.</li>
+                <li>Agregar una breve descripción "Sobre mí" o un archivo <a href="../humans.txt" title="We Are Humans, not machines" target="_blank">humans.txt</a> para mayor contexto.</li>
             </ul>
         </article>
         <footer>

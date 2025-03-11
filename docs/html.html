@@ -325,33 +325,9 @@
             </section>
         </section>
         <section id="image">
-            <h2>Picture</h2>
-            <p>El elemento <code>&lt;picture&gt;</code> permite servir diferentes imágenes según el tamaño de pantalla o el tipo de dispositivo, lo que mejora la optimización y la accesibilidad.</p>
-            <picture>
-                <!-- Imagen más pequeña para pantallas menores a 600px -->
-                <source srcset="https://placehold.co/300x200.webp" type="image/webp" media="(max-width: 600px)">
-                <source srcset="https://placehold.co/300x200.jpg" type="image/jpeg" media="(max-width: 600px)">
-                
-                <!-- Imagen mediana para pantallas entre 601px y 1024px -->
-                <source srcset="https://placehold.co/600x400.webp" type="image/webp" media="(max-width: 1024px)">
-                <source srcset="https://placehold.co/600x400.jpg" type="image/jpeg" media="(max-width: 1024px)">
-                
-                <!-- Imagen grande para pantallas mayores a 1025px -->
-                <source srcset="https://placehold.co/1200x800.webp" type="image/webp">
-                <source srcset="https://placehold.co/1200x800.jpg" type="image/jpeg">
-        
-                <!-- Fallback en caso de que <picture> no sea soportado -->
-                <img src="https://placehold.co/1200x800.jpg" alt="Imagen adaptable">
-            </picture>
-            
-            <h2>Buenas prácticas al usar &lt;picture&gt;</h2>
-            <ul>
-                <li>Usar imágenes optimizadas para diferentes tamaños de pantalla.</li>
-                <li>Emplear el atributo <code>media</code> en <code>&lt;source&gt;</code> para definir puntos de quiebre.</li>
-                <li>Siempre incluir un <code>&lt;img&gt;</code> de respaldo dentro de <code>&lt;picture&gt;</code> para navegadores sin soporte.</li>
-                <li>Optimizar imágenes en formatos modernos como WebP para mejor rendimiento.</li>
-                <li>Utilizar imágenes de alta resolución para pantallas con densidad de píxeles mayor (retina).</li>
-            </ul>
+            <h2>
+                <a href="https://juanfuent-es.github.io/html-starter/docs/responsive-images.html">Responsive Images</a>
+            </h2>
         </section>
         <section id="web-semantic">
             <h2>Web Semántica</h2>

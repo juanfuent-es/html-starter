@@ -22,19 +22,15 @@ html {
 
 
 :root {
-    --bg-color: #00F;
+    --bg-color: #FFF;
     --text-color: #1a1a1a;
     --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-title: 'Archivo Black', sans-serif;
-    --font-text: 'Open Sans', sans-serif;
-    --color-link: #000;
 }
 /* Modo dark detectado por media query */
 @media (prefers-color-scheme: dark) {
     :root {
         --bg-color: #1a1a1a;
         --text-color: #ffffff;
-        --color-link: #00F;
     }
 }
 body {

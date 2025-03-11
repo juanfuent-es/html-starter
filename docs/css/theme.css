@@ -1,0 +1,27 @@
+:root {
+    --bg-dark: #1a1a1a;
+    --text-dark: #ffffff;
+
+    --bg-light: #f0f0f0;
+    --text-light: #333333;
+}
+
+/* Estilos por defecto para modo light */
+body {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+}
+
+/* Modo dark detectado por media query */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--bg-dark);
+        color: var(--text-dark);
+    }
+}
+
+/* Estilos personalizados para modo dark */
+.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images | Guía de Estudio: Diseño y Desarrollo Web</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+    <!-- favicon -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/docs.css">
+</head>
+
+<body>
+    <header id="main-header">
+        <nav class="container">
+            <ul>
+                <li>
+                    <a href="../index.html" aria-label="Inicio">
+                        <img src="../img/centro-logo-white.svg" alt="Logotipo de CENTRO" width="100" height="20">
+                    </a>
+                </li>
+                <!-- urls de ejemplo como rutas de navegación -->
+                <li><a href="./html.html" class="box-link" title="HyperText Markup Language">HTML</a></li>
+                <li><a href="./css.html" class="box-link" title="Cascading Style Sheets">CSS</a></li>
+                <li><a href="./cheat-sheet.html" class="box-link" title="Keyboard Shortcuts">Cheat Sheet</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <!-- Contenido -->
+        <header>
+            <h1>Imágenes Responsivas</h1>
+            <p>Las imágenes responsivas son aquellas que se adaptan dinámicamente al tamaño y la resolución de la
+                pantalla del dispositivo que las está visualizando. <br>Esto no solo mejora la experiencia del usuario,
+                sino que también optimiza el rendimiento del sitio web, reduciendo el tiempo de carga y el consumo
+                de datos.</p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#ancho-pantalla">Ancho de Pantalla</a></li>
+                <li><a href="#tamano-imagen">Tamaño de la Imagen</a></li>
+                <li><a href="#formatos-imagen">Formatos de Imagen</a></li>
+                <li><a href="#srcset-sizes">¿Cómo funcionan srcset y sizes?</a></li>
+                <li><a href="#ejemplo-tres-versiones">Ejemplo: Tres Versiones de Imagen</a></li>
+                <li><a href="#ejemplo-logotipo-disney">Ejemplo: Logotipo Responsivo - Disney</a></li>
+                <li><a href="#conclusion">Conclusión</a></li>
+                <li><a href="#recursos">Recursos Externos</a></li>
+            </ul>
+        </nav>
+
+        <!-- Encabezado del artículo -->
+        <header>
+            <h1>El Uso de Imágenes Responsivas</h1>
+            <p>Consideraciones sobre ancho de pantalla, tamaño de imagen, densidad de píxeles y formatos de imagen.
+            </p>
+        </header>
+
+        <!-- Consideraciones clave -->
+        <section>
+            <h2>Consideraciones Clave para Imágenes Responsivas</h2>
+
+            <!-- Ancho de pantalla -->
+            <section id="ancho-pantalla">
+                <h3>1. Ancho de Pantalla</h3>
+                <p>El ancho de pantalla varía significativamente entre dispositivos. Para adaptarse a estas
+                    diferencias, se utilizan técnicas como:</p>
+                <ul>
+                    <li><strong>Media Queries en CSS</strong>: Permiten definir estilos específicos para diferentes
+                        anchos de pantalla.</li>
+                    <li><strong>Atributo <code>srcset</code> en HTML</strong>: Permite especificar diferentes
+                        versiones de una imagen para diferentes anchos de pantalla.</li>
+                </ul>
+                <p>Además, es importante considerar la <strong>densidad de píxeles</strong> del dispositivo. Por
+                    ejemplo, un dispositivo móvil con una pantalla de 320px de ancho y una densidad de 2x necesitará
+                    una imagen de 640px para verse nítida.</p>
+            </section>
+
+            <!-- Tamaño de la imagen -->
+            <section id="tamano-imagen">
+                <h3>2. Tamaño de la Imagen</h3>
+                <p>El tamaño de la imagen es crucial para el rendimiento. Para optimizarlo:</p>
+                <ul>
+                    <li><strong>Compresión de Imágenes</strong>: Usa herramientas como <a href="https://tinypng.com"
+                            target="_blank">TinyPNG</a>.</li>
+                    <li><strong>Formatos Modernos</strong>: Prefiere formatos como WebP o AVIF.</li>
+                </ul>
+            </section>
+
+            <!-- Formatos de imagen -->
+            <section id="formatos-imagen">
+                <h3>3. Formatos de Imagen</h3>
+                <p>Elegir el formato de imagen adecuado es esencial para equilibrar calidad y rendimiento. Algunos
+                    formatos comunes incluyen:</p>
+                <ul>
+                    <li><strong>JPEG</strong>: Ideal para fotografías, ofrece buena compresión pero sin
+                        transparencia.</li>
+                    <li><strong>PNG</strong>: Soporta transparencia, pero tiene un tamaño de archivo mayor.</li>
+                    <li><strong>WebP</strong>: Ofrece una compresión superior a JPEG y PNG, con soporte para
+                        transparencia y animación.</li>
+                    <li><strong>AVIF</strong>: Un formato moderno con compresión aún mejor que WebP, pero con
+                        soporte limitado en navegadores antiguos.</li>
+                </ul>
+            </section>
+
+            <!-- Explicación de srcset y sizes -->
+            <section id="srcset-sizes">
+                <h3>4. ¿Cómo funcionan <code>srcset</code> y <code>sizes</code>?</h3>
+                <p>Los atributos <code>srcset</code> y <code>sizes</code> son fundamentales para crear imágenes
+                    responsivas. Aquí te explicamos cómo funcionan:</p>
+
+                <h4>Atributo <code>srcset</code></h4>
+                <p>El atributo <code>srcset</code> permite especificar múltiples versiones de una imagen, cada una
+                    con un ancho o densidad de píxeles diferente. El navegador elige la imagen más adecuada según el
+                    dispositivo del usuario.</p>
+
+                <h4>Atributo <code>sizes</code></h4>
+                <p>El atributo <code>sizes</code> define cómo se mostrará la imagen en diferentes condiciones de
+                    pantalla. Especifica el tamaño que ocupará la imagen en función del ancho de la ventana del
+                    navegador.</p>
+            </section>
+        </section>
+
+        <!-- Ejemplo: Tres versiones de imagen -->
+        <section id="ejemplo-tres-versiones">
+            <h2>Ejemplo: Tres Versiones de Imagen</h2>
+            <p>Este ejemplo muestra cómo usar <code>srcset</code> y <code>sizes</code> para proporcionar tres
+                versiones de una imagen (chica, mediana, grande) adaptadas a dispositivos móviles, tablets y
+                desktops, considerando la densidad de píxeles.</p>
+            <figure>
+                <pre><code>&lt;img src="https://placehold.co/320x150?text=320w" 
+            srcset="https://placehold.co/320x150?text=320w 320w, 
+                    https://placehold.co/640x300?text=640w 640w, 
+                    https://placehold.co/1200x560?text=1200w 1200w" 
+            sizes="(max-width: 600px) 100vw, 
+                    (max-width: 900px) 50vw, 
+                    1200px" 
+            alt="Imagen responsiva"&gt;</code></pre>
+                <figcaption>Ejemplo de tres versiones de imagen para mobile, tablet y desktop.</figcaption>
+            </figure>
+            <img src="https://placehold.co/320x150?text=320w" srcset="https://placehold.co/320x150?text=320w 320w, 
+                            https://placehold.co/640x300?text=640w 640w, 
+                            https://placehold.co/1200x560?text=1200w 1200w" sizes="(max-width: 600px) 100vw, 
+                        (max-width: 900px) 50vw, 
+                        1200px" alt="Imagen responsiva">
+        </section>
+
+
+        <!-- Conclusión -->
+        <section id="conclusion">
+            <h2>Conclusión</h2>
+            <p>El uso de imágenes responsivas es esencial para crear experiencias web modernas y eficientes. Al
+                considerar el ancho de pantalla, el tamaño de la imagen, la densidad de píxeles y los formatos de
+                imagen, puedes garantizar que tus imágenes se vean bien en cualquier dispositivo sin comprometer el
+                rendimiento. Herramientas como <code>&lt;picture&gt;</code>, <code>srcset</code>, y
+                <code>sizes</code> son fundamentales para lograrlo.</p>
+        </section>
+
+        <!-- Recursos externos -->
+        <section id="recursos">
+            <h2>Recursos Externos</h2>
+            <ul>
+                <li><a href="https://tinypng.com" target="_blank">TinyPNG</a>: Herramienta para comprimir imágenes
+                    PNG y JPEG.</li>
+                <li><a href="https://placehold.co" target="_blank">Placehold.co</a>: Generador de imágenes de
+                    placeholder.</li>
+                <li><a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/picture" target="_blank">MDN:
+                        Elemento &lt;picture&gt;</a>: Documentación oficial sobre el elemento
+                    <code>&lt;picture&gt;</code>.</li>
+            </ul>
+        </section>
+
+        <header>
+            <h2>Logo Responsivo</h2>
+            <p><i>Caso de Uso</i></p>
+        </header>
+        <p>Este ejemplo muestra cómo usar la etiqueta <code>&lt;picture&gt;</code> para adaptar el logotipo
+            de Disney a diferentes tamaños de pantalla.</p>
+        <!-- https://responsivelogos.co.uk/
+        https://brandesign.es/branding/que-son-los-logos-responsive/ -->
+        <picture>
+            <!-- Versión para pantallas pequeñas (hasta 600px) -->
+            <source media="(max-width: 600px)" srcset="img/walt-disney-d-symbol.png">
+            <!-- Versión para pantallas medianas (601px - 900px) -->
+            <source media="(max-width: 900px)" srcset="img/walt-disney-logo.png">
+            <!-- Versión para pantallas grandes (901px - 1200px) -->
+            <source media="(max-width: 1200px)" srcset="img/walt-disney-full-logo.png">
+            <!-- Versión predeterminada (para pantallas mayores a 1200px) -->
+            <img src="img/walt-disney-pictures-logotype.png" alt="Logotipo de Disney" width="320"
+                style="width: 50%;">
+        </picture>
+    </main>
+    <!-- footer -->
+    <footer id="main-footer">
+        <div class="container">
+            <a href="https://centro.edu.mx/" target="_blank" title="centro.">
+                <img src="../img/centro-flag-loop.webp" alt="CENTRO Diseño, Cine y Televisión" width="80">
+            </a>
+            <small>CENTRO Diseño, Cine y Televisión 2025</small>
+        </div>
+    </footer>
+    <!-- footer -->
+</body>
+
+</html>

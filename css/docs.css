@@ -1,7 +1,8 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css');
 
 main.container {
-    padding: 2em 0;
+    padding: 2em 1em;
+    overflow-x: hidden;
 }
 
 header#main-header {
@@ -55,6 +56,10 @@ section, article {
     margin: 3em auto;
     width: 100%;
     max-width: 1024px;
+}
+
+pre {
+    overflow-x: auto;
 }
 
 footer#main-footer {

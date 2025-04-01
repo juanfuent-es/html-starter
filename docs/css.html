@@ -9,8 +9,8 @@
     <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
     <link rel="manifest" href="../favicon/site.webmanifest" />
     <!-- favicon -->
-    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
@@ -25,6 +25,7 @@
                 <!-- urls de ejemplo como rutas de navegación -->
                 <li><a href="./html.html" class="box-link" title="HyperText Markup Language">HTML</a></li>
                 <li><a href="./css.html" class="box-link active" title="Cascading Style Sheets">CSS</a></li>
+                <li><a href="./js.html" class="box-link" title="Javascript">JS</a></li>
                 <li><a href="./cheat-sheet.html" class="box-link" title="Keyboard Shortcuts & Commands">Cheat Sheet</a>
                 </li>
             </ul>
@@ -65,10 +66,12 @@
             <h3>Introducción a las Variables CSS</h3>
             <p>Variables CSS permiten definir valores reutilizables en una hoja de estilos.</p>
             <h3>Sintaxis</h3>
-            <code>:root {
-                --color_principal: #ff0000;
-                --tamaño_fuente: 16px;
-              }</code>
+<pre>
+:root {
+    --color_principal: #ff0000;
+    --tamaño_fuente: 16px;
+}
+</pre>
             <h3>Beneficios</h3>
             <ul>
                 <li>Mantenibilidad del código</li>
@@ -94,16 +97,17 @@
         <section id="usos_variables_temas">
             <h2>5. Uso de Variables y Temas</h2>
             <h3>Ejemplo práctico</h3>
-            <code>:root {
-                --color_fondo: #ffffff;
-                --color_texto: #333333;
-                --color_acento: #007bff;
-              }
-      
-              body {
-                background-color: var(--color_fondo);
-                color: var(--color_texto);
-              }</code>
+<pre>
+:root {
+    --color_fondo: #ffffff;
+    --color_texto: #333333;
+    --color_acento: #007bff;
+}
+
+body {
+    background-color: var(--color_fondo);
+    color: var(--color_texto);
+}</pre>
             <h3>Aplicación en un tema</h3>
             <ul>
                 <li>Definición de variables temáticas</li>

@@ -95,6 +95,11 @@ img {
     max-width: 100%;
 }
 
+code {
+    background-color: inherit;
+    color: inherit;
+}
+
 header {
     width: 100%;
 }
@@ -125,6 +130,10 @@ a.box-link {
 a.box-link:hover {
     transition: all 100ms ease-in;
     filter: invert(1);
+}
+a:visited,
+a:hover {
+    text-decoration: underline;
 }
 
 a.active {

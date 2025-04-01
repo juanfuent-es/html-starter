@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images | Guía de Estudio: Diseño y Desarrollo Web</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+    <!-- favicon -->
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <header id="main-header">
+        <nav class="container">
+            <ul>
+                <li>
+                    <a href="../index.html" aria-label="Inicio">
+                        <img src="../img/centro-logo-white.svg" alt="Logotipo de CENTRO" width="100" height="20">
+                    </a>
+                </li>
+                <!-- urls de ejemplo como rutas de navegación -->
+                <li><a href="./html.html" class="box-link" title="HyperText Markup Language">HTML</a></li>
+                <li><a href="./css.html" class="box-link" title="Cascading Style Sheets">CSS</a></li>
+                <li><a href="./js.html" class="box-link" title="Javascript">JS</a></li>
+                <li><a href="./cheat-sheet.html" class="box-link" title="Keyboard Shortcuts">Cheat Sheet</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <!-- Contenido -->
+        <header>
+            <h1>Programación Orientada a Objetos (POO)</h1>
+            <p>Paradigma de programación que organiza el código en torno a objetos, que representan entidades del mundo real con propiedades y comportamientos.</p>
+        </header>
+        <section id="poo">
+        
+            <h2>Temario</h2>
+            <ol>
+                <li><a href="#conceptos-basicos">Conceptos Básicos</a></li>
+                <li><a href="#objetos">Objetos</a></li>
+                <li><a href="#clases">Clases</a></li>
+                <li><a href="#herencia">Herencia</a></li>
+                <li><a href="#polimorfismo">Polimorfismo</a></li>
+                <li><a href="#encapsulacion">Encapsulación</a></li>
+            </ol>
+        
+            <section id="conceptos-basicos">
+                <h2>1. Conceptos Básicos</h2>
+                <p>La POO se basa en cuatro pilares fundamentales: objetos, clases, herencia, polimorfismo y encapsulación. Estos conceptos permiten modelar entidades del mundo real en el código.</p>
+            </section>
+        
+            <section id="objetos">
+                <h2>2. Objetos</h2>
+                <p>Un objeto es una entidad que agrupa datos (propiedades) y funciones (métodos). Representa una instancia de una clase.</p>
+                <pre>
+        <code>
+        // Ejemplo de objeto
+        const persona = {
+            nombre: "Juan",
+            edad: 30,
+            saludar: function() {
+                return `Hola, mi nombre es ${this.nombre}.`;
+            }
+        };
+        
+        console.log(persona.saludar()); // Output: Hola, mi nombre es Juan.
+        </code>
+                </pre>
+            </section>
+        
+            <section id="clases">
+                <h2>3. Clases</h2>
+                <p>Una clase es una plantilla para crear objetos. Define las propiedades y métodos que tendrán las instancias de la clase.</p>
+                <pre>
+        <code>
+        // Ejemplo de clase
+        class Persona {
+            constructor(nombre, edad) {
+                this.nombre = nombre;
+                this.edad = edad;
+            }
+        
+            saludar() {
+                return `Hola, mi nombre es ${this.nombre} y tengo ${this.edad} años.`;
+            }
+        }
+        
+        const persona1 = new Persona("Juan", 30);
+        console.log(persona1.saludar()); // Output: Hola, mi nombre es Juan y tengo 30 años.
+        </code>
+                </pre>
+            </section>
+        
+            <section id="herencia">
+                <h2>4. Herencia</h2>
+                <p>La herencia permite que una clase (clase hija) herede las propiedades y métodos de otra clase (clase padre).</p>
+                <pre>
+        <code>
+        // Ejemplo de herencia
+        class Animal {
+            constructor(nombre) {
+                this.nombre = nombre;
+            }
+        
+            hacerSonido() {
+                return `${this.nombre} hace un sonido.`;
+            }
+        }
+        
+        class Perro extends Animal {
+            hacerSonido() {
+                return `${this.nombre} ladra.`;
+            }
+        }
+        
+        const perro = new Perro("Firulais");
+        console.log(perro.hacerSonido()); // Output: Firulais ladra.
+        </code>
+                </pre>
+            </section>
+        
+            <section id="polimorfismo">
+                <h2>5. Polimorfismo</h2>
+                <p>El polimorfismo permite que un método se comporte de manera diferente según el objeto que lo invoque.</p>
+                <pre>
+        <code>
+        // Ejemplo de polimorfismo
+        class Animal {
+            hacerSonido() {
+                return "Este animal hace un sonido.";
+            }
+        }
+        
+        class Gato extends Animal {
+            hacerSonido() {
+                return "El gato maúlla.";
+            }
+        }
+        
+        const animal = new Animal();
+        const gato = new Gato();
+        
+        console.log(animal.hacerSonido()); // Output: Este animal hace un sonido.
+        console.log(gato.hacerSonido());   // Output: El gato maúlla.
+        </code>
+                </pre>
+            </section>
+        
+            <section id="encapsulacion">
+                <h2>6. Encapsulación</h2>
+                <p>La encapsulación consiste en restringir el acceso directo a las propiedades de un objeto, permitiendo su manipulación solo a través de métodos.</p>
+                <pre>
+        <code>
+        // Ejemplo de encapsulación
+        class CuentaBancaria {
+            #saldo; // Propiedad privada
+        
+            constructor(saldoInicial) {
+                this.#saldo = saldoInicial;
+            }
+        
+            depositar(cantidad) {
+                this.#saldo += cantidad;
+            }
+        
+            obtenerSaldo() {
+                return this.#saldo;
+            }
+        }
+        
+        const cuenta = new CuentaBancaria(1000);
+        cuenta.depositar(500);
+        console.log(cuenta.obtenerSaldo()); // Output: 1500
+        </code>
+                </pre>
+            </section>
+        </section>
+        <section id="objetos">
+            <h2>Objetos en JavaScript</h2>
+            <p>Un objeto es una estructura que agrupa datos (propiedades) y funciones (métodos) relacionados. Las propiedades son pares clave-valor, y los métodos son funciones asociadas al objeto.</p>
+        
+            <h3>Estructura de un Objeto</h3>
+            <pre>
+        <code>
+        const objeto = {
+            clave1: valor1,
+            clave2: valor2,
+            metodo: function() {
+                // Código del método
+            }
+        };
+        </code>
+            </pre>
+        
+            <h3>Cómo Funciona un Objeto</h3>
+            <ul>
+                <li><strong>Propiedades:</strong> Datos almacenados en el objeto.</li>
+                <li><strong>Métodos:</strong> Funciones asociadas al objeto que pueden manipular sus propiedades.</li>
+                <li><strong>Acceso:</strong> Se puede acceder a las propiedades y métodos usando la notación de punto (<code>objeto.propiedad</code>) o de corchetes (<code>objeto["propiedad"]</code>).</li>
+            </ul>
+        
+            <h3>Ejemplo Básico</h3>
+            <pre>
+        <code>
+        const persona = {
+            nombre: "Juan",
+            edad: 30,
+            saludar: function() {
+                return `Hola, mi nombre es ${this.nombre} y tengo ${this.edad} años.`;
+            }
+        };
+        
+        console.log(persona.nombre); // Output: Juan
+        console.log(persona.saludar()); // Output: Hola, mi nombre es Juan y tengo 30 años.
+        </code>
+            </pre>
+        
+            <h3>Creación de Objetos</h3>
+            <ul>
+                <li><strong>Objeto Literal:</strong> Se crea directamente usando llaves <code>{}</code>.</li>
+                <li><strong>Objeto con Constructor:</strong> Se utiliza una función constructora para crear múltiples instancias.</li>
+                <li><strong>Clases:</strong> Introducidas en ES6, son una forma moderna de crear objetos.</li>
+            </ul>
+        
+            <h4>Ejemplo: Objeto Literal</h4>
+            <pre>
+        <code>
+        const coche = {
+            marca: "Toyota",
+            modelo: "Corolla",
+            año: 2022
+        };
+        </code>
+            </pre>
+
+            <h3>Manipulación de Objetos</h3>
+            <ul>
+                <li><strong>Agregar Propiedades:</strong> Se pueden agregar nuevas propiedades dinámicamente.</li>
+                <li><strong>Eliminar Propiedades:</strong> Se utiliza la palabra clave <code>delete</code>.</li>
+                <li><strong>Iterar sobre un Objeto:</strong> Se puede usar <code>for...in</code> para recorrer las propiedades.</li>
+            </ul>
+        
+            <h4>Ejemplo: Agregar y Eliminar Propiedades</h4>
+            <pre>
+        <code>
+        const persona = {};
+        persona.nombre = "Juan";
+        persona.edad = 30;
+        console.log(persona); // Output: { nombre: "Juan", edad: 30 }
+        
+        delete persona.edad;
+        console.log(persona); // Output: { nombre: "Juan" }
+        </code>
+            </pre>
+        
+            <h4>Ejemplo: Iterar sobre un Objeto</h4>
+            <pre>
+        <code>
+        const persona = { nombre: "Juan", edad: 30 };
+        for (let clave in persona) {
+            console.log(`${clave}: ${persona[clave]}`);
+        }
+        // Output:
+        // nombre: Juan
+        // edad: 30
+        </code>
+            </pre>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer id="main-footer">
+        <div class="container">
+            <a href="https://centro.edu.mx/" target="_blank" title="centro.">
+                <img src="../img/centro-flag-loop.webp" alt="CENTRO Diseño, Cine y Televisión" width="80">
+            </a>
+            <small>CENTRO Diseño, Cine y Televisión 2025</small>
+        </div>
+    </footer>
+    <!-- footer -->
+</body>
+
+</html>

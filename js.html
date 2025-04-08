@@ -78,9 +78,157 @@ console.log(nombre); // Output: María
                     <li><strong>object:</strong> Colección de propiedades y métodos.</li>
                 </ul>
             </div>
+
+            <h2>1. Introducción a los Arrays</h2>
+            <ul>
+                <li>Definición y características de los arrays</li>
+                <li>Creación de arrays: literales y constructor</li>
+                <li>Acceso a elementos por índice</li>
+                <li>Propiedad length</li>
+                <li>Arrays son objetos especiales</li>
+            </ul>
+            
+            <h2>2. Métodos Básicos de Arrays</h2>
+            
+            <div class="method">
+                <h3 class="method-name">push() y pop()</h3>
+                <p><code>array.push(elemento1, ..., elementoN)</code> - Añade uno o más elementos al final del array.</p>
+                <p><code>array.pop()</code> - Elimina y devuelve el último elemento del array.</p>
+            </div>
+            
+            <div class="method">
+                <h3 class="method-name">shift() y unshift()</h3>
+                <p><code>array.shift()</code> - Elimina y devuelve el primer elemento del array.</p>
+                <p><code>array.unshift(elemento1, ..., elementoN)</code> - Añade uno o más elementos al inicio del array.</p>
+            </div>
+            
+            <div class="method">
+                <h3 class="method-name">concat()</h3>
+                <p><code>array.concat(valor1, valor2, ..., valorN)</code> - Combina dos o más arrays y devuelve un nuevo array.</p>
+            </div>
+            
+            <div class="method">
+                <h3 class="method-name">slice()</h3>
+                <p><code>array.slice(inicio, fin)</code> - Devuelve una copia superficial de una porción del array.</p>
+            </div>
+            
+            <div class="method">
+                <h3 class="method-name">splice()</h3>
+                <p><code>array.splice(inicio, cantidad, elemento1, ..., elementoN)</code> - Cambia el contenido de un array eliminando, reemplazando o añadiendo elementos.</p>
+            </div>
+            
+            <h2>3. Métodos de Búsqueda</h2>
+            
+            <div class="method">
+                <h3 class="method-name">indexOf() y lastIndexOf()</h3>
+                <p><code>array.indexOf(elemento, desdeIndice)</code> - Devuelve el primer índice donde se encuentra un elemento.</p>
+                <p><code>array.lastIndexOf(elemento, desdeIndice)</code> - Devuelve el último índice donde se encuentra un elemento.</p>
+            </div>
+            
+            <div class="method">
+                <h3 class="method-name">includes()</h3>
+                <p><code>array.includes(elemento, desdeIndice)</code> - Determina si un array incluye un determinado elemento.</p>
+            </div>
+            
+            <div class="method">
+                <h3 class="method-name">find() y findIndex()</h3>
+                <p><code>array.find(funcion(elemento, indice, array))</code> - Devuelve el primer elemento que cumple con la condición.</p>
+                <p><code>array.findIndex(funcion(elemento, indice, array))</code> - Devuelve el índice del primer elemento que cumple con la condición.</p>
+            </div>
+            
+            <h2>4. Métodos de Iteración</h2>
+            
+            <div class="method">
+                <h3 class="method-name">forEach()</h3>
+                <p><code>array.forEach(funcion(elemento, indice, array))</code> - Ejecuta una función por cada elemento del array.</p>
+            </div>
+            
+            <div class="method">
+                <h3 class="method-name">map()</h3>
+                <p><code>array.map(funcion(elemento, indice, array))</code> - Crea un nuevo array con los resultados de la función aplicada a cada elemento.</p>
+            </div>
+            
+            <div class="method">
+                <h3 class="method-name">filter()</h3>
+                <p><code>array.filter(funcion(elemento, indice, array))</code> - Crea un nuevo array con todos los elementos que pasan la prueba.</p>
+            </div>
+            
+            <div class="method">
+                <h3 class="method-name">reduce() y reduceRight()</h3>
+                <p><code>array.reduce(funcion(acumulador, elemento, indice, array), valorInicial)</code> - Aplica una función a un acumulador y cada elemento para reducirlo a un único valor.</p>
+                <p><code>array.reduceRight()</code> - Igual que reduce pero procesa el array de derecha a izquierda.</p>
+            </div>
+            
+            <div class="method">
+                <h3 class="method-name">every() y some()</h3>
+                <p><code>array.every(funcion(elemento, indice, array))</code> - Comprueba si todos los elementos cumplen una condición.</p>
+                <p><code>array.some(funcion(elemento, indice, array))</code> - Comprueba si al menos un elemento cumple una condición.</p>
+            </div>
+            
+            <h2>5. Métodos de Transformación</h2>
+            
+            <div class="method">
+                <h3 class="method-name">join()</h3>
+                <p><code>array.join(separador)</code> - Une todos los elementos de un array en una cadena.</p>
+            </div>
+            
+            <div class="method">
+                <h3 class="method-name">reverse()</h3>
+                <p><code>array.reverse()</code> - Invierte el orden de los elementos de un array.</p>
+            </div>
+            
+            <div class="method">
+                <h3 class="method-name">sort()</h3>
+                <p><code>array.sort(funcionComparacion)</code> - Ordena los elementos de un array.</p>
+            </div>
+            
+            <div class="method">
+                <h3 class="method-name">flat() y flatMap()</h3>
+                <p><code>array.flat(nivelProfundidad)</code> - Crea un nuevo array con todos los elementos de sub-array concatenados.</p>
+                <p><code>array.flatMap(funcion(elemento, indice, array))</code> - Mapea cada elemento y luego aplana el resultado.</p>
+            </div>
+            
+            <h2>6. Arrays y el Operador Spread</h2>
+            <ul>
+                <li>Uso del operador spread (...) con arrays</li>
+                <li>Copiar arrays</li>
+                <li>Concatenar arrays</li>
+                <li>Pasar elementos como argumentos de función</li>
+            </ul>
+            
+            <h2>7. Arrays Multidimensionales</h2>
+            <ul>
+                <li>Definición y creación</li>
+                <li>Acceso a elementos</li>
+                <li>Iteración sobre arrays multidimensionales</li>
+            </ul>
+            
+            <h2>8. Métodos Estáticos de Array</h2>
+            
+            <div class="method">
+                <h3 class="method-name">Array.isArray()</h3>
+                <p><code>Array.isArray(valor)</code> - Determina si el valor pasado es un array.</p>
+            </div>
+            
+            <div class="method">
+                <h3 class="method-name">Array.from()</h3>
+                <p><code>Array.from(objetoIterable, funcionMapeo, thisArg)</code> - Crea una nueva instancia de Array a partir de un objeto iterable.</p>
+            </div>
+            
+            <div class="method">
+                <h3 class="method-name">Array.of()</h3>
+                <p><code>Array.of(elemento0, elemento1, ..., elementoN)</code> - Crea un nuevo array con un número variable de elementos.</p>
+            </div>
+            
+            <h2>9. Buenas Prácticas y Consideraciones</h2>
+            <ul>
+                <li>Mutabilidad vs Inmutabilidad</li>
+                <li>Rendimiento de diferentes métodos</li>
+                <li>Uso adecuado de métodos según el caso</li>
+                <li>Compatibilidad con versiones anteriores de JavaScript</li>
+            </ul>
         </section>
-
-
+            
         <section id="funciones">
             <h2>Funciones</h2>
             <p>Bloques de código reutilizables que realizan una tarea específica. En JavaScript, existen tres tipos principales de funciones: declarativas, expresivas y funciones flecha.</p>

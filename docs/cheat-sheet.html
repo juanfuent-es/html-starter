@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortcuts & Commands</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    <!-- favicon -->
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header id="main-header">
+        <nav class="container">
+            <ul>
+                <li>
+                    <a href="./index.html" aria-label="Inicio">
+                        <img src="/img/centro-logo.svg" alt="Logotipo de CENTRO" width="100" height="20">
+                    </a>
+                </li>
+                <li><a href="./html.html" class="box-link" title="HyperText Markup Language">HTML</a></li>
+                <li><a href="./css.html" class="box-link" title="Cascading Style Sheets">CSS</a></li>
+<li><a href="./js.html" class="box-link" title="Javascript">JS</a></li>
+                <li><a href="./cheat-sheet.html" class="box-link active" title="Keyboard Shortcuts & Commands">Cheat
+                        Sheet</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header -->
+    <main class="container">
+        <!-- Contenido -->
+        <article>
+            <header>
+                <h1>Shortcuts & Commands</h1>
+                <p>
+                    Visual Studio - Keyboards Shortcuts
+                    <a target="_blank" class=""
+                        href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf"
+                        title="VSCode - Shortcuts para Mac"> Mac</a> |
+                    <a target="_blank" class=""
+                        href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf"
+                        title="VSCode - Shortcuts para Windows">Windows</a>
+                </p>
+            </header>
+        </article>
+        <section>
+            <h2>Comandos Básicos de Terminal</h2>
+            <ul>
+                <li>
+                    <code>cd &lt;directorio&gt;</code> Cambia de ruta a &lt;directorio&gt;
+                </li>
+                <li>
+                    <code>cd ..</code> Sube un directorio al directorio actual.
+                </li>
+                <li>
+                    <code>ls</code> Lista los archivos y directorios en el directorio actual.
+                </li>
+                <li>
+                    <code>pwd</code> Muestra la ruta del directorio actual.
+                </li>
+                <li>
+                    <code>mkdir</code> Crea un nuevo directorio.
+                </li>
+                <li>
+                    <code>rm</code> Elimina archivos o directorios.
+                </li>
+                <li>
+                    <code>cp</code> Copia archivos o directorios.
+                </li>
+                <li>
+                    <code>mv</code> Mueve o renombra archivos o directorios.
+                </li>
+                <li>
+                    <code>echo</code> Muestra un mensaje en la terminal.
+                </li>
+                <li>
+                    <code>cat</code> Muestra el contenido de un archivo.
+                </li>
+            </ul>
+        </section>
+        <section id="clone-repo">
+            <h2>Comandos Básicos de Git</h2>
+            <section id="git-commands">
+                <p>Comandos básicos de Git para el control de versiones:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Command</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>git init</code></td>
+                            <td>Inicializa un nuevo repositorio de Git</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>git clone &lt;url&gt;</code>
+                            </td>
+                            <td>Clona un repositorio existente desde una URL.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>git status</code>
+                            </td>
+                            <td>Muestra el estado de los cambios en el repositorio.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>git add .</code>
+                            </td>
+                            <td>Añade todos los archivos al área de preparación (staging area).</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>git add &lt;archivo&gt;</code>
+                            </td>
+                            <td>Añade un archivo al área de preparación (staging area).</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>git commit -m "mensaje"</code>
+                            </td>
+                            <td>Realiza un commit de los cambios en el área de preparación con un mensaje
+                                descriptivo.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>git push</code>
+                            </td>
+                            <td>Envía los commits locales al repositorio remoto.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>git pull</code>
+                            </td>
+                            <td>Actualiza el repositorio local con los cambios del repositorio remoto.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>git branch</code>
+                            </td>
+                            <td>Lista, crea o elimina ramas.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>git checkout &lt;rama&gt;</code>
+                            </td>
+                            <td>Cambia a una rama específica.</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <code>git merge &lt;rama&gt;</code>
+                            </td>
+                            <td>Fusiona una rama específica con la rama actual.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h2>GitHub vía SSH</h2>
+                <ul>
+                    <li><code>git config --global user.name "Tu Nombre"</code></li>
+                    <li><code>git config --global user.email "tuemail@example.com"</code></li>
+                    <li><code>ssh-keygen</code></li>
+                </ul>
+                <p>
+                    <i>*Para más información, visita:</i>
+                    <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh"
+                        target="_blank" title="Connecting to GitHub with SSH">Github Docs</a>
+                </p>
+            </section>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer id="main-footer">
+        <div class="container">
+            <a href="https://centro.edu.mx/" target="_blank" title="centro.">
+                <img src="../img/centro-flag-loop.webp" alt="CENTRO Diseño, Cine y Televisión" width="80">
+            </a>
+            <small>CENTRO Diseño, Cine y Televisión 2025</small>
+        </div>
+    </footer>
+    <!-- footer -->
+</body>
+
+</html>

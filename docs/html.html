@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HyperText Markup Language</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="manifest" href="manifest.json" />
+    <!-- favicon -->
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+    <header id="main-header">
+        <nav class="container">
+            <ul>
+                <li>
+                    <a href="./index.html" aria-label="Inicio">
+                        <img src="img/centro-logo.svg" alt="Logotipo de CENTRO" width="100" height="20">
+                    </a>
+                </li>
+                <li><a href="./html.html" class="box-link active" title="HyperText Markup Language">HTML</a></li>
+                <li><a href="./css.html" class="box-link" title="Cascading Style Sheets">CSS</a></li>
+<li><a href="./js.html" class="box-link" title="Javascript">JS</a></li>
+                <li><a href="./cheat-sheet.html" class="box-link" title="Keyboard Shortcuts & Commands">Cheat Sheet</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <!-- Contenido -->
+        <section id="index">
+            <header>
+                <h1>HTML</h1>
+                <p>HyperText Markup Language</p>
+            </header>
+            <nav>
+                <h2>Índice</h2>
+                <ol>
+                    <li><a href="#html">¿Qué es HTML?</a></li>
+                    <li><a href="#tags">Etiquetas</a></li>
+                    <li><a href="#document">Estructura de documento</a></li>
+                    <li><a href="#common-tags">Etiquetas más comunes</a></li>
+                    <li><a href="#attributes">Atributos HTML</a></li>
+                    <li><a href="#semantic-tags">Etiquetas Semánticas</a></li>
+                    <li><a href="#example">Ejemplo Markup Semántico</a></li>
+                    <li><a href="#favicons">Favicons</a></li>
+                    <li><a href="#links">Links</a></li>
+                    <li><a href="https://juanfuent-es.github.io/html-starter/docs/responsive-images.html" target="_blank">Responsive Images</a></li>
+                    <li><a href="#web-semantic">Web Semántica</a></li>
+                    <li><a href="#git-github">Git & GitHub</a></li>
+                </ol>
+            </nav>
+        </section>
+        <section id="html">
+            <h2>¿Qué es HTML?</h2>
+            <ul>
+                <li>Es un lenguaje de marcado, NO de programación.</li>
+                <li>Se utiliza para crear y estructurar el contenido de sitios web.</li>
+                <li>Está basado en etiquetas para marcar diferentes elementos de una página, tales como encabezados, párrafos, listas, imágenes y enlaces.</li>
+            </ul>
+        </section>
+        <section id="tags">
+            <h2>Etiquetas HTML</h2>
+            <ul>
+                <li>Son la base de la estructura de un documento web.</li>
+                <li>Cada etiqueta tiene un propósito específico y define cómo se debe mostrar el contenido en el navegador.</li>
+                <li>Se escriben entre corchetes angulares &lt; y &gt;, y generalmente vienen en pares: una etiqueta de apertura y una etiqueta de cierre.</li>
+                <li>La etiqueta de apertura marca el inicio de un elemento, mientras que la etiqueta de cierre marca el final del elemento. La etiqueta de cierre siempre lleva una barra diagonal / antes del nombre de la etiqueta.</li>
+            </ul>
+<pre>
+&lt;!-- Esto es una etiqueta de comentario --&gt;
+
+&lt;!-- h1 Etiqueta de título principal --&gt;
+&lt;h1&gt;Hola Mundo&lt;/h1&gt;
+
+&lt;!-- Etiqueta de imagen, no cierra con par --&gt;
+&lt;img src="/centro-logo.svg" alt="CENTRO" width="100"&gt;
+</pre>
+        </section>
+        <section id="document">
+            <h2>Estructura de documento</h2>
+            <p>Ejemplo: <em>index.html</em></p>
+<pre>
+    &lt;!DOCTYPE html&gt; 
+    &lt;html lang="en"&gt; 
+        &lt;head&gt; 
+            &lt;meta charset="UTF-8"&gt; 
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; 
+            &lt;title&gt;Hola Mundo&lt;/title&gt; 
+        &lt;/head&gt; 
+        &lt;body&gt; 
+            &lt;!-- Contenido de la página --&gt; 
+        &lt;/body&gt; 
+    &lt;/html&gt;
+</pre>
+            <p><small><em>*Markup básico, recomendable escribir todas las etiquetas de base.</em></small></p>
+            <ul>
+                <li>Los documentos <code>html</code> se guardan como archivos con la extensión <code>.html</code> o <code>.htm</code></li>
+                <li>La etiqueta <code>&lt;!DOCTYPE html&gt;</code> declara el tipo de documento como HTML5.</li>
+                <li>La etiqueta <code>&lt;html&gt;</code> es la etiqueta raíz que contiene todo el contenido del documento.</li>
+                <li>La etiqueta <code>&lt;head&gt;</code> contiene metadatos sobre el documento, como el título, la codificación de caracteres y enlaces a hojas de estilo.</li>
+                <li>La etiqueta <code>&lt;body&gt;</code> contiene todo el contenido visible de la página web.</li>
+            </ul>
+        </section>
+        <section id="common-tags">
+            <h2>Etiquetas más comunes</h2>
+            <ul>
+                <li><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code> para encabezados de diferentes niveles.</li>
+                <li><code>&lt;p&gt;</code> para párrafos de texto.</li>
+                <li><code>&lt;ul&gt;</code> y <code>&lt;ol&gt;</code> para listas no ordenadas y ordenadas, respectivamente.</li>
+                <li><code>&lt;li&gt;</code> para elementos de lista.</li>
+                <li><code>&lt;a&gt;</code> para enlaces.</li>
+                <li><code>&lt;img&gt;</code> para imágenes.</li>
+                <li><code>&lt;div&gt;</code> y <code>&lt;span&gt;</code> para agrupar elementos.</li>
+            </ul>
+        </section>
+        <section id="attributes">
+            <h2>Atributos HTML</h2>
+            <ul>
+                <li>Proporcionan información adicional sobre los elementos HTML. Se escriben dentro de la etiqueta de apertura y consisten en un nombre y un valor, separados por un signo igual =.</li>
+                <li>Se utilizan para especificar propiedades de los elementos, como el color, el tamaño, la fuente, la alineación, etc.</li>
+            </ul>
+            <code>&lt;img src="/ruta-a-imagen.jpg" alt="Descripción de imagen" width="100"&gt;</code>
+        </section>
+        <section id="semantic-tags">
+            <h2>Etiquetas Semánticas</h2>
+            <p>HTML5 introdujo una serie de etiquetas semánticas que han revolucionado la forma en que estructuramos el contenido web. Algunas de las más importantes son:</p>
+            <table >
+                <thead>
+                    <tr>
+                        <th>Etiqueta</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <code>&lt;header&gt;</code>
+                        </td>
+                        <td>
+                            Define la cabecera de una página o sección. Generalmente contiene el título principal, el logotipo y elementos de navegación.</li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;nav&gt;</code>
+                        </td>
+                        <td>
+                            Indica una sección de navegación con enlaces a otras páginas o secciones del sitio web.</li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;main&gt;</code>
+                        </td>
+                        <td>
+                            Representa el contenido principal y único de una página. Debe haber un solo elemento <code>&lt;main&gt;</code> por página.</li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;article&gt;</code>
+                        </td>
+                        <td>
+                            Define un contenido independiente y autónomo que se puede reutilizar en diferentes contextos, como un artículo de blog, una noticia o una publicación en un foro.</li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;section&gt;</code>
+                        </td>
+                        <td>
+                            Agrupa contenido temáticamente relacionado dentro de una página. Se utiliza para dividir el contenido en secciones más pequeñas y manejables.</li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;aside&gt;</code>
+                        </td>
+                        <td>
+                            Contiene información adicional o complementaria relacionada con el contenido principal, como barras laterales, anuncios o enlaces relacionados.</li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;footer&gt;</code>
+                        </td>
+                        <td>
+                            Define el pie de página de una página o sección. Suele contener información sobre derechos de autor, enlaces a otras páginas y datos de contacto.</li>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="example">
+            <h2>Ejemplo Markup Semántico</h2>
+<pre>
+    &lt;header&gt; 
+        &lt;h1&gt;Título de la página&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul&gt; 
+                &lt;li&gt;&lt;a href="#"&gt;Enlace 1&lt;/a&gt;&lt;/li&gt; 
+                &lt;li&gt;&lt;a href="#"&gt;Enlace 2&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt; 
+    &lt;/header&gt; 
+    &lt;main&gt; 
+        &lt;article&gt; 
+            &lt;h2&gt;Título del artículo&lt;/h2&gt; 
+            &lt;p&gt;Contenido del artículo.&lt;/p&gt; 
+        &lt;/article&gt; 
+        &lt;aside&gt; 
+            &lt;h3&gt;Contenido relacionado&lt;/h3&gt; 
+            &lt;p&gt;Información adicional.&lt;/p&gt;
+        &lt;/aside&gt; 
+    &lt;/main&gt;
+    &lt;footer&gt;
+        &lt;p&gt;Pie de página.&lt;/p&gt;
+    &lt;/footer&gt;
+</pre>
+        </section>
+        <section id="favicons">
+            <section>
+                <h2>¿Qué es un Favicon?</h2>
+                <p>Un favicon es un pequeño icono que aparece en la pestaña del navegador, en los marcadores y en otros lugares. Ayuda a identificar visualmente el sitio web.</p>
+            </section>
+            <section>
+                <h2>Ejemplos de Favicon</h2>
+                <p>A continuación se muestran diferentes formas de incluir un favicon en tu sitio web:</p>
+                <h3>Favicon básico</h3>
+    <pre>
+    &lt;link rel="icon" href="img/favicon.ico" type="image/x-icon"&gt;
+    </pre>
+                <h3>Favicon en formato PNG</h3>
+    <pre>
+    &lt;link rel="icon" href="img/favicon.png" type="image/png"&gt;
+    </pre>
+                <h3>Favicon para dispositivos Apple</h3>
+    <pre>
+    &lt;link rel="apple-touch-icon" href="img/apple-touch-icon.png"&gt;
+    </pre>
+                <h3>Manifest para aplicaciones web progresivas</h3>
+    <pre>
+    &lt;link rel="manifest" href="manifest.json"&gt;
+    </pre>
+            </section>
+            <section>
+                <h2>Buenas Prácticas</h2>
+                <ul>
+                    <li>Usar un favicon de 16x16 píxeles para navegadores.</li>
+                    <li>Incluir versiones de mayor resolución para dispositivos de alta densidad de píxeles.</li>
+                    <li>Asegurarse de que el favicon sea representativo del sitio web.</li>
+                    <li>Utilizar el formato ICO/PNG para compatibilidad con todos los navegadores.</li>
+                    <li>Incluir favicons en formato SVG para dispositivos modernos.</li>
+                    <li>Proporcionar un archivo de manifiesto para aplicaciones web progresivas.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Referencias</h2>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/es/docs/Web/HTML/Elemento/link" target="_blank">Documentación de MDN sobre el elemento &lt;link&gt;</a></li>
+                    <li><a href="https://web.dev/add-manifest/" target="_blank">Guía de Google sobre cómo agregar un manifiesto</a></li>
+                    <li><a href="https://realfavicongenerator.net/" target="_blank">Generador de favicons</a></li>
+                </ul>
+            </section>
+        </section>
+        <section id="links">
+            <section>
+                <h2>Rutas Absolutas</h2>
+                <p>Una ruta absoluta especifica la ubicación completa de un recurso, incluyendo el protocolo (http, https) y el dominio.</p>
+                <p>Ejemplo:</p>
+                <a href="https://www.example.com">Enlace a Example.com</a>
+            </section>
+            <section>
+                <h2>Rutas Relativas</h2>
+                <p>Una ruta relativa especifica la ubicación de un recurso en relación con la ubicación actual del documento.</p>
+                <p>Ejemplos:</p>
+                <ul>
+                    <li><code>&lt;a href="pagina.html"&gt;Enlace a página en el mismo directorio&lt;/a&gt;</code></li>
+                    <li><code>&lt;a href="./pagina.html"&gt;Enlace a página en el mismo directorio (con ./)&lt;/a&gt;</code></li>
+                    <li><code>&lt;a href="../pagina.html"&gt;Enlace a página en el directorio padre&lt;/a&gt;</code></li>
+                    <li><code>&lt;a href="/pagina.html"&gt;Enlace a página en la raíz del sitio&lt;/a&gt;</code></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Prefijos de Rutas Relativas</h2>
+                <p>Los prefijos './', '../' y '/' se utilizan para navegar por el sistema de archivos relativo a la ubicación del documento actual.</p>
+                <ul>
+                    <li><strong>'./'</strong>: Se refiere al directorio actual.</li>
+                    <li><strong>'../'</strong>: Se refiere al directorio padre del directorio actual.</li>
+                    <li><strong>'/'</strong>: Se refiere a la raíz del sitio web.</li>
+                </ul>
+                <p>Ejemplos:</p>
+                <ul>
+                    <li><code>&lt;a href="./pagina.html"&gt;Enlace a página en el mismo directorio&lt;/a&gt;</code></li>
+                    <li><code>&lt;a href="../pagina.html"&gt;Enlace a página en el directorio padre&lt;/a&gt;</code></li>
+                    <li><code>&lt;a href="/pagina.html"&gt;Enlace a página en la raíz del sitio&lt;/a&gt;</code></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Ejemplos Prácticos</h2>
+                <p>Supongamos que tenemos la siguiente estructura de directorios:</p>
+    <pre>
+    /d:/CENTRO/www/
+    ├── index.html
+    ├── docs/
+    │   ├── html.html
+    │   ├── css.html
+    │   └── cheat-sheet.html
+    └── img/
+        └── centro-logo.svg
+    </pre>
+                <p>Desde <code>index.html</code>:</p>
+                <ul>
+                    <li><code>&lt;a href="docs/html.html"&gt;HTML&lt;/a&gt;</code> - Enlace a <code>html.html</code> en el directorio <code>docs</code>.</li>
+                    <li><code>&lt;a href="img/centro-logo.svg"&gt;Logo&lt;/a&gt;</code> - Enlace a <code>centro-logo.svg</code> en el directorio <code>img</code>.</li>
+                </ul>
+                <p>Desde <code>docs/html.html</code>:</p>
+                <ul>
+                    <li><code>&lt;a href="../index.html"&gt;Inicio&lt;/a&gt;</code> - Enlace a <code>index.html</code> en el directorio raíz.</li>
+                    <li><code>&lt;a href="../img/centro-logo.svg"&gt;Logo&lt;/a&gt;</code> - Enlace a <code>centro-logo.svg</code> en el directorio <code>img</code>.</li>
+                </ul>
+            </section>
+        </section>
+        <section id="image">
+            <h2>
+                <a href="https://juanfuent-es.github.io/html-starter/docs/responsive-images.html">Responsive Images</a>
+            </h2>
+        </section>
+        <section id="web-semantic">
+            <h2>Web Semántica</h2>
+            <ul>
+                <li><strong>Accesibilidad mejorada</strong>: El HTML semántico facilita la vida de las personas con discapacidades visuales. Los lectores de pantalla, utilizados por estas personas, pueden interpretar el significado de las etiquetas semánticas para "leer" el contenido de manera más lógica y comprensible.</li>
+                <li><strong>SEO optimizado</strong>: Los motores de búsqueda, como Google, valoran el HTML semántico. Al entender la estructura y el contenido de una página, los motores de búsqueda pueden indexarla y clasificarla de manera más efectiva, lo que puede mejorar el posicionamiento en los resultados de búsqueda.</li>
+                <li><strong>Código más legible y mantenible</strong>: El HTML semántico hace que el código sea más claro y fácil de entender para los desarrolladores. Al utilizar etiquetas que describen el significado del contenido, se reduce la necesidad de comentarios extensos y se facilita el mantenimiento del código a largo plazo.</li>
+            </ul>
+        </section>
+        <section id="git-github">
+            <h2>Git & GitHub</h2>
+            <ul>
+                <li><strong>Git</strong> Software manejador de versiones</li>
+                <li><strong>GitHub</strong> Plataforma para alojar repositorios en la nube, permite gestión de proyectos en colaborativo, revisión de código y más.</li>
+            </ul>
+        </section>
+    </main>
+    <!-- footer -->
+    <footer id="main-footer">
+        <div class="container">
+            <a href="https://centro.edu.mx/" target="_blank" title="centro.">
+                <img src="../img/centro-flag-loop.webp" alt="CENTRO Diseño, Cine y Televisión" width="80">
+            </a>
+            <small>CENTRO Diseño, Cine y Televisión 2025</small>
+        </div>
+    </footer>
+    <!-- footer -->
+</body>
+
+</html>

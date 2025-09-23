@@ -18,9 +18,11 @@ body {
     padding: 1em;
 }
 
-#challenge-container {
+.container {
+    padding: 0 1em;
     max-width: 640px;
     color: #00ff00;
+    margin: 0 auto;
 }
 
 /* nav */

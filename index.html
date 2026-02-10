@@ -1,47 +1,152 @@
+<!--
+  Documento base HTML semántico
+  Uso recomendado: starter / referencia / archivo vivo
+-->
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
+    <!--
+      @meta: charset
+      Define la codificación del documento.
+      UTF-8 permite acentos, caracteres especiales y emojis.
+    -->
     <meta charset="UTF-8">
+    <!--
+      @meta: viewport
+      Hace que el layout se adapte correctamente a dispositivos móviles.
+    -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Semantic HTML - Starter Markup</title>
-    <!-- favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="manifest" href="manifest.json" />
-    <!-- Open Graph Metadata -->
-    <meta property="og:title" content="Semantic HTML - Starter Markup">
-    <meta property="og:description" content="Un documento de inicio para crear páginas HTML semánticas con buenas prácticas. Incluye ejemplos y referencias.">
-    <meta property="og:url" content="https://juanfuent-es.github.io/html-starter/">
+    <!--
+      @title
+      Título del documento.
+      Se muestra en la pestaña del navegador y es relevante para SEO.
+    -->
+    <title>HTML Starter · CENTRO</title>
+    <!--
+      @favicon
+      Ícono del sitio.
+      Se recomienda SVG por nitidez y peso.
+    -->
+    <link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
+    <!--
+      Metadatos Open Graph
+      Permiten una previsualización correcta al compartir el enlace.
+    -->
     <meta property="og:type" content="website">
-    <!-- favicon -->
+    <meta property="og:title" content="Semantic HTML · Starter Markup">
+    <meta
+      property="og:description"
+      content="Documento base para construir páginas HTML semánticas con buenas prácticas, estructura clara y enfoque accesible."
+    >
+    <meta property="og:url" content="https://juanfuent-es.github.io/html-starter/">
+
+    <!--
+      @styles
+      Archivo de estilos externo.
+      El HTML debe funcionar incluso sin CSS.
+    -->
     <link rel="stylesheet" href="/src/style.css">
-</head>
-<body>
+  </head>
+
+  <body>
+    <!--
+      HEADER GLOBAL
+      Contiene identidad y navegación principal.
+    -->
     <header>
-        <nav class="container">
-            <ul>
-                <li>
-                    <a href="/" aria-label="Inicio" class="active">
-                        <img src="img/centro-logo.svg" alt="Logotipo de CENTRO" width="100" height="20">
-                    </a>
-                </li>
-                <!-- urls de ejemplo como rutas de navegación -->
-                <li><a href="docs.html" class="box-link" title="Documentation">Docs</a></li>
-                <li><a href="docs/cheat-sheet.html" class="box-link" title="Keyboard Shortcuts | Basic Terminal Commands">Shortcuts / Commands</a></li>
-            </ul>
-        </nav>
+      <nav aria-label="Navegación principal">
+        <a href="https://centro.edu.mx" title="Sitio oficial de CENTRO" target="_blank">
+            <img src="img/centro-logo.svg" alt="CENTRO | Diseño, Cine y Televisión" width="120" height="24">
+        </a>
+        <ul>
+          <!--
+            Ejemplo de ruta secundaria.
+            Sirve como referencia de navegación interna.
+          -->
+          <li>
+            <a href="cheat-sheet.html" title="Shortcuts / Commands">Cheat Sheet</a>
+          </li>
+          <li>
+            <a href="html.html" title="HiperText Markup Language">HTML</a>
+          </li>
+          <li>
+            <a href="css.html" title="Cascading Style Sheets">CSS</a>
+          </li>
+          <li>
+            <a href="js.html" title="JavaScript">JS</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <main class="container">
-        <!-- Contenido -->
-        <section>
-            <header>
-                <h1>Semantic HTML - Starter Markup</h1>
-            </header>
-            <p>Este documento proporciona un punto de partida para crear páginas HTML semánticas utilizando buenas prácticas. Incluye ejemplos de código y referencias a documentación relevante para ayudar a los desarrolladores a construir sitios web accesibles y bien estructurados.</p>
-        </section>
+
+    <!--
+      MAIN
+      Contenido principal del documento.
+      Solo debe existir un <main> por página.
+    -->
+    <main>
+      <!--
+        SECTION
+        Agrupa contenido relacionado temáticamente.
+      -->
+      <section>
+        <header>
+          <h1>Semantic HTML · Starter Markup</h1>
+        </header>
+
+        <p>
+          Este documento funciona como punto de partida para crear páginas HTML
+          semánticas. Prioriza estructura, significado y legibilidad antes que
+          estilos visuales.
+        </p>
+
+        <p>
+          Puede utilizarse como template inicial, referencia técnica o archivo
+          vivo para experimentar con etiquetas semánticas y buenas prácticas.
+        </p>
+      </section>
     </main>
+
+    <!--
+      FOOTER
+      Información complementaria y enlaces institucionales.
+    -->
     <footer>
-        <small>CENTRO Diseño, Cine y Televisión 2025</small>
+      <!--
+        address
+        Información de contacto institucional.
+      -->
+      <address>
+        <p>
+            <a href="https://centro.edu.mx/" target="_blank"><strong>CENTRO | Diseño, Cine y Televisión</strong></a>
+          <br>
+          Av. Constituyentes 455, Ciudad de México<br>
+          <a href="tel:+525527899000">(+52) 55 2789 9000</a>
+        </p>
+      </address>
+
+      <!--
+        Redes sociales institucionales
+      -->
+      <nav aria-label="Redes sociales de CENTRO">
+        <ul>
+          <li><a href="https://www.instagram.com/centro_U/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/school/centro.edu.mx/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.tiktok.com/@centro_diseno_cine_tv" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="https://www.facebook.com/centro.edu.mx" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://twitter.com/centro_news" target="_blank" rel="noopener">X / Twitter</a></li>
+          <li><a href="https://www.youtube.com/channel/UC40YNTjmtfGfYOmogaPvXHQ" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://open.spotify.com/show/5zodXwizDTfyAeyjRnV1Ck" target="_blank" rel="noopener">Spotify</a></li>
+        </ul>
+      </nav>
+
     </footer>
+
+    <!--
+      @scripts
+      JavaScript modular.
+      Idealmente cargado al final del documento.
+    -->
     <script type="module" src="/src/main.js"></script>
-</body>
+  </body>
 </html>

@@ -1,10 +1,10 @@
 /* TEAM */
-	WebCraftDev: JuanFuent.es
+	Author: JuanFuent.es
 	Contact: input [at] juanfuent.es
 	From: Hidalgo, Mexico
 
 /* SITE */
-	Last update: 2025/03/05
-	Language: Es-LA
+	Last update: 10/02/2026
+	Language: es-LA
 	Doctype: HTML5
 	IDE: Visual Studio Code

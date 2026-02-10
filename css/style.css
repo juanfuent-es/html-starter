@@ -10,7 +10,7 @@ html {
     /* 
     * box-sizing
     * default: 'box-sizing: content-box'
-    * @see: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing 
+    * @see: https://developer.mozilla.org/en-US/Web/CSS/box-sizing 
     */
     box-sizing: border-box;
     height: 100%;

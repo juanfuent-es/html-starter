@@ -7,13 +7,10 @@
     --scroll-foreground: #000;
     --scroll-background-over: #666666;
     --scroll-border-radius: 0px;
-    --scroll-size: 10px;
 }
 
 ::-webkit-scrollbar {
     background-color: var(--scroll-background);
-    height: var(--scroll-size);
-    width: var(--scroll-size);
 }
 
 ::-webkit-scrollbar-track {

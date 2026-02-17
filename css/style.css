@@ -36,7 +36,7 @@ body {
 /* 
   LAYOUT
 */
-main {
+header, main, footer {
   /* Ancho máximo de lectura y centrado */
   max-width: 60rem;
   margin-left: auto;
@@ -45,27 +45,32 @@ main {
   /* Padding lateral simple */
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+main {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
 header {
-  max-width: 60rem;
-  margin: 0 auto;
   padding-top: 3rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid currentColor; /* Usa el color del texto */
+  
+  max-width: 60rem;
+  margin: 0 auto;
 }
 
 footer {
-  max-width: 60rem;
-  margin: 0 auto;
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin-top: 3rem;
   border-top: 1px solid currentColor;
   text-align: center;
   font-size: 0.875rem;
+
+  max-width: 60rem;
+  margin: 0 auto;
 }
 
 
@@ -75,10 +80,19 @@ footer {
 */
 
 h1 {
-  font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem);
+  /* Configuración base para el título (aplica a todo el bloque, o sea, la segunda línea) */
+  font-size: clamp(1.5rem, 3vw + 1rem, 2.5rem); 
+  
   margin-bottom: 0.5em;
   line-height: 1.1;
   letter-spacing: -0.02em; 
+}
+
+h1::first-line {
+  /* Estilos específicos SOLO para la primera línea de texto */
+  font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem);
+  font-weight: 800;
+  color: #000; /* Un poco más oscuro para más énfasis */
 }
 
 h2 {

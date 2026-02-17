@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guía de Estilos CSS · Introducción</title>
+    <!-- 
+        Vinculamos nuestra hoja de estilos minimalista.
+        Al usar solo etiquetas base en el CSS, este HTML se mantiene limpio,
+        sin necesidad de clases (class="...") ni identificadores (id="...").
+    -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- 
+        HEADER
+        Encabezado principal del documento.
+        Aquí usamos h1 para el título más importante.
+    -->
+    <header>
+      <h1>Guía de Estilos CSS Minimalista</h1>
+      <p>Una demostración de tipografía fluida y elementos HTML semánticos.</p>
+    </header>
+
+    <main>
+      <!-- 
+            SECCIÓN DE TIPOGRAFÍA
+            Mostramos la jerarquía de títulos.
+        -->
+      <section>
+        <h2>Tipografía y Jerarquía</h2>
+        <p>
+          Este párrafo tiene un ancho máximo de lectura óptima (65 caracteres) y
+          un tamaño de fuente que escala fluidamente con el ancho de la pantalla
+          gracias a la función <code>clamp()</code> de CSS.
+        </p>
+
+        <h3>Subtítulo de Nivel 3</h3>
+        <p>
+          Los subtítulos ayudan a dividir el contenido en secciones lógicas.
+          Observa cómo el espaciado (margen) está configurado para separar
+          claramente los temas.
+        </p>
+      </section>
+
+      <!-- 
+            SECCIÓN DE ELEMENTOS DE TEXTO
+            Listas, citas y código.
+        -->
+      <section>
+        <h2>Elementos de Texto Básicos</h2>
+
+        <h3>Listas Desordenadas</h3>
+        <!-- 
+                ul (Unordered List): Para items donde el orden no importa.
+            -->
+        <ul>
+          <li>Primer ítem de la lista.</li>
+          <li>
+            Segundo ítem con un poco más de texto para ver el salto de línea.
+          </li>
+          <li>Tercer ítem.</li>
+        </ul>
+
+        <h3>Listas Ordenadas</h3>
+        <!-- 
+                ol (Ordered List): Para pasos o secuencias.
+            -->
+        <ol>
+          <li>Paso uno: Definir la estructura HTML.</li>
+          <li>Paso dos: Aplicar estilos base a las etiquetas.</li>
+          <li>Paso tres: Ajustar la tipografía con clamp().</li>
+        </ol>
+
+        <h3>Citas</h3>
+        <!-- 
+                blockquote: Para citas largas o bloques de texto destacado.
+            -->
+        <blockquote>
+          "El diseño web es el 95% tipografía."
+          <br />— Oliver Reichenstein
+        </blockquote>
+
+        <h3>Enlaces</h3>
+        <p>
+          Los enlaces como <a href="#">este ejemplo</a> tienen estados
+          interactivos definidos (:hover, :focus) para mejorar la experiencia de
+          usuario y la accesibilidad.
+        </p>
+      </section>
+    </main>
+
+    <!-- 
+        FOOTER
+        Pie de página con información de cierre.
+    -->
+    <footer>
+      <p>
+        <small
+          >© 2026 Clase de Introducción a CSS. Creado con HTML5 y CSS3
+          nativo.</small
+        >
+      </p>
+    </footer>
+  </body>
+</html>

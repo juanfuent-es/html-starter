@@ -1,0 +1,159 @@
+/* 
+  MINIMAL CSS GUIDE
+  -----------------
+  Guía de estilos base para aprender CSS.
+  - Sin clases ni IDs.
+  - Tipografía fluida y funcional.
+  - Colores heredados.
+*/
+
+/* 
+  RESET BÁSICO 
+*/
+html {
+  font-size: 100%; /* Respeta tamaño base del usuario */
+  box-sizing: border-box; /* Manejo fácil de padding/border */
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Pila de fuentes nativa del sistema */
+  font-family: system-ui, -apple-system, sans-serif;
+  
+  /* Color principal y fondo (heredados por el resto) */
+  color: #333;
+  background-color: #f9f9f9;
+  
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* 
+  LAYOUT
+*/
+header, main, footer {
+  /* Ancho máximo de lectura y centrado */
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+  
+  /* Padding lateral simple */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+main {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+header {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid currentColor; /* Usa el color del texto */
+}
+
+footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 3rem;
+  border-top: 1px solid currentColor;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+
+/* 
+  TIPOGRAFÍA FLUIDA
+  clamp(min, preferred, max)
+*/
+
+h1 {
+  font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem);
+  margin-bottom: 0.5em;
+  line-height: 1.1;
+  letter-spacing: -0.02em; 
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw + 1rem, 3rem);
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw + 1rem, 2rem);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+/* 
+  ELEMENTOS DE TEXTO
+*/
+
+p {
+  max-width: 65ch; /* Ancho de lectura óptimo */
+  margin-bottom: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  max-width: 65ch;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  font-size: clamp(1rem, 2vw, 1.125rem);
+}
+
+/* Enlaces simples, heredan color */
+a {
+  color: inherit; /* Hereda color del padre/body */
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+  opacity: 0.7; /* Cambio sutil en hover */
+}
+
+a:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+blockquote {
+  border-left: 4px solid currentColor;
+  padding-left: 1rem;
+  margin: 2rem 0;
+  font-style: italic;
+  font-size: 1.1em;
+  opacity: 0.8; /* Ligeramente más suave */
+}
+
+code {
+  font-family: monospace;
+  background-color: rgba(0,0,0,0.05); /* Fondo sutil transparente */
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem 0;
+}

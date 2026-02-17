@@ -4,7 +4,7 @@ Template para setup básico de desarrollo web enfocado en **HTML Semántico** y 
 
 Este proyecto sirve como punto de partida para aprender buenas prácticas, accesibilidad y estructura web sin depender de frameworks.
 
-## 📚 Documentación y Referencias
+## Documentación y Referencias
 
 ### HTML (HyperText Markup Language)
 

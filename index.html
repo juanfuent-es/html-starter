@@ -6,143 +6,142 @@
 <html lang="es">
 
 <head>
-    <!--
+  <!--
       @meta: charset
       Define la codificación del documento.
       UTF-8 permite acentos, caracteres especiales y emojis.
     -->
-    <meta charset="UTF-8">
-    <!--
+  <meta charset="UTF-8">
+  <!--
       @meta: viewport
       Hace que el layout se adapte correctamente a dispositivos móviles.
     -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
       @title
       Título del documento.
       Se muestra en la pestaña del navegador y es relevante para SEO.
     -->
-    <title>HTML Starter · CENTRO</title>
-    <!--
+  <title>HTML Starter · CENTRO</title>
+  <!--
       @favicon
       Ícono del sitio.
       Se recomienda SVG por nitidez y peso.
     -->
-    <link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
-    <!--
+  <link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
+  <!--
       Metadatos Open Graph
       Permiten una previsualización correcta al compartir el enlace.
     -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Semantic HTML · Starter Markup">
-    <meta property="og:description"
-        content="Documento base para construir páginas HTML semánticas con buenas prácticas, estructura clara y enfoque accesible.">
-    <meta property="og:url" content="https://juanfuent-es.github.io/html-starter/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Semantic HTML · Starter Markup">
+  <meta property="og:description" content="Documento base para construir páginas HTML semánticas con buenas prácticas, estructura clara y enfoque accesible.">
+  <meta property="og:url" content="https://juanfuent-es.github.io/html-starter/">
 
-    <!--
+  <!--
       @styles
       Archivo de estilos externo.
       El HTML debe funcionar incluso sin CSS.
     -->
-    <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <!--
+  <!--
       HEADER GLOBAL
       Contiene identidad y navegación principal.
     -->
-    <header>
-        <nav aria-label="Navegación principal">
-            <a href="https://centro.edu.mx" title="Sitio oficial de CENTRO" target="_blank">
-                <img src="./img/centro-logo.svg" alt="CENTRO | Diseño, Cine y Televisión" width="120" height="24">
-            </a>
-            <ul>
-                <!--
-            Ejemplo de ruta secundaria.
-            Sirve como referencia de navegación interna.
-          -->
-                <li>
-                    <a href="cheat-sheet.html" title="Shortcuts / Commands">Cheat Sheet</a>
-                </li>
-                <li>
-                    <a href="html.html" title="HiperText Markup Language">HTML</a>
-                </li>
-                <li>
-                    <a href="css.html" title="Cascading Style Sheets">CSS</a>
-                </li>
-                <li>
-                    <a href="js.html" title="JavaScript">JS</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav aria-label="Navegación principal">
+      <a href="https://centro.edu.mx" title="Sitio oficial de CENTRO" target="_blank">
+        <img src="./img/centro-logo.svg" alt="CENTRO | Diseño, Cine y Televisión" width="120" height="24">
+      </a>
+      <ul>
+        <!--
+                Ejemplo de ruta secundaria.
+                Sirve como referencia de navegación interna.
+              -->
+        <li>
+          <a href="cheat-sheet.html" title="Shortcuts / Commands">Cheat Sheet</a>
+        </li>
+        <li>
+          <a href="html.html" title="HiperText Markup Language">HTML</a>
+        </li>
+        <li>
+          <a href="css.html" title="Cascading Style Sheets">CSS</a>
+        </li>
+        <li>
+          <a href="js.html" title="JavaScript">JS</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <!--
+  <!--
       MAIN
       Contenido principal del documento.
       Solo debe existir un <main> por página.
     -->
-    <main>
-        <!--
+  <main>
+    <!--
         SECTION
         Agrupa contenido relacionado temáticamente.
       -->
-        <section>
-            <header>
-                <h1>HTML Starter · Markup Semántico</h1>
-            </header>
+    <section>
+      <header>
+        <h1>HTML Starter · Markup Semántico</h1>
+      </header>
 
-            <p>Este documento funciona como punto de partida para crear páginas HTML5. Prioriza estructura, significado
-                y legibilidad antes que estilos visuales.</p>
+      <p>Este documento funciona como punto de partida para crear páginas HTML5. Prioriza estructura, significado
+        y legibilidad antes que estilos visuales.</p>
 
-            <p><i>*Puede utilizarse como template inicial, referencia técnica o documentación para marcado de html
-                    semántico y buenas prácticas.</i></p>
+      <p><i>*Puede utilizarse como template inicial, referencia técnica o documentación para marcado de html
+          semántico y buenas prácticas.</i></p>
 
-        </section>
-    </main>
+    </section>
+  </main>
 
-    <!--
+  <!--
       FOOTER
       Información complementaria y enlaces institucionales.
     -->
-    <footer>
-        <!--
+  <footer>
+    <!--
         address
         Información de contacto institucional.
       -->
-        <address>
-            <p>
-                <a href="https://centro.edu.mx/" target="_blank"><strong>CENTRO | Diseño, Cine y Televisión</strong></a>
-                <br>
-                Av. Constituyentes 455, Ciudad de México<br>
-                <a href="tel:+525527899000">(+52) 55 2789 9000</a>
-            </p>
-        </address>
-
-        <!--
-        Redes sociales institucionales
-      -->
-        <nav aria-label="Redes sociales de CENTRO">
-            <ul>
-                <li><a target="_blank" href="https://instagram.com/centro_U/">Instagram</a></li>
-                <li><a target="_blank" href="https://linkedin.com/school/centro.edu.mx/">LinkedIn</a></li>
-                <li><a target="_blank" href="https://tiktok.com/@centro_diseno_cine_tv">TikTok</a></li>
-                <li><a target="_blank" href="https://facebook.com/centro.edu.mx">Facebook</a></li>
-                <li><a target="_blank" href="https://twitter.com/centro_news">X / Twitter</a></li>
-                <li><a target="_blank" href="https://youtube.com/channel/UC40YNTjmtfGfYOmogaPvXHQ">YouTube</a></li>
-                <li><a target="_blank" href="https://open.spotify.com/show/5zodXwizDTfyAeyjRnV1Ck">Spotify</a></li>
-            </ul>
-        </nav>
-
-    </footer>
+    <address>
+      <p>
+        <a href="https://centro.edu.mx/" target="_blank"><strong>CENTRO | Diseño, Cine y Televisión</strong></a>
+        <br>
+        Av. Constituyentes 455, Ciudad de México<br>
+        <a href="tel:+525527899000">(+52) 55 2789 9000</a>
+      </p>
+    </address>
 
     <!--
+        Redes sociales institucionales
+      -->
+    <nav aria-label="Redes sociales de CENTRO">
+      <ul>
+        <li><a target="_blank" href="https://instagram.com/centro_U/">Instagram</a></li>
+        <li><a target="_blank" href="https://linkedin.com/school/centro.edu.mx/">LinkedIn</a></li>
+        <li><a target="_blank" href="https://tiktok.com/@centro_diseno_cine_tv">TikTok</a></li>
+        <li><a target="_blank" href="https://facebook.com/centro.edu.mx">Facebook</a></li>
+        <li><a target="_blank" href="https://twitter.com/centro_news">X / Twitter</a></li>
+        <li><a target="_blank" href="https://youtube.com/channel/UC40YNTjmtfGfYOmogaPvXHQ">YouTube</a></li>
+        <li><a target="_blank" href="https://open.spotify.com/show/5zodXwizDTfyAeyjRnV1Ck">Spotify</a></li>
+      </ul>
+    </nav>
+
+  </footer>
+
+  <!--
       @scripts
       JavaScript modular.
       Idealmente cargado al final del documento.
     -->
-    <script src="./js/main.js"></script>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>

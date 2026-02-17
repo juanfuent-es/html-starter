@@ -44,34 +44,14 @@
   <body>
     <!--
       HEADER GLOBAL
-      Navegación principal (<nav>) e identidad.
       Docs: https://developer.mozilla.org/es/docs/Web/HTML/Element/header
     -->
-    <header>
-      <nav aria-label="Navegación principal">
-        <a href="https://centro.edu.mx" title="Sitio oficial de CENTRO" target="_blank">
-          <!-- Siempre incluir width/height en imágenes para evitar saltos de layout (CLS) -->
-          <img src="./img/centro-logo.svg" alt="CENTRO | Diseño, Cine y Televisión" width="120" height="24"/>
-        </a>
-      </nav>
-    </header>
-
-    <!--
-      MAIN
-      Contenido principal único del documento.
-      Docs: https://developer.mozilla.org/es/docs/Web/HTML/Element/main
-    -->
-    <!--
-        SECTION
-        Agrupación temática de contenido.
-        Docs: https://developer.mozilla.org/es/docs/Web/HTML/Element/section
-      -->
 
     <header>
-      <h1>Tipografía en Diseño Digital</h1>
+      <h1>Tipografía para Web | Diseño Digital</h1>
       <p>El texto como Interfaz de Usuario</p>
     </header>
-
+    
     <nav>
       <h2>Contenido</h2>
       <ul>
@@ -92,7 +72,16 @@
         <li><a href="#referencias">Bibliografía y referencias</a></li>
       </ul>
     </nav>
-
+    <!--
+      MAIN
+      Contenido principal único del documento.
+      Docs: https://developer.mozilla.org/es/docs/Web/HTML/Element/main
+    -->
+    <!--
+        SECTION
+        Agrupación temática de contenido.
+        Docs: https://developer.mozilla.org/es/docs/Web/HTML/Element/section
+      -->
     <main>
       <section id="punto-de-partida">
         <h2>1. Punto de partida</h2>
@@ -106,26 +95,90 @@
           información escrita para que pueda leerse, escanearse y entenderse
           rápidamente.
         </p>
+        <blockquote>
+          <p>
+            <a href="https://ia.net/topics/the-web-is-all-about-typography-period" 
+               target="_blank" rel="noopener">
+              <strong>Web Design is 95% Typography</strong>
+            </a>
+            <br />
+            -Oliver Reichenstein
+          </p>
+        </blockquote>
+        <p>
+          Como señala Oliver Reichenstein en su artículo fundacional
+          <a href="https://ia.net/topics/the-web-is-all-about-typography-period" target="_blank" rel="noopener">
+          "Web Design is 95% Typography"</a>, optimizar tipografía es optimizar
+          la interfaz de usuario.
+        </p>
+        <p>
+          <strong>Recursos:</strong>
+        </p>
+        <ul>
+          <li>
+            <a href="https://practicaltypography.com/" target="_blank" rel="noopener">
+              Practical Typography por Matthew Butterick
+            </a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html" target="_blank" rel="noopener">
+              WCAG 2.1: Text Spacing
+            </a>
+          </li>
+        </ul>
       </section>
 
       <section id="tipografia-como-sistema">
         <h2>2. Tipografía como sistema</h2>
         <p>
           Elegir una tipografía no es hacer tipografía. La tipografía en web
-          implica construir un sistema.
+          implica construir un sistema cohesivo y escalable.
         </p>
-        <ul>
-          <li>Jerarquía</li>
-          <li>Escala</li>
-          <li>Ritmo vertical</li>
-          <li>Longitud de línea</li>
-          <li>Espaciado</li>
-          <li>Contraste</li>
-          <li>Accesibilidad</li>
-        </ul>
+        <h3>Componentes del sistema tipográfico</h3>
+        <dl>
+          <dt><strong>Jerarquía</strong></dt>
+          <dd>Orden de importancia visual y semántica (h1-h6, p, small)</dd>
+          
+          <dt><strong>Escala</strong></dt>
+          <dd>Progresión de tamaños. Común: escala mayor (1.25), tercera mayor (1.25), cuarta perfecta (1.333). 
+          Herramienta: <a href="https://typescale.com/" target="_blank" rel="noopener">Type Scale</a></dd>
+          
+          <dt><strong>Ritmo vertical</strong></dt>
+          <dd>Espaciado consistente entre elementos (margin, padding, line-height)</dd>
+          
+          <dt><strong>Longitud de línea</strong></dt>
+          <dd>45–75 caracteres para lectura óptima</dd>
+          
+          <dt><strong>Espaciado</strong></dt>
+          <dd>Letter-spacing, word-spacing, y espacio entre bloques</dd>
+          
+          <dt><strong>Contraste</strong></dt>
+          <dd>Mínimo 4.5:1 para texto normal, 3:1 para texto grande (WCAG AA)</dd>
+          
+          <dt><strong>Accesibilidad</strong></dt>
+          <dd>Escalabilidad, legibilidad, y soporte para tecnologías asistivas</dd>
+        </dl>
         <p>
           La calidad del diseño depende del sistema, no de la fuente aislada.
+          Un sistema tipográfico robusto garantiza consistencia visual y
+          mantenibilidad del código.
         </p>
+        <pre><code>/* Ejemplo de sistema tipográfico en CSS */
+html {
+  font-size: 100%; /* 16px base */
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: #1a1a1a;
+}
+
+h1 { font-size: 2.488rem; }    /* ~40px */
+h2 { font-size: 2.074rem; }    /* ~33px */
+h3 { font-size: 1.728rem; }    /* ~28px */
+p  { font-size: 1rem; }         /* 16px */
+small { font-size: 0.833rem; } /* ~13px */</code></pre>
       </section>
 
       <section id="familias-tipograficas">
@@ -135,27 +188,110 @@
           <h3>Serif</h3>
           <p>
             Tradición editorial, adecuada para lectura extensa. Asociada a
-            libros y publicaciones culturales.
+            libros y publicaciones culturales. Las serifas (remates) guían
+            el ojo horizontalmente, facilitando la lectura en bloques largos.
           </p>
-          <pre><code>font-family: "Merriweather", serif;</code></pre>
+          <p><strong>Google Fonts recomendadas:</strong></p>
+          <ul>
+            <li>
+              <a href="https://fonts.google.com/specimen/Merriweather" target="_blank" rel="noopener">
+                Merriweather
+              </a> — Diseñada para legibilidad en pantalla
+            </li>
+            <li>
+              <a href="https://fonts.google.com/specimen/Lora" target="_blank" rel="noopener">
+                Lora
+              </a> — Elegante y contemporánea
+            </li>
+            <li>
+              <a href="https://fonts.google.com/specimen/Crimson+Pro" target="_blank" rel="noopener">
+                Crimson Pro
+              </a> — Variable font con múltiples pesos
+            </li>
+            <li>
+              <a href="https://fonts.google.com/specimen/Playfair+Display" target="_blank" rel="noopener">
+                Playfair Display
+              </a> — Alto contraste, ideal para headings
+            </li>
+          </ul>
+          <pre><code>@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+
+font-family: "Merriweather", Georgia, serif;</code></pre>
         </article>
 
         <article>
           <h3>Sans Serif</h3>
           <p>
             Contemporánea, funcional y altamente legible en pantalla. Dominante
-            en interfaces digitales.
+            en interfaces digitales. Sin remates decorativos, ofrece claridad
+            en tamaños pequeños y pantallas de baja resolución.
           </p>
-          <pre><code>font-family: "Inter", sans-serif;</code></pre>
+          <p><strong>Google Fonts recomendadas:</strong></p>
+          <ul>
+            <li>
+              <a href="https://fonts.google.com/specimen/Inter" target="_blank" rel="noopener">
+                Inter
+              </a> — Optimizada para UI, excelente hinting
+            </li>
+            <li>
+              <a href="https://fonts.google.com/specimen/Roboto" target="_blank" rel="noopener">
+                Roboto
+              </a> — Diseñada por Google, universal
+            </li>
+            <li>
+              <a href="https://fonts.google.com/specimen/Open+Sans" target="_blank" rel="noopener">
+                Open Sans
+              </a> — Neutral y amigable
+            </li>
+            <li>
+              <a href="https://fonts.google.com/specimen/Work+Sans" target="_blank" rel="noopener">
+                Work Sans
+              </a> — Variable font, versátil
+            </li>
+            <li>
+              <a href="https://fonts.google.com/specimen/Montserrat" target="_blank" rel="noopener">
+                Montserrat
+              </a> — Geométrica, inspirada en Buenos Aires
+            </li>
+          </ul>
+          <pre><code>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap');
+
+font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;</code></pre>
         </article>
 
         <article>
           <h3>Monospace</h3>
           <p>
             Caracteres de ancho igual. Asociada a programación y sistemas
-            técnicos.
+            técnicos. Esencial para código, tablas de datos y situaciones
+            donde la alineación vertical es crítica.
           </p>
-          <pre><code>font-family: "Fira Code", monospace;</code></pre>
+          <p><strong>Google Fonts recomendadas:</strong></p>
+          <ul>
+            <li>
+              <a href="https://fonts.google.com/specimen/Fira+Code" target="_blank" rel="noopener">
+                Fira Code
+              </a> — Soporta ligaduras de programación
+            </li>
+            <li>
+              <a href="https://fonts.google.com/specimen/JetBrains+Mono" target="_blank" rel="noopener">
+                JetBrains Mono
+              </a> — Diseñada para desarrolladores
+            </li>
+            <li>
+              <a href="https://fonts.google.com/specimen/Source+Code+Pro" target="_blank" rel="noopener">
+                Source Code Pro
+              </a> — Por Adobe, alta legibilidad
+            </li>
+            <li>
+              <a href="https://fonts.google.com/specimen/IBM+Plex+Mono" target="_blank" rel="noopener">
+                IBM Plex Mono
+              </a> — Sistema Plex de IBM
+            </li>
+          </ul>
+          <pre><code>@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+font-family: "Fira Code", "Courier New", monospace;</code></pre>
         </article>
 
         <article>
@@ -163,116 +299,951 @@
           <ul>
             <li>
               <strong>cursive:</strong> Simula escritura manual. Uso decorativo.
+              Ejemplo: <a href="https://fonts.google.com/specimen/Pacifico" target="_blank" rel="noopener">Pacifico</a>
             </li>
             <li>
-              <strong>fantasy:</strong> Decorativa o temática. Uso expresivo
-              puntual.
+              <strong>fantasy:</strong> Decorativa o temática. Uso expresivo puntual.
+              Ejemplo: <a href="https://fonts.google.com/specimen/Creepster" target="_blank" rel="noopener">Creepster</a>
             </li>
             <li>
               <strong>system-ui:</strong> Fuente nativa del sistema. Alta
-              legibilidad y rendimiento.
+              legibilidad, rendimiento óptimo (sin descarga), y familiaridad
+              para el usuario.
+              <pre><code>font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+             "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;</code></pre>
             </li>
           </ul>
+        </article>
+
+        <article>
+          <h3>Variable Fonts</h3>
+          <p>
+            Las fuentes variables contienen múltiples variaciones (peso, ancho, inclinación)
+            en un solo archivo. Ventajas: menor peso de descarga, interpolación suave,
+            y control granular sobre los ejes tipográficos.
+          </p>
+          <p><strong>Google Fonts variables:</strong></p>
+          <ul>
+            <li>
+              <a href="https://fonts.google.com/specimen/Roboto+Flex" target="_blank" rel="noopener">
+                Roboto Flex
+              </a> — 12 ejes ajustables
+            </li>
+            <li>
+              <a href="https://fonts.google.com/variablefonts" target="_blank" rel="noopener">
+                Catálogo completo de Variable Fonts
+              </a>
+            </li>
+          </ul>
+          <pre><code>@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@100..1000&display=swap');
+
+h1 {
+  font-family: "Roboto Flex", sans-serif;
+  font-variation-settings: "wght" 800, "wdth" 120;
+}</code></pre>
         </article>
       </section>
 
       <section id="jerarquia">
         <h2>4. Jerarquía y semántica</h2>
-        <p>HTML define estructura semántica:</p>
-        <ul>
-          <li>h1 → Nivel principal</li>
-          <li>h2 → Segundo nivel</li>
-          <li>h3 → Tercer nivel</li>
-          <li>p → Texto base</li>
-        </ul>
         <p>
-          La jerarquía no depende solo del tamaño visual, sino de la estructura
-          y el contraste.
+          HTML define estructura semántica que lectores de pantalla y motores
+          de búsqueda interpretan. La jerarquía visual debe reflejar la
+          jerarquía semántica del HTML.
+        </p>
+        <h3>Niveles semánticos</h3>
+        <dl>
+          <dt><strong>&lt;h1&gt;</strong></dt>
+          <dd>Título principal del documento. Solo uno por página para SEO y accesibilidad.</dd>
+          
+          <dt><strong>&lt;h2&gt;</strong></dt>
+          <dd>Secciones principales. Divide el contenido en bloques temáticos.</dd>
+          
+          <dt><strong>&lt;h3&gt;–&lt;h6&gt;</strong></dt>
+          <dd>Subsecciones. Mantener jerarquía lógica sin saltar niveles.</dd>
+          
+          <dt><strong>&lt;p&gt;</strong></dt>
+          <dd>Texto base. El tamaño de párrafo define la escala del sistema.</dd>
+        </dl>
+        
+        <h3>Diseñar jerarquía visual</h3>
+        <p>
+          La jerarquía no depende solo del tamaño, también de:
+        </p>
+        <ul>
+          <li><strong>Peso (font-weight):</strong> 300 (light), 400 (regular), 700 (bold), 900 (black)</li>
+          <li><strong>Espaciado:</strong> Margin superior/inferior crea respiración</li>
+          <li><strong>Color:</strong> Contraste y saturación dirigen la atención</li>
+          <li><strong>Tipografía:</strong> Combinar serif para headings + sans para body</li>
+          <li><strong>Transformaciones:</strong> text-transform: uppercase para énfasis</li>
+        </ul>
+        
+        <pre><code>/* Jerarquía completa */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-block: 0 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-block: 2rem 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-block: 1.5rem 0.75rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-block: 0 1rem;
+}</code></pre>
+
+        <p>
+          <strong>Accesibilidad:</strong> Lectores de pantalla navegan por headings.
+          Usuarios con discapacidad cognitiva dependen de jerarquía clara.
+          <a href="https://www.w3.org/WAI/tutorials/page-structure/headings/" target="_blank" rel="noopener">
+            W3C: Headings Tutorial
+          </a>
         </p>
       </section>
 
       <section id="tamano-base">
         <h2>5. Tamaño base y rem</h2>
         <p>
-          El navegador define un tamaño base aproximado de 16px, que puede
-          cambiar según la preferencia del usuario.
+          El navegador define un tamaño base de <strong>16px</strong> por defecto,
+          pero usuarios pueden modificarlo en la configuración del navegador
+          (accesibilidad crítica para personas con baja visión).
         </p>
-        <pre><code>html {
-  font-size: 100%;
+        <pre><code>/* CORRECTO: Respetar preferencia del usuario */
+html {
+  font-size: 100%; /* = 16px si el usuario no lo modificó */
+}
+
+/* INCORRECTO: Anula preferencia del usuario */
+html {
+  font-size: 16px; /* ❌ Valor fijo */
 }</code></pre>
+        
+        <h3>¿Qué es rem?</h3>
         <p>
-          1rem equivale al tamaño raíz. Usar rem permite que el sistema escale
-          proporcionalmente.
+          <strong>rem</strong> = <em>root em</em>. Unidad relativa al tamaño
+          de fuente del elemento <code>&lt;html&gt;</code>.
+        </p>
+        <ul>
+          <li>1rem = tamaño base (16px por defecto)</li>
+          <li>2rem = doble del tamaño base (32px)</li>
+          <li>0.875rem = 87.5% del tamaño base (14px)</li>
+        </ul>
+        
+        <h3>Ventajas de rem</h3>
+        <ol>
+          <li><strong>Accesibilidad:</strong> Escala automáticamente con las preferencias del usuario</li>
+          <li><strong>Consistencia:</strong> Todo el sistema escala proporcionalmente</li>
+          <li><strong>Mantenibilidad:</strong> Un cambio en la raíz afecta todo el sitio</li>
+          <li><strong>Previsibilidad:</strong> Siempre relativo al mismo origen (a diferencia de em)</li>
+        </ol>
+        
+        <pre><code>/* Sistema tipográfico con rem */
+html { font-size: 100%; }
+
+body { font-size: 1rem; }      /* 16px */
+h1   { font-size: 2.5rem; }    /* 40px */
+h2   { font-size: 2rem; }      /* 32px */
+small { font-size: 0.875rem; } /* 14px */</code></pre>
+        
+        <p>
+          <strong>Nota:</strong> Si un usuario configura su navegador a 20px,
+          todo el sistema escala automáticamente (h1 = 50px, h2 = 40px, etc.).
+        </p>
+        
+        <p>
+          <strong>Referencia:</strong>
+          <a href="https://www.24a11y.com/2019/pixels-vs-relative-units-in-css-why-its-still-a-big-deal/" 
+             target="_blank" rel="noopener">
+            Pixels vs. Relative Units — 24 Accessibility
+          </a>
         </p>
       </section>
 
       <section id="unidades">
         <h2>6. Unidades en tipografía</h2>
-        <h3>Absolutas</h3>
-        <p>px — Unidad fija.</p>
+        
+        <h3>Unidades absolutas</h3>
+        <dl>
+          <dt><strong>px (píxel)</strong></dt>
+          <dd>
+            Unidad fija. No escala con preferencias del usuario.
+            <strong>Evitar para font-size por accesibilidad.</strong>
+            Útil para borders, sombras, y ajustes menores.
+            <pre><code>/* ❌ Poco accesible */
+p { font-size: 16px; }</code></pre>
+          </dd>
+        </dl>
 
-        <h3>Relativas</h3>
+        <h3>Unidades relativas</h3>
+        <dl>
+          <dt><strong>rem (root em)</strong></dt>
+          <dd>
+            Relativa al <code>&lt;html&gt;</code>. Previsible y escalable.
+            <strong>Recomendada para font-size.</strong>
+            <pre><code>/* ✅ Accesible y escalable */
+p { font-size: 1rem; }
+h1 { font-size: 2.5rem; }</code></pre>
+          </dd>
+          
+          <dt><strong>em</strong></dt>
+          <dd>
+            Relativa al tamaño de fuente del elemento padre. Compone (1.5em de 1.5em = 2.25).
+            Útil para espaciado proporcional al texto.
+            <pre><code>p {
+  font-size: 1rem;
+  margin-bottom: 1em; /* Se ajusta al tamaño del texto */
+  padding-inline: 2em;
+}</code></pre>
+          </dd>
+          
+          <dt><strong>% (porcentaje)</strong></dt>
+          <dd>
+            Relativa al elemento padre. Similar a em.
+            <pre><code>small { font-size: 87.5%; } /* 87.5% del padre */</code></pre>
+          </dd>
+          
+          <dt><strong>vw / vh (viewport width / height)</strong></dt>
+          <dd>
+            Relativa al tamaño de la ventana. 1vw = 1% del ancho del viewport.
+            Útil para tipografía fluida, pero <strong>cuidado con accesibilidad</strong>
+            (puede ser muy pequeña o grande).
+            <pre><code>/* Tipografía fluida con clamp() */
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  /* min: 2rem, ideal: 5vw, max: 4rem */
+}</code></pre>
+          </dd>
+          
+          <dt><strong>ch (character width)</strong></dt>
+          <dd>
+            Ancho del carácter "0" en la fuente actual. Ideal para controlar
+            longitud de línea.
+            <pre><code>article {
+  max-width: 65ch; /* ~65 caracteres por línea */
+}</code></pre>
+          </dd>
+          
+          <dt><strong>ex</strong></dt>
+          <dd>
+            Altura de la letra "x" minúscula (x-height). Útil para alinear
+            elementos con el texto.
+          </dd>
+        </dl>
+        
+        <h3>Comparación práctica</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Unidad</th>
+              <th>Relativa a</th>
+              <th>Accesibilidad</th>
+              <th>Uso recomendado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>rem</code></td>
+              <td>Elemento raíz</td>
+              <td>✅ Excelente</td>
+              <td>Font-size, spacing</td>
+            </tr>
+            <tr>
+              <td><code>em</code></td>
+              <td>Elemento padre</td>
+              <td>✅ Buena</td>
+              <td>Padding, margin proporcional</td>
+            </tr>
+            <tr>
+              <td><code>ch</code></td>
+              <td>Ancho de carácter</td>
+              <td>✅ Buena</td>
+              <td>Max-width de contenido</td>
+            </tr>
+            <tr>
+              <td><code>vw</code></td>
+              <td>Viewport</td>
+              <td>⚠️ Cuidado</td>
+              <td>Tipografía fluida con clamp()</td>
+            </tr>
+            <tr>
+              <td><code>px</code></td>
+              <td>Nada</td>
+              <td>❌ Mala</td>
+              <td>Borders, sombras</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <p>
+          <strong>Recursos:</strong>
+        </p>
         <ul>
-          <li>rem — Relativa al elemento raíz.</li>
-          <li>em — Relativa al elemento padre.</li>
-          <li>% — Relativa al contenedor.</li>
-          <li>vw — Relativa al viewport.</li>
-          <li>ch — Relativa al ancho del carácter "0".</li>
+          <li>
+            <a href="https://web.dev/articles/min-max-clamp" target="_blank" rel="noopener">
+              web.dev: min(), max(), and clamp()
+            </a>
+          </li>
+          <li>
+            <a href="https://moderncss.dev/generating-font-size-css-rules-and-creating-a-fluid-type-scale/" 
+               target="_blank" rel="noopener">
+              Modern CSS: Fluid Type Scale
+            </a>
+          </li>
         </ul>
       </section>
 
       <section id="longitud-linea">
         <h2>7. Longitud de línea</h2>
         <p>
-          La legibilidad depende de la longitud de línea. Demasiado larga genera
-          fatiga; demasiado corta fragmenta el ritmo.
+          La legibilidad depende críticamente de la longitud de línea
+          (también llamada "medida" en tipografía tradicional).
         </p>
-        <p>Rango recomendado: 45–75 caracteres por línea.</p>
-        <pre><code>article {
+        
+        <h3>Problemas de longitud incorrecta</h3>
+        <ul>
+          <li>
+            <strong>Líneas muy largas (>90 caracteres):</strong> El ojo se cansa
+            al recorrer distancias horizontales extensas. Dificulta encontrar
+            el inicio de la siguiente línea.
+          </li>
+          <li>
+            <strong>Líneas muy cortas (<40 caracteres):</strong> Interrumpe el
+            ritmo de lectura. El ojo salta líneas constantemente.
+          </li>
+        </ul>
+        
+        <h3>Rango óptimo</h3>
+        <p>
+          <strong>45–75 caracteres por línea</strong> (óptimo: ~65 caracteres).
+          Este rango está validado por investigación de tipografía y usabilidad.
+        </p>
+        
+        <h3>Implementación con ch</h3>
+        <p>
+          La unidad <code>ch</code> representa el ancho del carácter "0".
+          Es aproximada pero efectiva para controlar longitud de línea.
+        </p>
+        <pre><code>/* Contenido principal */
+article {
   max-width: 65ch;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+/* Contenido ancho (listas, tablas) */
+.wide-content {
+  max-width: 80ch;
+}
+
+/* Textos breves (poesía, citas) */
+blockquote {
+  max-width: 50ch;
 }</code></pre>
+        
+        <h3>Consideraciones responsive</h3>
+        <pre><code>/* Sistema adaptable */
+article {
+  max-width: min(65ch, 100% - 2rem);
+  margin-inline: auto;
+}
+
+/* O con container queries */
+@container (min-width: 60ch) {
+  p { max-width: 65ch; }
+}</code></pre>
+        
+        <h3>Relación con interlineado</h3>
+        <p>
+          Líneas más largas requieren mayor interlineado para compensar:
+        </p>
+        <ul>
+          <li>45–55 caracteres → line-height: 1.5</li>
+          <li>55–65 caracteres → line-height: 1.6</li>
+          <li>65–75 caracteres → line-height: 1.7</li>
+        </ul>
+        
+        <p>
+          <strong>Referencia:</strong> Robert Bringhurst recomienda 45–75 caracteres
+          en <em>The Elements of Typographic Style</em>, considerado la biblia
+          de la tipografía.
+        </p>
+        
+        <p>
+          <strong>Estudios:</strong>
+        </p>
+        <ul>
+          <li>
+            <a href="https://baymard.com/blog/line-length-readability" target="_blank" rel="noopener">
+              Baymard Institute: Readability & Line Length
+            </a>
+          </li>
+          <li>
+            <a href="https://designsystem.digital.gov/components/typography/" target="_blank" rel="noopener">
+              U.S. Web Design System: Typography
+            </a>
+          </li>
+        </ul>
       </section>
 
       <section id="interlineado">
         <h2>8. Interlineado</h2>
-        <p>El espacio entre líneas afecta la comodidad de lectura.</p>
-        <pre><code>line-height: 1.5–1.7;</code></pre>
+        <p>
+          El interlineado (line-height en CSS, leading en tipografía tradicional)
+          es el espacio vertical entre líneas de texto. Afecta directamente
+          la comodidad y velocidad de lectura.
+        </p>
+        
+        <h3>Principios del interlineado</h3>
+        <ul>
+          <li>Demasiado apretado: Texto denso, difícil de seguir</li>
+          <li>Demasiado amplio: Pierde cohesión, parece desconectado</li>
+          <li><strong>Rango general: 1.4–1.8</strong></li>
+          <li><strong>Óptimo para lectura: 1.5–1.6</strong></li>
+        </ul>
+        
+        <h3>Factores que afectan el interlineado</h3>
+        <dl>
+          <dt><strong>Longitud de línea</strong></dt>
+          <dd>Líneas más largas necesitan más interlineado</dd>
+          
+          <dt><strong>Tamaño de fuente</strong></dt>
+          <dd>Texto pequeño necesita más espacio proporcional</dd>
+          
+          <dt><strong>X-height de la fuente</strong></dt>
+          <dd>Fuentes con x-height alta (como Verdana) necesitan más espacio</dd>
+          
+          <dt><strong>Peso de la fuente</strong></dt>
+          <dd>Pesos pesados (bold) necesitan más respiración</dd>
+        </dl>
+        
+        <h3>Valores recomendados</h3>
+        <pre><code>/* Texto base */
+body {
+  line-height: 1.6;
+}
+
+/* Headings: menos interlineado por ser texto corto */
+h1, h2, h3 {
+  line-height: 1.1–1.3;
+}
+
+/* Texto pequeño: más proporción */
+small, .caption {
+  line-height: 1.7;
+}
+
+/* Texto display (muy grande) */
+.hero-text {
+  line-height: 1;
+  letter-spacing: -0.02em;
+}</code></pre>
+        
+        <h3>Accesibilidad del interlineado</h3>
+        <p>
+          <strong>WCAG 2.1 Success Criterion 1.4.12:</strong> Line height debe
+          ser al menos <strong>1.5×</strong> el tamaño de fuente en párrafos.
+        </p>
+        <p>
+          Usuarios con dislexia, baja visión o discapacidades cognitivas
+          dependen de interlineado generoso.
+        </p>
+        <pre><code>/* Cumple WCAG 2.1 Level AA */
+p {
+  line-height: 1.5; /* mínimo */
+  /* Recomendado: 1.6 */
+}</code></pre>
+        
+        <h3>Unidades en line-height</h3>
+        <p>
+          <strong>Usar valores sin unidad (unitless):</strong>
+        </p>
+        <pre><code>/* ✅ CORRECTO: Valor sin unidad */
+p {
+  line-height: 1.6; /* Se multiplica por font-size */
+}
+
+/* ❌ EVITAR: Valores fijos */
+p {
+  line-height: 24px; /* No escala con texto */
+}
+
+/* ⚠️ CUIDADO: Valores relativos */
+p {
+  line-height: 1.6em; /* Se hereda como valor fijo */
+}</code></pre>
+        
+        <p>
+          Valores sin unidad heredan proporcionalmente, permitiendo que
+          cada elemento calcule su propio interlineado basado en su font-size.
+        </p>
+        
+        <p>
+          <strong>Recursos:</strong>
+        </p>
+        <ul>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG21/Understanding/text-spacing.html" 
+               target="_blank" rel="noopener">
+              WCAG 2.1: Understanding Text Spacing
+            </a>
+          </li>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height" 
+               target="_blank" rel="noopener">
+              MDN: line-height
+            </a>
+          </li>
+        </ul>
       </section>
 
       <section id="justificado">
         <h2>9. Evitar justificado en web</h2>
         <p>
-          El texto justificado no es recomendable en web porque el ancho es
-          fluido y puede generar espacios irregulares.
+          El texto justificado (alineado a ambos lados) no es recomendable
+          en web. Aunque funciona en impresión con algoritmos de partición
+          de palabras sofisticados, en pantalla genera problemas.
         </p>
-        <pre><code>text-align: left;</code></pre>
-        <p>Pantalla no es impresión.</p>
+        
+        <h3>Problemas del justificado en web</h3>
+        <ol>
+          <li>
+            <strong>Ríos de espacio en blanco:</strong> CSS distribuye espacio
+            entre palabras de forma desigual, creando "ríos" verticales que
+            interrumpen la lectura.
+          </li>
+          <li>
+            <strong>Partición de palabras limitada:</strong> La propiedad
+            <code>hyphens</code> tiene soporte inconsistente entre navegadores
+            y es deshabilitada por muchos usuarios.
+          </li>
+          <li>
+            <strong>Ancho fluido:</strong> En web responsive, el ancho del
+            contenido cambia constantemente (móvil, tablet, desktop), haciendo
+            impredecible el espaciado.
+          </li>
+          <li>
+            <strong>Accesibilidad:</strong> Usuarios con dislexia encuentran
+            más difícil leer texto justificado. Espacios irregulares
+            dificultan tracking.
+          </li>
+        </ol>
+        
+        <h3>Alineación recomendada</h3>
+        <pre><code>/* ✅ RECOMENDADO */
+p {
+  text-align: left; /* LTR languages */
+  /* text-align: start; (respeta dirección del idioma) */
+}
+
+/* ❌ EVITAR */
+p {
+  text-align: justify;
+}</code></pre>
+        
+        <h3>Excepción: Justificado con hyphenation</h3>
+        <p>
+          Si es absolutamente necesario justificar (ej: diseño editorial),
+          combinar con hyphenation:
+        </p>
+        <pre><code>p {
+  text-align: justify;
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 2; /* min-word min-before min-after */
+}
+
+@supports (hyphens: auto) {
+  p { text-align: justify; }
+}</code></pre>
+        
+        <p>
+          <strong>Nota:</strong> <code>hyphens: auto</code> requiere atributo
+          <code>lang</code> en HTML para funcionar:
+        </p>
+        <pre><code>&lt;html lang="es"&gt; &lt;!-- Esencial para hyphenation --&gt;</code></pre>
+        
+        <h3>Alternativas modernas</h3>
+        <pre><code>/* Alineación lógica (respeta LTR/RTL) */
+p {
+  text-align: start;
+}
+
+/* Centrado para textos breves */
+blockquote {
+  text-align: center;
+}
+
+/* Derecha para datos numéricos */
+.table-number {
+  text-align: end;
+}</code></pre>
+        
+        <p>
+          <strong>Principio fundamental:</strong> Pantalla no es impresión.
+          Las convenciones editoriales impresas no siempre se transfieren a
+          medios digitales responsivos.
+        </p>
+        
+        <p>
+          <strong>Referencias:</strong>
+        </p>
+        <ul>
+          <li>
+            <a href="https://designsystem.digital.gov/components/typography/#avoid-justified-text" 
+               target="_blank" rel="noopener">
+              U.S. Web Design System: Avoid justified text
+            </a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG21/Understanding/visual-presentation.html" 
+               target="_blank" rel="noopener">
+              WCAG 2.1: Understanding Visual Presentation
+            </a>
+          </li>
+        </ul>
       </section>
 
       <section id="texto-como-interfaz">
         <h2>10. Texto como interfaz</h2>
         <p>
-          Tratar texto como interfaz implica claridad inmediata, escaneo rápido
-          y sistema coherente.
+          Tratar texto como interfaz implica diseñar para escaneo, comprensión
+          rápida y acción. El texto no solo comunica, también guía al usuario
+          a través de la experiencia.
         </p>
+        
+        <h3>Principios de texto como UI</h3>
+        <dl>
+          <dt><strong>1. Escaneabilidad</strong></dt>
+          <dd>
+            Usuarios no leen palabra por palabra, escanean en patrón F
+            (eye-tracking research de Nielsen Norman Group).
+            <ul>
+              <li>Usar headings descriptivos</li>
+              <li>Listas con bullets</li>
+              <li>Negritas para keywords</li>
+              <li>Párrafos cortos (3–4 líneas)</li>
+            </ul>
+          </dd>
+          
+          <dt><strong>2. Jerarquía de información</strong></dt>
+          <dd>
+            Ordenar contenido del más al menos importante. Pirámide invertida
+            (periodismo): conclusión primero, detalles después.
+          </dd>
+          
+          <dt><strong>3. Acción clara</strong></dt>
+          <dd>
+            CTAs (calls-to-action) y enlaces deben ser inequívocos:
+            <ul>
+              <li>❌ "Click aquí" — Ambiguo</li>
+              <li>✅ "Descargar guía PDF" — Específico</li>
+            </ul>
+          </dd>
+          
+          <dt><strong>4. Tono consistente</strong></dt>
+          <dd>
+            Voice & tone del contenido debe reflejar la marca y ser coherente
+            en todo el sitio.
+          </dd>
+        </dl>
+        
+        <h3>Tipografía funcional</h3>
+        <pre><code>/* Énfasis por función, no decoración */
+
+/* Llamadas a la acción */
+.cta {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Metadata / información secundaria */
+.meta {
+  font-size: 0.875rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Código inline */
+code {
+  font-family: monospace;
+  font-size: 0.9em;
+  background: #f5f5f5;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+/* Citas destacadas */
+blockquote {
+  font-size: 1.25rem;
+  font-style: italic;
+  border-left: 4px solid currentColor;
+  padding-left: 1.5rem;
+}</code></pre>
+        
+        <h3>Microcopy efectivo</h3>
+        <p>
+          Microcopy (textos de UI pequeños) tiene impacto desproporcionado:
+        </p>
+        <ul>
+          <li><strong>Labels de formulario:</strong> Claros y accionables</li>
+          <li><strong>Mensajes de error:</strong> Explicar qué salió mal y cómo corregirlo</li>
+          <li><strong>Estados vacíos:</strong> Guiar al usuario en qué hacer</li>
+          <li><strong>Tooltips:</strong> Contexto adicional sin saturar</li>
+        </ul>
+        
+        <h3>Optimización es accesibilidad</h3>
         <p>
           Optimizar tipografía es optimizar accesibilidad, usabilidad y
-          comprensión.
+          comprensión. Un sistema tipográfico robusto:
         </p>
+        <ul>
+          <li>Reduce carga cognitiva</li>
+          <li>Acelera comprensión</li>
+          <li>Mejora retención de información</li>
+          <li>Aumenta conversión</li>
+          <li>Comunica profesionalismo</li>
+        </ul>
+        
+        <p>
+          <strong>Métricas de éxito:</strong>
+        </p>
+        <ul>
+          <li>Tiempo en página</li>
+          <li>Bounce rate</li>
+          <li>Task completion rate</li>
+          <li>Accessibility score (Lighthouse)</li>
+        </ul>
+        
+        <p>
+          <strong>Recursos:</strong>
+        </p>
+        <ul>
+          <li>
+            <a href="https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/" 
+               target="_blank" rel="noopener">
+              Nielsen Norman Group: F-Shaped Pattern for Reading
+            </a>
+          </li>
+          <li>
+            <a href="https://alistapart.com/article/heywhatsyourproblem/" 
+               target="_blank" rel="noopener">
+              A List Apart: Content Strategy
+            </a>
+          </li>
+          <li>
+            <a href="https://www.smashingmagazine.com/2021/11/dyslexia-friendly-mode-website/" 
+               target="_blank" rel="noopener">
+              Smashing Magazine: Dyslexia-Friendly Mode
+            </a>
+          </li>
+        </ul>
       </section>
 
       <section id="accesibilidad">
         <h2>11. Accesibilidad tipográfica</h2>
+        <p>
+          La accesibilidad tipográfica garantiza que el contenido sea legible
+          y usable para todas las personas, incluyendo quienes tienen
+          discapacidades visuales, cognitivas, o motoras.
+        </p>
+        
+        <h3>Estándares WCAG 2.1</h3>
+        <p>
+          Las <a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank" rel="noopener">
+          Web Content Accessibility Guidelines (WCAG)</a> definen criterios
+          de accesibilidad. Para tipografía:
+        </p>
+        
+        <h4>1.4.3 Contraste (Nivel AA)</h4>
         <ul>
-          <li>Escalabilidad con rem</li>
-          <li>Respeto a preferencias del usuario</li>
-          <li>Alto contraste</li>
-          <li>Tamaño base mínimo de 1rem</li>
+          <li><strong>Texto normal:</strong> Ratio mínimo 4.5:1</li>
+          <li><strong>Texto grande (18pt+/14pt+ bold):</strong> Ratio mínimo 3:1</li>
+          <li><strong>Nivel AAA:</strong> 7:1 para texto normal, 4.5:1 para grande</li>
+        </ul>
+        <pre><code>/* ✅ Contraste adecuado */
+body {
+  color: #1a1a1a; /* sobre fondo blanco = 16.1:1 */
+  background: #ffffff;
+}
+
+/* ❌ Contraste insuficiente */
+.subtle-text {
+  color: #999999; /* sobre blanco = 2.8:1 ❌ */
+}</code></pre>
+        <p>
+          <strong>Herramienta:</strong>
+          <a href="https://color.adobe.com/es/create/color-contrast-analyzer" target="_blank" rel="noopener">
+            Color Contrast Analyzer — Adobe
+          </a>
+        </p>
+        
+        <h4>1.4.4 Redimensionamiento de texto (Nivel AA)</h4>
+        <p>
+          El texto debe poder escalarse hasta 200% sin pérdida de contenido
+          o funcionalidad.
+        </p>
+        <pre><code>/* ✅ Escalable */
+html { font-size: 100%; }
+p { font-size: 1rem; }
+
+/* ❌ No escalable */
+html { font-size: 16px; }
+p { font-size: 16px; }</code></pre>
+        
+        <h4>1.4.8 Presentación visual (Nivel AAA)</h4>
+        <ul>
+          <li>Ancho de línea: máximo 80 caracteres</li>
+          <li>Interlineado: mínimo 1.5 en párrafos</li>
+          <li>Espaciado de párrafo: mínimo 1.5× line-height</li>
+          <li>Letter-spacing ajustable por el usuario</li>
+        </ul>
+        
+        <h4>1.4.12 Espaciado de texto (Nivel AA)</h4>
+        <p>
+          Usuarios deben poder ajustar espaciado sin pérdida de contenido:
+        </p>
+        <pre><code>/* Los usuarios pueden aplicar: */
+* {
+  line-height: 1.5 !important;
+  letter-spacing: 0.12em !important;
+  word-spacing: 0.16em !important;
+}
+
+p {
+  margin-bottom: 2em !important;
+}
+
+/* Tu CSS debe adaptarse sin romper layout */</code></pre>
+        
+        <h3>Tipografía para dislexia</h3>
+        <p>
+          15-20% de la población tiene algún grado de dislexia. Mejores prácticas:
+        </p>
+        <ul>
+          <li>Fuentes sans-serif con formas distintivas (evitar ambigüedad entre b/d, p/q)</li>
+          <li>Peso regular (no muy delgado)</li>
+          <li>Interlineado generoso (1.5–2.0)</li>
+          <li>No justificar texto</li>
+          <li>Letter-spacing ligeramente aumentado: 0.12em</li>
+          <li>Párrafos cortos</li>
+        </ul>
+        <p>
+          <strong>Fuentes recomendadas:</strong>
+        </p>
+        <ul>
+          <li>
+            <a href="https://fonts.google.com/specimen/Atkinson+Hyperlegible" target="_blank" rel="noopener">
+              Atkinson Hyperlegible
+            </a> — Diseñada por Braille Institute específicamente para baja visión
+          </li>
+          <li>
+            <a href="https://www.opendyslexic.org/" target="_blank" rel="noopener">
+              OpenDyslexic
+            </a> — Fuente libre para dislexia
+          </li>
+        </ul>
+        
+        <h3>Modo de alto contraste</h3>
+        <p>
+          Respetar las preferencias del sistema operativo:
+        </p>
+        <pre><code>/* Detectar preferencia de contraste alto */
+@media (prefers-contrast: high) {
+  body {
+    color: #000000;
+    background: #ffffff;
+  }
+  
+  a {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+}</code></pre>
+        
+        <h3>Checklist de accesibilidad tipográfica</h3>
+        <ol>
+          <li>☑️ <strong>Usar rem</strong> para font-size</li>
+          <li>☑️ <strong>Contraste mínimo 4.5:1</strong> (texto normal)</li>
+          <li>☑️ <strong>Line-height ≥ 1.5</strong> en párrafos</li>
+          <li>☑️ <strong>Max-width 45-75ch</strong> para lectura</li>
+          <li>☑️ <strong>No justificar</strong> texto en párrafos</li>
+          <li>☑️ <strong>Fuentes legibles</strong> (evitar decorativas para cuerpo)</li>
+          <li>☑️ <strong>Atributo lang</strong> en HTML</li>
+          <li>☑️ <strong>Tamaño mínimo 1rem</strong> (16px equivalente)</li>
+          <li>☑️ <strong>Texto en imágenes evitado</strong> (o con alt adecuado)</li>
+          <li>☑️ <strong>Color no es único indicador</strong> de información</li>
+        </ol>
+        
+        <h3>Herramientas de testing</h3>
+        <ul>
+          <li>
+            <a href="https://www.deque.com/axe/" target="_blank" rel="noopener">
+              axe DevTools
+            </a> — Extensión de navegador para auditoría
+          </li>
+          <li>
+            <a href="https://wave.webaim.org/" target="_blank" rel="noopener">
+              WAVE
+            </a> — Evaluador de accesibilidad web
+          </li>
+          <li>
+            <a href="https://developer.chrome.com/docs/lighthouse/" target="_blank" rel="noopener">
+              Lighthouse
+            </a> — Auditoría integrada en Chrome DevTools
+          </li>
+          <li>
+            <a href="https://www.nvaccess.org/" target="_blank" rel="noopener">
+              NVDA
+            </a> — Lector de pantalla gratuito para testing
+          </li>
+        </ul>
+        
+        <p>
+          <strong>Recursos fundamentales:</strong>
+        </p>
+        <ul>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank" rel="noopener">
+              WCAG 2.1 Quick Reference
+            </a>
+          </li>
+          <li>
+            <a href="https://webaim.org/" target="_blank" rel="noopener">
+              WebAIM
+            </a> — Center for web accessibility
+          </li>
+          <li>
+            <a href="https://www.a11yproject.com/" target="_blank" rel="noopener">
+              The A11Y Project
+            </a> — Checklist y recursos
+          </li>
+          <li>
+            <a href="https://inclusive-components.design/" target="_blank" rel="noopener">
+              Inclusive Components
+            </a> — Patrones accesibles
+          </li>
         </ul>
       </section>
 
       <section id="principios">
-        <h2>12. Principios del curso</h2>
+        <h2>12. Fundamentos</h2>
         <ol>
           <li>Diseñar sistemas, no tamaños sueltos.</li>
           <li>Respetar la preferencia del usuario.</li>
@@ -286,40 +1257,199 @@
 
       <section id="referencias">
         <h2>Bibliografía y referencias</h2>
+        
+        <h3>Artículos fundamentales</h3>
         <ul>
           <li>
-            <a
-              href="https://ia.net/topics/the-web-is-all-about-typography-period"
-              target="_blank"
-              rel="noopener"
-              >The Web Is All About Typography. Period.</a
-            >
-          </li>
-          <li>Robert Bringhurst — The Elements of Typographic Style</li>
-          <li>Emil Ruder — Typographie</li>
-          <li>Josef Müller-Brockmann — Grid Systems in Graphic Design</li>
-          <li>
-            <a href="https://fonts.adobe.com" target="_blank" rel="noopener"
-              >Adobe Fonts</a
-            >
+            <a href="https://ia.net/topics/the-web-is-all-about-typography-period" 
+               target="_blank" rel="noopener">
+              The Web Is All About Typography. Period.
+            </a> — Oliver Reichenstein, iA
           </li>
           <li>
-            <a href="https://fonts.google.com" target="_blank" rel="noopener"
-              >Google Fonts</a
-            >
+            <a href="https://practicaltypography.com/" target="_blank" rel="noopener">
+              Practical Typography
+            </a> — Matthew Butterick
           </li>
           <li>
-            <a
-              href="https://design.google/library/google-sans-flex-font"
-              target="_blank"
-              rel="noopener"
-              >Google Sans Flex – Variable Font Case Study</a
-            >
+            <a href="https://www.smashingmagazine.com/2011/03/technical-web-typography-guidelines-and-techniques/" 
+               target="_blank" rel="noopener">
+              Technical Web Typography
+            </a> — Harry Roberts, Smashing Magazine
+          </li>
+        </ul>
+        
+        <h3>Libros esenciales</h3>
+        <ul>
+          <li>
+            <strong>Robert Bringhurst</strong> — The Elements of Typographic Style 
+            (considerado la biblia de la tipografía)
+          </li>
+          <li>
+            <strong>Emil Ruder</strong> — Typographie: A Manual of Design
+          </li>
+          <li>
+            <strong>Josef Müller-Brockmann</strong> — Grid Systems in Graphic Design
+          </li>
+          <li>
+            <strong>Ellen Lupton</strong> — Thinking with Type (incluye sección web)
+          </li>
+          <li>
+            <strong>Jason Santa Maria</strong> — On Web Typography
+          </li>
+        </ul>
+        
+        <h3>Recursos de fuentes</h3>
+        <ul>
+          <li>
+            <a href="https://fonts.google.com" target="_blank" rel="noopener">
+              Google Fonts
+            </a> — Biblioteca gratuita con 1500+ familias
+          </li>
+          <li>
+            <a href="https://fonts.google.com/variablefonts" target="_blank" rel="noopener">
+              Google Fonts: Variable Fonts
+            </a>
+          </li>
+          <li>
+            <a href="https://fonts.adobe.com" target="_blank" rel="noopener">
+              Adobe Fonts
+            </a> — Incluido con Creative Cloud
+          </li>
+          <li>
+            <a href="https://www.fontshare.com/" target="_blank" rel="noopener">
+              Fontshare
+            </a> — Fuentes gratuitas de calidad por Indian Type Foundry
+          </li>
+          <li>
+            <a href="https://www.fontsquirrel.com/" target="_blank" rel="noopener">
+              Font Squirrel
+            </a> — Fuentes gratuitas para uso comercial
+          </li>
+        </ul>
+        
+        <h3>Casos de estudio</h3>
+        <ul>
+          <li>
+            <a href="https://design.google/library/google-sans-flex-font" 
+               target="_blank" rel="noopener">
+              Google Sans Flex – Variable Font Case Study
+            </a>
+          </li>
+          <li>
+            <a href="https://www.fonts.com/content/learning/fontology/level-4/fine-typography/legibility" 
+               target="_blank" rel="noopener">
+              Fonts.com: Legibility Research
+            </a>
+          </li>
+        </ul>
+        
+        <h3>Accesibilidad</h3>
+        <ul>
+          <li>
+            <a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank" rel="noopener">
+              WCAG 2.1 Quick Reference
+            </a>
+          </li>
+          <li>
+            <a href="https://webaim.org/" target="_blank" rel="noopener">
+              WebAIM
+            </a> — Center for Persons with Disabilities
+          </li>
+          <li>
+            <a href="https://www.a11yproject.com/" target="_blank" rel="noopener">
+              The A11Y Project
+            </a>
+          </li>
+          <li>
+            <a href="https://www.digitala11y.com/typography-accessibility-guide/" 
+               target="_blank" rel="noopener">
+              Typography Accessibility Guide
+            </a>
+          </li>
+        </ul>
+        
+        <h3>Herramientas</h3>
+        <ul>
+          <li>
+            <a href="https://typescale.com/" target="_blank" rel="noopener">
+              Type Scale
+            </a> — Generador de escalas tipográficas
+          </li>
+          <li>
+            <a href="https://modern-fluid-typography.vercel.app/" target="_blank" rel="noopener">
+              Modern Fluid Typography
+            </a> — Calculadora de tipografía fluida
+          </li>
+          <li>
+            <a href="https://color.adobe.com/es/create/color-contrast-analyzer" target="_blank" rel="noopener">
+              Color Contrast Analyzer — Adobe
+            </a>
+          </li>
+          <li>
+            <a href="https://www.fontpair.co/" target="_blank" rel="noopener">
+              Font Pair
+            </a> — Combinaciones de Google Fonts
+          </li>
+          <li>
+            <a href="https://gwfh.mranftl.com/fonts" target="_blank" rel="noopener">
+              Google Webfonts Helper
+            </a> — Self-hosting de Google Fonts
+          </li>
+        </ul>
+        
+        <h3>Sistemas de diseño de referencia</h3>
+        <ul>
+          <li>
+            <a href="https://m3.material.io/styles/typography/overview" target="_blank" rel="noopener">
+              Material Design: Typography
+            </a>
+          </li>
+          <li>
+            <a href="https://designsystem.digital.gov/components/typography/" 
+               target="_blank" rel="noopener">
+              U.S. Web Design System: Typography
+            </a>
+          </li>
+          <li>
+            <a href="https://polaris.shopify.com/design/typography" target="_blank" rel="noopener">
+              Shopify Polaris: Typography
+            </a>
+          </li>
+          <li>
+            <a href="https://www.carbondesignsystem.com/guidelines/typography/overview/" 
+               target="_blank" rel="noopener">
+              IBM Carbon Design System: Typography
+            </a>
+          </li>
+        </ul>
+        
+        <h3>Comunidades y blogs</h3>
+        <ul>
+          <li>
+            <a href="https://alistapart.com/" target="_blank" rel="noopener">
+              A List Apart
+            </a> — Web design & standards
+          </li>
+          <li>
+            <a href="https://www.smashingmagazine.com/category/typography/" 
+               target="_blank" rel="noopener">
+              Smashing Magazine: Typography
+            </a>
+          </li>
+          <li>
+            <a href="https://css-tricks.com/tag/typography/" target="_blank" rel="noopener">
+              CSS-Tricks: Typography
+            </a>
+          </li>
+          <li>
+            <a href="https://typewolf.com/" target="_blank" rel="noopener">
+              Typewolf
+            </a> — Tendencias y recomendaciones
           </li>
         </ul>
       </section>
     </main>
-
     <!--
       FOOTER
       Pie de página con información de contacto y enlaces secundarios.
@@ -328,12 +1458,12 @@
     <footer>
       <address>
         <p>
-          <a href="https://centro.edu.mx/" target="_blank"
-            ><strong>CENTRO</strong></a
-          ><br />
-          <a href="https://maps.app.goo.gl/QzhCvoLRDLP3NZJLA" target="_blank"
-            >Av. Constituyentes 455, CDMX</a
-          ><br />
+          <a href="https://centro.edu.mx/" target="_blank">
+            <img src="./img/centro-logo.svg" alt="Logotipo CENTRO" width="120" height="24"/>
+          </a>
+          <br />
+          <a href="https://maps.app.goo.gl/QzhCvoLRDLP3NZJLA" target="_blank">Av. Constituyentes 455, CDMX</a>
+          <br />
           <a href="tel:+525527899000">(+52) 55 2789 9000</a>
         </p>
       </address>

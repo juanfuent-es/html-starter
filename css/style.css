@@ -61,13 +61,15 @@ main {
   padding: 2rem 1.5rem;
 }
 
+header {
+  text-align: center;
+}
 
 /* ------------------------------------------
    4. NAVEGACIÓN
    ------------------------------------------ */
 
 nav {
-  max-width: 65ch;
   margin: 0 auto;
   padding: 1rem 1.5rem;
 }
@@ -175,8 +177,7 @@ blockquote {
    ------------------------------------------ */
 
 footer {
-  max-width: 65ch;
-  margin: 3rem auto 2rem;
-  padding: 0 1.5rem;
+  text-align: center;
+  margin: 3rem auto;
   font-size: 0.875rem;
 }

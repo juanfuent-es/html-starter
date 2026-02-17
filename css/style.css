@@ -36,7 +36,7 @@ body {
 /* 
   LAYOUT
 */
-header, main, footer {
+main {
   /* Ancho máximo de lectura y centrado */
   max-width: 60rem;
   margin-left: auto;
@@ -45,20 +45,21 @@ header, main, footer {
   /* Padding lateral simple */
   padding-left: 1rem;
   padding-right: 1rem;
-}
-
-main {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 
 header {
+  max-width: 60rem;
+  margin: 0 auto;
   padding-top: 3rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid currentColor; /* Usa el color del texto */
 }
 
 footer {
+  max-width: 60rem;
+  margin: 0 auto;
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin-top: 3rem;

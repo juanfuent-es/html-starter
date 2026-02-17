@@ -2,115 +2,344 @@
   Documento base HTML semántico
   Uso recomendado: starter / referencia / archivo vivo
 -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-  <!--
+  <head>
+    <!--
       @meta: charset
       Define la codificación de caracteres.
       Docs: https://developer.mozilla.org/es/docs/Web/HTML/Element/meta#attr-charset
     -->
-  <meta charset="UTF-8">
-  <!--
+    <meta charset="UTF-8" />
+    <!--
       @meta: viewport
       Controla el tamaño y escala en móviles.
       Docs: https://developer.mozilla.org/es/docs/Web/HTML/Viewport_meta_tag
     -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
       @title
       Título de la pestaña. Importante para SEO y accesibilidad.
     -->
-  <title>HTML Starter · CENTRO</title>
-  <!--
+    <title>HTML Starter · CENTRO</title>
+    <!--
       @favicon
       Ícono del sitio. Formato SVG recomendado.
     -->
-  <link rel="icon" type="image/svg+xml" href="./img/favicon.svg">
-  
-  <!-- Metadatos Open Graph (RRSS) -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Semantic HTML · Starter Markup">
-  <meta property="og:description" content="Base para HTML semántico y accesibilidad.">
-  <meta property="og:url" content="https://juanfuent-es.github.io/html-starter/">
+    <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
 
-  <!--
+    <!-- Metadatos Open Graph (RRSS) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Semantic HTML · Starter Markup" />
+    <meta property="og:description" content="Base para HTML semántico y accesibilidad."/>
+    <meta property="og:url" content="https://juanfuent-es.github.io/html-starter/"/>
+    <!--
       @styles
       Hoja de estilos externa.
       Docs: https://developer.mozilla.org/es/docs/Web/HTML/Element/link
     -->
-  <link rel="stylesheet" href="./css/style.css">
-</head>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-<body>
-  <!--
+  <body>
+    <!--
       HEADER GLOBAL
       Navegación principal (<nav>) e identidad.
       Docs: https://developer.mozilla.org/es/docs/Web/HTML/Element/header
     -->
-  <header>
-    <nav aria-label="Navegación principal">
-      <a href="https://centro.edu.mx" title="Sitio oficial de CENTRO" target="_blank">
-        <!-- Siempre incluir width/height en imágenes para evitar saltos de layout (CLS) -->
-        <img src="./img/centro-logo.svg" alt="CENTRO | Diseño, Cine y Televisión" width="120" height="24">
-      </a>
-      <ul>
-        <li><a href="css.html">CSS</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+      <nav aria-label="Navegación principal">
+        <a href="https://centro.edu.mx" title="Sitio oficial de CENTRO" target="_blank">
+          <!-- Siempre incluir width/height en imágenes para evitar saltos de layout (CLS) -->
+          <img src="./img/centro-logo.svg" alt="CENTRO | Diseño, Cine y Televisión" width="120" height="24"/>
+        </a>
+      </nav>
+    </header>
 
-  <!--
+    <!--
       MAIN
       Contenido principal único del documento.
       Docs: https://developer.mozilla.org/es/docs/Web/HTML/Element/main
     -->
-  <main>
     <!--
         SECTION
         Agrupación temática de contenido.
         Docs: https://developer.mozilla.org/es/docs/Web/HTML/Element/section
       -->
-    <section>
-      <header>
-        <h1>HTML Starter<br>Markup Semántico</h1>
-      </header>
 
-      <p>Este documento es un punto de partida para crear páginas HTML5, priorizando estructura y significado.</p>
+    <header>
+      <h1>Tipografía en Diseño Digital</h1>
+      <p>El texto como Interfaz de Usuario</p>
+    </header>
 
-      <p>
-        <i>*Úsalo como referencia de buenas prácticas.</i>
-      </p>
+    <nav>
+      <h2>Contenido</h2>
+      <ul>
+        <li><a href="#punto-de-partida">1. Punto de partida</a></li>
+        <li>
+          <a href="#tipografia-como-sistema">2. Tipografía como sistema</a>
+        </li>
+        <li><a href="#familias-tipograficas">3. Familias tipográficas</a></li>
+        <li><a href="#jerarquia">4. Jerarquía y semántica</a></li>
+        <li><a href="#tamano-base">5. Tamaño base y rem</a></li>
+        <li><a href="#unidades">6. Unidades en tipografía</a></li>
+        <li><a href="#longitud-linea">7. Longitud de línea</a></li>
+        <li><a href="#interlineado">8. Interlineado</a></li>
+        <li><a href="#justificado">9. Evitar justificado en web</a></li>
+        <li><a href="#texto-como-interfaz">10. Texto como interfaz</a></li>
+        <li><a href="#accesibilidad">11. Accesibilidad tipográfica</a></li>
+        <li><a href="#principios">12. Principios del curso</a></li>
+        <li><a href="#referencias">Bibliografía y referencias</a></li>
+      </ul>
+    </nav>
 
-    </section>
-  </main>
+    <main>
+      <section id="punto-de-partida">
+        <h2>1. Punto de partida</h2>
+        <p>
+          La web es principalmente texto. Aunque existan video, animación,
+          inteligencia artificial y entornos inmersivos, la interacción digital
+          sigue mediada por lenguaje escrito.
+        </p>
+        <p>
+          Texto no es decoración. Texto es interfaz. Diseñar web es organizar
+          información escrita para que pueda leerse, escanearse y entenderse
+          rápidamente.
+        </p>
+      </section>
 
-  <!--
+      <section id="tipografia-como-sistema">
+        <h2>2. Tipografía como sistema</h2>
+        <p>
+          Elegir una tipografía no es hacer tipografía. La tipografía en web
+          implica construir un sistema.
+        </p>
+        <ul>
+          <li>Jerarquía</li>
+          <li>Escala</li>
+          <li>Ritmo vertical</li>
+          <li>Longitud de línea</li>
+          <li>Espaciado</li>
+          <li>Contraste</li>
+          <li>Accesibilidad</li>
+        </ul>
+        <p>
+          La calidad del diseño depende del sistema, no de la fuente aislada.
+        </p>
+      </section>
+
+      <section id="familias-tipograficas">
+        <h2>3. Familias tipográficas</h2>
+
+        <article>
+          <h3>Serif</h3>
+          <p>
+            Tradición editorial, adecuada para lectura extensa. Asociada a
+            libros y publicaciones culturales.
+          </p>
+          <pre><code>font-family: "Merriweather", serif;</code></pre>
+        </article>
+
+        <article>
+          <h3>Sans Serif</h3>
+          <p>
+            Contemporánea, funcional y altamente legible en pantalla. Dominante
+            en interfaces digitales.
+          </p>
+          <pre><code>font-family: "Inter", sans-serif;</code></pre>
+        </article>
+
+        <article>
+          <h3>Monospace</h3>
+          <p>
+            Caracteres de ancho igual. Asociada a programación y sistemas
+            técnicos.
+          </p>
+          <pre><code>font-family: "Fira Code", monospace;</code></pre>
+        </article>
+
+        <article>
+          <h3>Otros grupos genéricos</h3>
+          <ul>
+            <li>
+              <strong>cursive:</strong> Simula escritura manual. Uso decorativo.
+            </li>
+            <li>
+              <strong>fantasy:</strong> Decorativa o temática. Uso expresivo
+              puntual.
+            </li>
+            <li>
+              <strong>system-ui:</strong> Fuente nativa del sistema. Alta
+              legibilidad y rendimiento.
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="jerarquia">
+        <h2>4. Jerarquía y semántica</h2>
+        <p>HTML define estructura semántica:</p>
+        <ul>
+          <li>h1 → Nivel principal</li>
+          <li>h2 → Segundo nivel</li>
+          <li>h3 → Tercer nivel</li>
+          <li>p → Texto base</li>
+        </ul>
+        <p>
+          La jerarquía no depende solo del tamaño visual, sino de la estructura
+          y el contraste.
+        </p>
+      </section>
+
+      <section id="tamano-base">
+        <h2>5. Tamaño base y rem</h2>
+        <p>
+          El navegador define un tamaño base aproximado de 16px, que puede
+          cambiar según la preferencia del usuario.
+        </p>
+        <pre><code>html {
+  font-size: 100%;
+}</code></pre>
+        <p>
+          1rem equivale al tamaño raíz. Usar rem permite que el sistema escale
+          proporcionalmente.
+        </p>
+      </section>
+
+      <section id="unidades">
+        <h2>6. Unidades en tipografía</h2>
+        <h3>Absolutas</h3>
+        <p>px — Unidad fija.</p>
+
+        <h3>Relativas</h3>
+        <ul>
+          <li>rem — Relativa al elemento raíz.</li>
+          <li>em — Relativa al elemento padre.</li>
+          <li>% — Relativa al contenedor.</li>
+          <li>vw — Relativa al viewport.</li>
+          <li>ch — Relativa al ancho del carácter "0".</li>
+        </ul>
+      </section>
+
+      <section id="longitud-linea">
+        <h2>7. Longitud de línea</h2>
+        <p>
+          La legibilidad depende de la longitud de línea. Demasiado larga genera
+          fatiga; demasiado corta fragmenta el ritmo.
+        </p>
+        <p>Rango recomendado: 45–75 caracteres por línea.</p>
+        <pre><code>article {
+  max-width: 65ch;
+}</code></pre>
+      </section>
+
+      <section id="interlineado">
+        <h2>8. Interlineado</h2>
+        <p>El espacio entre líneas afecta la comodidad de lectura.</p>
+        <pre><code>line-height: 1.5–1.7;</code></pre>
+      </section>
+
+      <section id="justificado">
+        <h2>9. Evitar justificado en web</h2>
+        <p>
+          El texto justificado no es recomendable en web porque el ancho es
+          fluido y puede generar espacios irregulares.
+        </p>
+        <pre><code>text-align: left;</code></pre>
+        <p>Pantalla no es impresión.</p>
+      </section>
+
+      <section id="texto-como-interfaz">
+        <h2>10. Texto como interfaz</h2>
+        <p>
+          Tratar texto como interfaz implica claridad inmediata, escaneo rápido
+          y sistema coherente.
+        </p>
+        <p>
+          Optimizar tipografía es optimizar accesibilidad, usabilidad y
+          comprensión.
+        </p>
+      </section>
+
+      <section id="accesibilidad">
+        <h2>11. Accesibilidad tipográfica</h2>
+        <ul>
+          <li>Escalabilidad con rem</li>
+          <li>Respeto a preferencias del usuario</li>
+          <li>Alto contraste</li>
+          <li>Tamaño base mínimo de 1rem</li>
+        </ul>
+      </section>
+
+      <section id="principios">
+        <h2>12. Principios del curso</h2>
+        <ol>
+          <li>Diseñar sistemas, no tamaños sueltos.</li>
+          <li>Respetar la preferencia del usuario.</li>
+          <li>Usar rem para jerarquía.</li>
+          <li>Controlar longitud con ch.</li>
+          <li>No justificar texto.</li>
+          <li>Priorizar lectura sobre ornamentación.</li>
+          <li>Recordar que texto es interfaz.</li>
+        </ol>
+      </section>
+
+      <section id="referencias">
+        <h2>Bibliografía y referencias</h2>
+        <ul>
+          <li>
+            <a
+              href="https://ia.net/topics/the-web-is-all-about-typography-period"
+              target="_blank"
+              rel="noopener"
+              >The Web Is All About Typography. Period.</a
+            >
+          </li>
+          <li>Robert Bringhurst — The Elements of Typographic Style</li>
+          <li>Emil Ruder — Typographie</li>
+          <li>Josef Müller-Brockmann — Grid Systems in Graphic Design</li>
+          <li>
+            <a href="https://fonts.adobe.com" target="_blank" rel="noopener"
+              >Adobe Fonts</a
+            >
+          </li>
+          <li>
+            <a href="https://fonts.google.com" target="_blank" rel="noopener"
+              >Google Fonts</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://design.google/library/google-sans-flex-font"
+              target="_blank"
+              rel="noopener"
+              >Google Sans Flex – Variable Font Case Study</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!--
       FOOTER
       Pie de página con información de contacto y enlaces secundarios.
       Docs: https://developer.mozilla.org/es/docs/Web/HTML/Element/footer
     -->
-  <footer>
-    <address>
-      <p>
-        <a href="https://centro.edu.mx/" target="_blank"><strong>CENTRO</strong></a><br>
-        Av. Constituyentes 455, CDMX<br>
-        <a href="tel:+525527899000">(+52) 55 2789 9000</a>
-      </p>
-    </address>
+    <footer>
+      <address>
+        <p>
+          <a href="https://centro.edu.mx/" target="_blank"
+            ><strong>CENTRO</strong></a
+          ><br />
+          <a href="https://maps.app.goo.gl/QzhCvoLRDLP3NZJLA" target="_blank"
+            >Av. Constituyentes 455, CDMX</a
+          ><br />
+          <a href="tel:+525527899000">(+52) 55 2789 9000</a>
+        </p>
+      </address>
+    </footer>
 
-    <nav aria-label="Redes sociales">
-      <ul>
-        <li><a target="_blank" href="https://instagram.com/centro_U/">Instagram</a></li>
-        <li><a target="_blank" href="https://linkedin.com/school/centro.edu.mx/">LinkedIn</a></li>
-        <li><!-- Más redes... --></li>
-      </ul>
-    </nav>
-  </footer>
-
-  <!-- Scripts al final del body para no bloquear renderizado -->
-  <script src="./js/main.js"></script>
-</body>
-
+    <!-- Scripts al final del body para no bloquear renderizado -->
+    <script src="./js/script.js"></script>
+  </body>
 </html>

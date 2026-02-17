@@ -1,174 +1,182 @@
-/* 
-  MINIMAL CSS GUIDE
-  -----------------
-  Guía de estilos base para aprender CSS.
-  - Sin clases ni IDs.
-  - Tipografía fluida y funcional.
-  - Colores heredados.
-*/
+/* ==================================================
+   TIPOGRAFÍA Y SISTEMA BASE · 2026
+   Hoja minimal para documento académico
+   ================================================== */
+
+
+/* ------------------------------------------
+   1. CONFIGURACIÓN GLOBAL
+   ------------------------------------------ */
 
 /* 
-  RESET BÁSICO 
+   Respetamos el tamaño base del usuario.
+   1rem dependerá de la configuración del navegador.
 */
 html {
-  font-size: 100%; /* Respeta tamaño base del usuario */
-  box-sizing: border-box; /* Manejo fácil de padding/border */
+  font-size: 100%;
+  box-sizing: border-box;
 }
 
+/* 
+   Modelo de caja consistente.
+   Hace que padding y border no alteren el ancho total.
+*/
 *, *::before, *::after {
   box-sizing: inherit;
-  margin: 0;
-  padding: 0;
 }
+
+
+/* ------------------------------------------
+   2. BASE DEL DOCUMENTO
+   ------------------------------------------ */
 
 body {
-  /* Pila de fuentes nativa del sistema */
+  margin: 0;
+
+  /* system-ui prioriza la fuente nativa del sistema */
   font-family: system-ui, -apple-system, sans-serif;
-  
-  /* Color principal y fondo (heredados por el resto) */
-  color: #333;
-  background-color: #f9f9f9;
-  
+
+  /* Interlineado cómodo para lectura prolongada */
   line-height: 1.6;
-  min-height: 100vh;
+
+  /* Contraste alto y limpio */
+  color: #222;
+  background-color: #ffffff;
 }
 
-/* 
-  LAYOUT
+
+/* ------------------------------------------
+   3. CONTENEDOR DE LECTURA
+   ------------------------------------------ */
+
+/*
+   Controlamos la longitud de línea.
+   65ch ≈ 65 caracteres por línea.
+   Mejora legibilidad y ritmo.
 */
-header, main, footer {
-  /* Ancho máximo de lectura y centrado */
-  max-width: 60rem;
-  margin-left: auto;
-  margin-right: auto;
-  
-  /* Padding lateral simple */
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
 main {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-header {
-  padding-top: 3rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid currentColor; /* Usa el color del texto */
-  
-  max-width: 60rem;
+  width: 100%;
+  max-width: 1024px;
   margin: 0 auto;
+  padding: 2rem 1.5rem;
 }
 
-footer {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  margin-top: 3rem;
-  border-top: 1px solid currentColor;
-  text-align: center;
-  font-size: 0.875rem;
 
-  max-width: 60rem;
+/* ------------------------------------------
+   4. NAVEGACIÓN
+   ------------------------------------------ */
+
+nav {
+  max-width: 65ch;
   margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+nav ul {
+  padding-left: 1.25rem;
 }
 
 
-/* 
-  TIPOGRAFÍA FLUIDA
-  clamp(min, preferred, max)
+/* ------------------------------------------
+   5. JERARQUÍA TIPOGRÁFICA
+   ------------------------------------------ */
+
+/*
+   Escala basada en rem.
+   Proporcional y accesible.
 */
 
 h1 {
-  /* Configuración base para el título (aplica a todo el bloque, o sea, la segunda línea) */
-  font-size: clamp(1.5rem, 3vw + 1rem, 2.5rem); 
-  
-  margin-bottom: 0.5em;
-  line-height: 1.1;
-  letter-spacing: -0.02em; 
-}
-
-h1::first-line {
-  /* Estilos específicos SOLO para la primera línea de texto */
-  font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem);
-  font-weight: 800;
-  color: #000; /* Un poco más oscuro para más énfasis */
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin: 2rem 0 1rem;
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw + 1rem, 3rem);
-  margin-top: 2em;
-  margin-bottom: 0.75em;
-  line-height: 1.2;
+  font-size: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
-  font-size: clamp(1.5rem, 3vw + 1rem, 2rem);
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
+  font-size: 1.5rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
 }
-
-/* 
-  ELEMENTOS DE TEXTO
-*/
 
 p {
-  max-width: 65ch; /* Ancho de lectura óptimo */
   margin-bottom: 1.5rem;
-  font-size: clamp(1rem, 2vw, 1.125rem);
 }
 
-ul, ol {
-  padding-left: 1.5rem;
+
+/* ------------------------------------------
+   6. LISTAS
+   ------------------------------------------ */
+
+ul,
+ol {
   margin-bottom: 1.5rem;
-  max-width: 65ch;
+  padding-left: 1.5rem;
 }
 
 li {
   margin-bottom: 0.5rem;
-  font-size: clamp(1rem, 2vw, 1.125rem);
 }
 
-/* Enlaces simples, heredan color */
+
+/* ------------------------------------------
+   7. ENLACES
+   ------------------------------------------ */
+
+/*
+   Heredan color del texto.
+   Sin decoraciones innecesarias.
+*/
 a {
-  color: inherit; /* Hereda color del padre/body */
+  color: inherit;
   text-decoration: underline;
-  text-decoration-thickness: 1px;
   text-underline-offset: 2px;
-  font-weight: 500;
-  transition: opacity 0.2s ease;
 }
 
-a:hover {
-  text-decoration-thickness: 2px;
-  opacity: 0.7; /* Cambio sutil en hover */
-}
-
+/*
+   Indicador de foco accesible.
+*/
 a:focus {
   outline: 2px solid currentColor;
-  outline-offset: 4px;
+  outline-offset: 2px;
 }
 
-blockquote {
-  border-left: 4px solid currentColor;
-  padding-left: 1rem;
-  margin: 2rem 0;
-  font-style: italic;
-  font-size: 1.1em;
-  opacity: 0.8; /* Ligeramente más suave */
+
+/* ------------------------------------------
+   8. BLOQUES ESPECIALES
+   ------------------------------------------ */
+
+pre {
+  overflow-x: auto;
+  padding: 1rem;
+  background-color: #f5f5f5;
 }
 
 code {
-  font-family: monospace;
-  background-color: rgba(0,0,0,0.05); /* Fondo sutil transparente */
-  padding: 0.2em 0.4em;
-  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.9em;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 1.5rem 0;
+blockquote {
+  margin: 2rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid currentColor;
+  font-style: italic;
+}
+
+
+/* ------------------------------------------
+   9. PIE DE PÁGINA
+   ------------------------------------------ */
+
+footer {
+  max-width: 65ch;
+  margin: 3rem auto 2rem;
+  padding: 0 1.5rem;
+  font-size: 0.875rem;
 }

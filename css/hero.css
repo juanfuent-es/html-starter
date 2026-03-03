@@ -1,0 +1,26 @@
+/* ==================================================
+   HERO SECTION · MINIMAL STYLE
+   Complemento de style.css para jerarquía visual
+   ================================================== */
+
+.hero {
+    padding: 4rem 0;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 3rem;
+    /* El ancho está controlado por el contenedor main en style.css */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    /* Ajuste para destacar más que el H1 estándar */
+    margin-top: 0;
+    letter-spacing: -0.02em;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: #666;
+    max-width: 45ch;
+    /* Longitud de línea optimizada para el lead text */
+    margin-bottom: 0;
+}

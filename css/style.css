@@ -21,7 +21,9 @@ html {
    Modelo de caja consistente.
    Hace que padding y border no alteren el ancho total.
 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -54,7 +56,8 @@ body {
    65ch ≈ 65 caracteres por línea.
    Mejora legibilidad y ritmo.
 */
-main {
+main,
+nav {
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;

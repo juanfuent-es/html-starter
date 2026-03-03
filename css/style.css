@@ -65,6 +65,13 @@ nav {
   padding: 2rem 1.5rem;
 }
 
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 header {
   text-align: center;
 }

@@ -8,11 +8,8 @@
     padding: 4rem 0;
     border-bottom: 2px solid #eee;
     margin-bottom: 3rem;
+    text-align: center;
     /* El ancho está controlado por el contenedor main en style.css */
-}
-
-.hero p {
-    max-width: 60ch;
 }
 
 .hero > header > p {
@@ -33,8 +30,9 @@
     letter-spacing: -0.02em;
 }
 
-.hero > p {
-    display: block;
+.hero p {
+    max-width: 60ch;
+    margin: 0 auto;
     font-size: 1.25rem;
 }
 
@@ -54,10 +52,13 @@
     margin-top: 1.5rem;
     padding: 0;
     width: 100%;
-    max-width: 45ch;
+    justify-content: space-around;
 }
 
 .hero > nav > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     padding: 0.5rem 0.75rem;
     border: 1px solid #ddd;
     text-decoration: none;

@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!--
+    @meta: charset
+    Define la codificación de caracteres.
+    Docs: https://developer.mozilla.org/es/docs/Web/HTML/Element/meta#attr-charset
+    -->
+    <meta charset="UTF-8" />
+    <!--
+    @meta: viewport
+    Controla el tamaño y escala en móviles.
+    Docs: https://developer.mozilla.org/es/docs/Web/HTML/Viewport_meta_tag
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--
+    @title
+    Título de la pestaña. Importante para SEO y accesibilidad.
+    -->
+    <title>HTML Starter · CENTRO</title>
+    <!--
+    @favicon
+    Ícono del sitio. Formato SVG recomendado.
+    -->
+    <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
+    <!-- Metadatos Open Graph (RRSS) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Semantic HTML · Starter Markup" />
+    <meta
+      property="og:description"
+      content="Base para HTML semántico y accesibilidad."
+    />
+    <meta
+      property="og:url"
+      content="https://juanfuent-es.github.io/html-starter/"
+    />
+    <!--
+    @styles
+    Hoja de estilos externa.
+    Docs: https://developer.mozilla.org/es/docs/Web/HTML/Element/link
+    -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/hero.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Encabezado y Navegación Principal -->
+      <section id="hero-section">
+        <header>
+          <h1>ROOT PAGE</h1>
+          <p>Landing personal con Hero + Sistema de Enlaces</p>
+        </header>
+
+        <nav id="challenge-nav" aria-label="Navegación del proyecto">
+          <ul>
+            <li><a href="#objective">Introducción</a></li>
+            <li><a href="#hero">Hero</a></li>
+            <li><a href="#structure">Estructura</a></li>
+            <li><a href="#layout">Layout</a></li>
+            <li><a href="#mobile">Mobile First</a></li>
+            <li><a href="#accessibility">Accesibilidad</a></li>
+            <li><a href="#multimedia">Multimedia</a></li>
+            <li><a href="#visual-system">Sistema Visual</a></li>
+            <li><a href="#repository">Repositorio</a></li>
+            <li><a href="#rubric">Rúbrica</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <hr />
+
+      <!-- Introducción -->
+      <article id="objective">
+        <h2>Introducción</h2>
+        <p>
+          El propósito de este ejercicio es diseñar una landing page personal
+          tipo "link hub", donde concentres tus enlaces sociales o profesionales
+          en una sola interfaz.
+        </p>
+        <p>
+          Este proyecto no es sólo una lista de enlaces. Es un ejercicio de
+          jerarquía visual, estructura semántica, layout y composición
+          tipográfica, con énfasis en la construcción de una sección Hero como
+          bloque principal.
+        </p>
+
+        <h3>Requisitos mínimos</h3>
+        <ol>
+          <li>Al menos tres enlaces a redes sociales o recursos externos.</li>
+          <li>Un enlace de contacto vía correo electrónico.</li>
+          <li>Un enlace de contacto vía WhatsApp o teléfono.</li>
+          <li>Una imagen de perfil, logo o avatar.</li>
+          <li>Una sección Hero correctamente estructurada.</li>
+        </ol>
+
+        <p><strong>Deadline: 24 de Marzo de 2026</strong></p>
+      </article>
+
+      <hr />
+
+      <!-- Hero -->
+      <article id="hero">
+        <h2>Sección Hero</h2>
+
+        <p>
+          El proyecto debe iniciar con una sección Hero que funcione como primer
+          impacto visual, contenedor de identidad y punto de entrada a la
+          navegación.
+        </p>
+
+        <h3>Debe incluir</h3>
+        <ul>
+          <li>Nombre o marca personal.</li>
+          <li>Descriptor o tagline.</li>
+          <li>Imagen (avatar, retrato o recurso gráfico).</li>
+          <li>Al menos un llamado a la acción (CTA).</li>
+          <li>Uso consciente de clases, ids y selectores CSS.</li>
+          <li>Aplicación de flex o grid para layout.</li>
+        </ul>
+
+        <h3>Se evaluará</h3>
+        <ul>
+          <li>Jerarquía visual clara.</li>
+          <li>Contraste adecuado.</li>
+          <li>Adaptabilidad en móvil.</li>
+          <li>Coherencia tipográfica.</li>
+        </ul>
+      </article>
+
+      <hr />
+
+      <!-- Estructura -->
+      <article id="structure">
+        <h2>Estructura y Semántica</h2>
+
+        <ul>
+          <li>Uso correcto de header, nav, main, section, article y footer.</li>
+          <li>Un solo h1 en todo el documento.</li>
+          <li>Jerarquía lógica de encabezados.</li>
+          <li>Uso correcto de atributos alt, aria-label y title.</li>
+          <li>Organización clara de carpetas y archivos.</li>
+        </ul>
+      </article>
+
+      <hr />
+
+      <!-- Layout -->
+      <article id="layout">
+        <h2>Layout y Modelo de Caja</h2>
+
+        <ul>
+          <li>Comprensión de margin, padding y border.</li>
+          <li>Uso de display flex o grid.</li>
+          <li>Control de ancho máximo con max-width.</li>
+          <li>Ritmo vertical consistente.</li>
+          <li>No depender de br para generar espacios.</li>
+        </ul>
+      </article>
+
+      <hr />
+
+      <!-- Mobile -->
+      <article id="mobile">
+        <h2>Mobile First</h2>
+
+        <ul>
+          <li>Diseñar primero para pantalla móvil.</li>
+          <li>Uso progresivo de media queries.</li>
+          <li>Áreas táctiles adecuadas (mínimo recomendado 44px).</li>
+          <li>Correcto comportamiento desde 320px de ancho.</li>
+        </ul>
+      </article>
+
+      <hr />
+
+      <!-- Accesibilidad -->
+      <article id="accessibility">
+        <h2>Accesibilidad y Diseño</h2>
+
+        <ul>
+          <li>Contraste mínimo AA.</li>
+          <li>Estados visibles en hover, focus y active.</li>
+          <li>No depender sólo del color para comunicar estados.</li>
+          <li>Uso de rel="noopener" en enlaces externos.</li>
+          <li>Texto alternativo descriptivo en imágenes.</li>
+        </ul>
+      </article>
+
+      <hr />
+
+      <!-- Multimedia -->
+      <article id="multimedia">
+        <h2>Multimedia</h2>
+
+        <ul>
+          <li>Imágenes optimizadas para web.</li>
+          <li>
+            Uso de formatos ideales, png para transparencias / JPG sin
+            transparencia. *Nuevos formatos, webp, avif.
+          </li>
+          <li>Dimensiones controladas desde CSS.</li>
+          <li>Compresión adecuada para mejorar tiempos de carga.</li>
+        </ul>
+      </article>
+
+      <hr />
+
+      <!-- Sistema Visual -->
+      <article id="visual-system">
+        <h2>Sistema Visual</h2>
+
+        <ul>
+          <li>Escala tipográfica coherente (h1, h2, texto base).</li>
+          <li>Uso consciente de peso, tamaño y contraste.</li>
+          <li>Consistencia en espaciados.</li>
+          <li>Estados interactivos claros en enlaces y botones.</li>
+          <li>Uso intencional de tipografía variable (opcional).</li>
+        </ul>
+      </article>
+
+      <hr />
+
+      <!-- Repositorio -->
+      <article id="repository">
+        <h2>Repositorio en GitHub</h2>
+
+        <ul>
+          <li>Repositorio público.</li>
+          <li>Archivo README.md con descripción conceptual.</li>
+          <li>Captura del Hero incluida en el README.</li>
+          <li>Enlace al deploy (GitHub Pages).</li>
+          <li>Commits descriptivos.</li>
+          <li>Estructura clara de carpetas (css, img, assets).</li>
+        </ul>
+      </article>
+
+      <hr />
+
+      <!-- Rúbrica -->
+      <article id="rubric">
+        <h2>Rúbrica de Evaluación</h2>
+
+        <h3>1. Hero (25 pts)</h3>
+        <ul>
+          <li>Jerarquía visual clara (5)</li>
+          <li>Uso correcto de layout (5)</li>
+          <li>Uso de clases e ids (5)</li>
+          <li>Adaptabilidad móvil (5)</li>
+          <li>Coherencia tipográfica (5)</li>
+        </ul>
+
+        <h3>2. Estructura HTML (15 pts)</h3>
+        <ul>
+          <li>Uso semántico correcto (5)</li>
+          <li>Jerarquía de títulos (5)</li>
+          <li>Accesibilidad básica (5)</li>
+        </ul>
+
+        <h3>3. Layout y Modelo de Caja (15 pts)</h3>
+        <ul>
+          <li>Uso adecuado de spacing (5)</li>
+          <li>Uso de flex o grid (5)</li>
+          <li>Ritmo y alineación consistentes (5)</li>
+        </ul>
+
+        <h3>4. Mobile First (10 pts)</h3>
+        <ul>
+          <li>Funciona correctamente en móvil (5)</li>
+          <li>Media queries bien aplicadas (5)</li>
+        </ul>
+
+        <h3>5. Sistema Visual (10 pts)</h3>
+        <ul>
+          <li>Escala tipográfica coherente (5)</li>
+          <li>Estados de interacción claros (5)</li>
+        </ul>
+
+        <h3>6. Multimedia y Optimización (10 pts)</h3>
+        <ul>
+          <li>Imágenes optimizadas (5)</li>
+          <li>Formatos modernos con fallback (5)</li>
+        </ul>
+
+        <h3>7. Accesibilidad (5 pts)</h3>
+        <ul>
+          <li>Contraste adecuado (3)</li>
+          <li>Estados focus visibles (2)</li>
+        </ul>
+
+        <h3>8. Repositorio y Documentación (10 pts)</h3>
+        <ul>
+          <li>README claro (5)</li>
+          <li>Commits descriptivos (5)</li>
+        </ul>
+      </article>
+
+      <hr />
+
+      <footer>
+        <p>#happyCoding</p>
+        <a href="#hero-section"> Volver al inicio </a>
+      </footer>
+    </main>
+    <footer>
+    <a href="https://centro.edu.mx/" target="_blank" rel="noopener">
+        <img
+          src="./img/centro-logo.svg"
+          alt="CENTRO Diseño, Cine y Televisión"
+          width="100"
+          height="20"
+        />
+      </a>
+      <p>
+        <strong>Diseño, Cine y Televisión 2025</strong>
+        <br />
+        Computación Creativa: Diseño y Desarrollo Web<br />
+        <small>Evaluación Primer Bloque</small>
+        <br />
+      </p>
+    </footer>
+  </body>
+</html>

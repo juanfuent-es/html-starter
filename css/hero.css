@@ -6,20 +6,8 @@
 .hero {
     display: block;
     padding: 4rem 0;
-    border-bottom: 2px solid #eee;
-    margin-bottom: 3rem;
     text-align: center;
     /* El ancho está controlado por el contenedor main en style.css */
-}
-
-.hero > header > p {
-    display: inline;
-    margin: 0;
-    padding: 0.25rem 0.5rem;
-    border: 1px solid currentColor;
-    font-size: 0.85rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
 }
 
 .hero > header > h1 {
@@ -36,20 +24,26 @@
     font-size: 1.25rem;
 }
 
+
+.hero > header > p {
+    display: inline;
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid currentColor;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
 .hero > p + p {
     margin-top: 1rem;
     font-size: 1rem;
 }
 
-.hero > p + p > span {
-    display: inline;
-    font-weight: 600;
-}
-
-.hero > nav {
+.hero nav {
     display: flex;
     gap: 0.75rem;
-    margin-top: 1.5rem;
+    margin-top: 3rem;
     padding: 0;
     width: 100%;
     justify-content: space-around;

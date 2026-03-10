@@ -2,12 +2,15 @@
    TIPOGRAFÍA Y SISTEMA BASE · 2026
    Hoja minimal para documento académico
    ================================================== */
-
-
 /* ------------------------------------------
    1. CONFIGURACIÓN GLOBAL
    ------------------------------------------ */
-
+:root {
+  --bg-color: #151515;
+  --text-color: #00ff8d;
+  --accent-color: cyan; 
+  --font-family: 'Google Sans Code', 'Courier New', Courier, monospace;
+}
 /* 
    Respetamos el tamaño base del usuario.
    1rem dependerá de la configuración del navegador.
@@ -17,7 +20,6 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
 /* 
    Modelo de caja consistente.
    Hace que padding y border no alteren el ancho total.
@@ -28,23 +30,18 @@ html {
   box-sizing: inherit;
 }
 
-
 /* ------------------------------------------
    2. BASE DEL DOCUMENTO
    ------------------------------------------ */
-
 body {
   margin: 0;
-
   /* system-ui prioriza la fuente nativa del sistema */
-  font-family: system-ui, -apple-system, sans-serif;
-
+  font-family: var(--font-family);
   /* Interlineado cómodo para lectura prolongada */
   line-height: 1.6;
-
   /* Contraste alto y limpio */
-  color: #222;
-  background-color: #ffffff;
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
 
@@ -66,7 +63,7 @@ nav {
 }
 
 main {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -6,10 +6,16 @@
    1. CONFIGURACIÓN GLOBAL
    ------------------------------------------ */
 :root {
-  --bg-color: #151515;
-  --text-color: #00ff8d;
-  --accent-color: cyan; 
-  --font-family: 'Google Sans Code', 'Courier New', Courier, monospace;
+  /* monokai colors */
+  --bg-color: #221f22;
+  --text-color: #fcfcfa;
+  --accent-color: #fad863; 
+  --orange: #f49966;
+  --red: #f66589;
+  --purple: #a899eb;
+  --blue: #87dbe8;
+  --green: #acdb73;
+  --font-family: 'Google Sans Code', 'Fira Code' 'Courier New', Courier, monospace;
 }
 /* 
    Respetamos el tamaño base del usuario.
@@ -143,7 +149,7 @@ li {
    Sin decoraciones innecesarias.
 */
 a {
-  color: inherit;
+  color: var(--accent-color);
   text-decoration: underline;
   text-underline-offset: 2px;
 }

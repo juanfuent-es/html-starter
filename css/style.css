@@ -15,7 +15,7 @@
   --purple: #a899eb;
   --blue: #87dbe8;
   --green: #acdb73;
-  --font-family: 'Google Sans Code', 'Fira Code' 'Courier New', Courier, monospace;
+  --font-family: 'Google Sans Code', 'Fira Code', 'Courier New', Courier, monospace;
 }
 /* 
    Respetamos el tamaño base del usuario.
@@ -23,8 +23,14 @@
 */
 html {
   font-size: 100%;
-  box-sizing: border-box;
   scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  body { font-size: 1.25rem; }
+}
+@media (min-width: 1024px) {
+  body { font-size: 1.5rem; } 
 }
 /* 
    Modelo de caja consistente.
@@ -35,7 +41,6 @@ html {
 *::after {
   box-sizing: inherit;
 }
-
 /* ------------------------------------------
    2. BASE DEL DOCUMENTO
    ------------------------------------------ */
@@ -48,9 +53,25 @@ body {
   /* Contraste alto y limpio */
   color: var(--text-color);
   background-color: var(--bg-color);
+  /* background-image: url('https://placehold.co/375x667?text=mobile'); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: contain;
 }
 
+/* @media (min-width: 768px) {
+  h1 {
+    background-image: url('https://placehold.co/768x1024?text=Tablet');
+  }
+}
 
+@media (min-width: 1024px) {
+  h1 {
+    background-image: url('https://placehold.co/1920x1080?text=Desktop');
+  }
+}
+ */
 /* ------------------------------------------
    3. CONTENEDOR DE LECTURA
    ------------------------------------------ */
@@ -63,7 +84,7 @@ body {
 main,
 nav {
   width: 100%;
-  max-width: 1024px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
 }
@@ -73,6 +94,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 2rem;
 }
 
 header {
@@ -103,15 +125,17 @@ nav ul {
 */
 
 h1 {
-  font-size: 2.5rem;
   line-height: 1.2;
-  margin: 2rem 0 1rem;
+  margin: .5em 0;
+  font-size: max(10vw, 48px);
+  font-family: var(--font-family);
+  color: var(--green);
 }
 
 h2 {
   font-size: 2rem;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  margin: 2rem 0;
+  color: var(--accent-color);
 }
 
 h3 {
@@ -122,6 +146,10 @@ h3 {
 
 p {
   margin-bottom: 1.5rem;
+}
+
+p {
+  max-width: 60ch;
 }
 
 
@@ -136,6 +164,7 @@ ol {
 }
 
 li {
+  max-width: 60ch;
   margin-bottom: 0.5rem;
 }
 
@@ -152,8 +181,16 @@ a {
   color: var(--accent-color);
   text-decoration: underline;
   text-underline-offset: 2px;
+  transition: color 150ms ease;
 }
 
+a:visited {
+  color: var(--green);
+}
+
+a:hover {
+  color: var(--orange);
+}
 /*
    Indicador de foco accesible.
 */
@@ -192,6 +229,18 @@ blockquote {
 
 footer {
   text-align: center;
-  margin: 3rem auto;
+  margin: 0 auto;
   font-size: 0.875rem;
+  padding: 2em 0;
+}
+
+/* Horizontal Rule */
+hr {
+  width: 100%;
+  
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }

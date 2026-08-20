@@ -1,31 +1,61 @@
-# HTML STARTER
+# HTML Starter
 
-Template para setup básico de desarrollo web enfocado en **HTML Semántico** y **CSS Moderno**.
+Template base para generar páginas HTML a partir de una especificación de layout.
 
-Este proyecto sirve como punto de partida para aprender buenas prácticas, accesibilidad y estructura web sin depender de frameworks.
+## Estructura
 
-## Documentación y Referencias
+- `README.md` · documentación y manual de uso.
+- `LAYOUT.md` · reglas estructurales compartidas.
+- `index.html` · página inicial.
+- `img/` · imágenes y recursos.
+- `docs/` · documentación adicional.
 
-### HTML (HyperText Markup Language)
+## Cómo funciona
 
-- [Elemento `head`](https://developer.mozilla.org/es/docs/Web/HTML/Element/head): Metadatos del documento.
-- [Elemento `nav`](https://developer.mozilla.org/es/docs/Web/HTML/Element/nav): Navegación del sitio.
-- [Elemento `main`](https://developer.mozilla.org/es/docs/Web/HTML/Element/main): Contenido principal único.
-- [Semántica en HTML](https://developer.mozilla.org/es/docs/Glossary/Semantics#semántica_en_html): Importancia del significado de las etiquetas.
+`LAYOUT.md` define las reglas persistentes del sitio:
 
-### CSS (Cascading Style Sheets)
+- estructura del documento;
+- metadata;
+- header;
+- navegación;
+- main;
+- footer;
+- enlaces;
+- imágenes;
+- nomenclatura de archivos.
 
-- [Modelo de Caja (Box Model)](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model): Concepto fundamental de layout.
-- [Unidad `rem`](https://developer.mozilla.org/es/docs/Web/CSS/length#rem): Unidades relativas a la raíz.
-- [Función `clamp()`](https://developer.mozilla.org/es/docs/Web/CSS/clamp): Tipografía fluida y responsive.
-- [Selectores Básicos](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors): Cómo aplicar estilos.
+Cuando se crea una nueva página, la instrucción debe utilizar `LAYOUT.md` como especificación.
 
-### Buenas Prácticas
+## Generar una nueva página
 
-- **Accesibilidad (a11y)**: Uso correcto de etiquetas para lectores de pantalla.
-- **Responsive Design**: Diseño adaptable sin media queries complejas.
-- **Performance**: Carga eficiente de recursos.
+Ejemplo:
 
----
+> Crea `acerca-de.html` a partir de `LAYOUT.md`.
+>
+> Título: Acerca de  
+> Descripción: Información general sobre el proyecto.
 
-© 2026 Clase de Introducción a CSS · CENTRO
+## Agregar una página a la navegación
+
+Ejemplo:
+
+> Crea `contacto.html` a partir de `LAYOUT.md`.
+>
+> Título: Contacto  
+> Descripción: Información de contacto.
+
+La nueva página debe añadirse automáticamente a la navegación según las reglas definidas en `LAYOUT.md`.
+
+## Modificar una página existente
+
+Ejemplo:
+
+> Actualiza `acerca-de.html` usando `LAYOUT.md`.
+>
+> Cambia el título a: Sobre el proyecto.
+
+## Regla principal
+
+No repetir en cada prompt las reglas ya definidas en `LAYOUT.md`.
+
+El prompt debe describir únicamente la tarea y el contenido variable.

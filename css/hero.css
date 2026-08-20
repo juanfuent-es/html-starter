@@ -5,7 +5,6 @@
 
 .hero {
     display: block;
-    padding: 4rem 0;
     text-align: center;
     /* El ancho está controlado por el contenedor main en style.css */
 }

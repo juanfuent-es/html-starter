@@ -1,10 +1,8 @@
 <!--
   Documento base HTML semántico
-  Uso recomendado: starter / referencia / archivo vivo
 -->
 <!doctype html>
 <html lang="es">
-
 <head>
     <!--
       @meta: charset
@@ -22,7 +20,7 @@
       @title
       Título de la pestaña. Importante para SEO y accesibilidad.
     -->
-    <title>HTML Starter · CENTRO</title>
+    <title>HTML Starter | CENTRO</title>
     <!--
       @favicon
       Ícono del sitio. Formato SVG recomendado.
@@ -31,7 +29,7 @@
 
     <!-- Metadatos Open Graph (RRSS) -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Semantic HTML · Starter Markup" />
+    <meta property="og:title" content="Semantic HTML | Starter Markup" />
     <meta property="og:description" content="Base para HTML semántico y accesibilidad." />
     <meta property="og:url" content="https://juanfuent-es.github.io/html-starter/" />
     <!--
@@ -51,66 +49,80 @@
 </head>
 
 <body>
+
+  <!-- HEADER: identidad y accesos principales -->
+  <header>
+    <a href="https://github.com/juanfuent-es" target="_blank" rel="noopener noreferrer" aria-label="Ir al perfil de GitHub">
+      <i class="fa-brands fa-github" aria-hidden="true"></i>
+      <span>GitHub</span>
+    </a>
+  </header>
+
+  <!-- MAIN: contenido principal del documento -->
+  <main>
+
     <!--
-      MAIN
-      Contenido principal único del documento.
-      Docs: https://developer.mozilla.org/es/docs/Web/HTML/Element/main
+      HERO
+      "Hero" no es una etiqueta HTML semántica.
+      Usamos un div para agrupar esta unidad de contenido.
     -->
-    <!--
-        SECTION
-        Agrupación temática de contenido.
-        Docs: https://developer.mozilla.org/es/docs/Web/HTML/Element/section
-      -->
-    <main>
-        <section class="hero">
-            <header>
-              <p>Práctica de layout semántico</p>
-              <h1>Diseño de Hero</h1>
-            </header>
+    <div class="hero">
+      <h1>Título Principal</h1>
 
-          <p>El <strong>hero</strong> es el bloque inicial que comunica el propósito de la página en pocos segundos.
-            Debe presentar una <em>jerarquía visual clara</em> entre título, contenido de apoyo y acciones de
-            navegación.</p>
-          <p>En esta práctica se observa cómo conviven <span>display block · inline · flex</span> para construir una
-            composición legible, flexible y consistente.</p>
+      <p>Tagline / Descripción</p>
 
-          <nav aria-label="Enlaces de referencia sobre hero y layout">
-            <a href="https://developer.mozilla.org/es/docs/Web/CSS/display" target="_blank"
-              rel="noopener noreferrer" title="Referencia de CSS display en MDN">
-              <i class="fa-solid fa-code"></i>Display
-            </a>
-            <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox"
-              target="_blank" rel="noopener noreferrer" title="Conceptos básicos de Flexbox en MDN">
-              <i class="fa-solid fa-diagram-project"></i>Flexbox
-            </a>
-            <a href="https://www.w3.org/WAI/tutorials/page-structure/" target="_blank" rel="noopener noreferrer"
-              title="Estructura de página accesible en W3C WAI">
-              <i class="fa-solid fa-universal-access"></i>W3C
-            </a>
-          </nav>
-        </section>
-    </main>
-    <!--
-      FOOTER
-      Pie de página con información de contacto y enlaces secundarios.
-      Docs: https://developer.mozilla.org/es/docs/Web/HTML/Element/footer
-    -->
-    <footer>
-        <address>
-            <p>
-                <a href="https://centro.edu.mx/" target="_blank">
-                    <img src="./img/centro-logo.svg" alt="Logotipo CENTRO" width="120" height="24" />
-                </a>
-                <br />
-                <a href="https://maps.app.goo.gl/QzhCvoLRDLP3NZJLA" target="_blank">Av. Constituyentes 455, CDMX</a>
-                <br />
-                <a href="tel:+525527899000">(+52) 55 2789 9000</a>
-            </p>
-        </address>
-    </footer>
+      <!-- CTA: enlace hacia el recurso principal -->
+      <a href="https://github.com/juanfuent-es/html-starter" target="_blank" rel="noopener noreferrer">
+        Ver Repo en GitHub
+      </a>
+    </div>
 
-    <!-- Scripts al final del body para no bloquear renderizado -->
-    <script src="./js/script.js"></script>
+  </main>
+
+  <!--
+    FOOTER: información complementaria.
+
+    Los grupos "izquierda" y "derecha" son una intención de layout visual.
+    HTML sólo estructura aquí dos grupos de información.
+  -->
+  <footer>
+
+    <!-- Grupo institucional -->
+    <div class="footer-info">
+      <a href="https://centro.edu.mx/" target="_blank" rel="noopener noreferrer" aria-label="Ir al sitio de CENTRO">
+        <img src="./img/centro-logo.svg" alt="CENTRO" width="120" height="24">
+      </a>
+
+      <address>
+        <p>
+          <a href="https://maps.app.goo.gl/QzhCvoLRDLP3NZJLA" target="_blank" rel="noopener noreferrer">
+            Av. Constituyentes 455, CDMX
+          </a>
+        </p>
+
+        <p>
+          <a href="tel:+525527899000">(+52) 55 2789 9000</a>
+        </p>
+      </address>
+    </div>
+
+    <!-- Grupo de redes -->
+    <div class="footer-social">
+      <p>Redes</p>
+
+      <!-- Lista: los elementos forman una colección de enlaces relacionados -->
+      <ul>
+        <li><a href="https://instagram.com/centro_universidad/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://linkedin.com/school/centro/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="https://facebook.com/centro.edu.mx/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="https://tiktok.com/@centro_universidad" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+        <li><a href="https://youtube.com/@CENTRO" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+      </ul>
+    </div>
+
+  </footer>
+
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
